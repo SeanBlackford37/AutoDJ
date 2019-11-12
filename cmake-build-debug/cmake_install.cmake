@@ -1,4 +1,4 @@
-# Install script for directory: /Users/sean/Desktop/HelloWorld
+# Install script for directory: /Users/AidanDeBolt/Documents/Fall 2019/COMP 220/CS220FinalProject
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/sean/Desktop/HelloWorld/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/AidanDeBolt/Documents/Fall 2019/COMP 220/CS220FinalProject/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
