@@ -78,6 +78,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/AidanDeBolt/Documents/Fall 2019/COMP 220/CS220FinalProject/Song.cpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="/Users/AidanDeBolt/Documents/Fall 2019/COMP 220/CS220FinalProject/Song.h">
+			<Option target="untitled"/>
+		</Unit>
 		<Unit filename="/Users/AidanDeBolt/Documents/Fall 2019/COMP 220/CS220FinalProject/main.cpp">
 			<Option target="untitled"/>
 		</Unit>

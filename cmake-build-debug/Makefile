@@ -123,6 +123,33 @@ untitled/fast:
 	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/build
 .PHONY : untitled/fast
 
+Song.o: Song.cpp.o
+
+.PHONY : Song.o
+
+# target to build an object file
+Song.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/Song.cpp.o
+.PHONY : Song.cpp.o
+
+Song.i: Song.cpp.i
+
+.PHONY : Song.i
+
+# target to preprocess a source file
+Song.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/Song.cpp.i
+.PHONY : Song.cpp.i
+
+Song.s: Song.cpp.s
+
+.PHONY : Song.s
+
+# target to generate assembly for a file
+Song.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/Song.cpp.s
+.PHONY : Song.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -159,6 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... untitled"
+	@echo "... Song.o"
+	@echo "... Song.i"
+	@echo "... Song.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
