@@ -23,7 +23,6 @@ public:
      */
     void AddSongsFromFile(std::string filename);
 
-    //add song normal
 
     /**
      * prints all the songs in alphabetical order
@@ -61,8 +60,37 @@ public:
      */
     void removeFromPlaylist(std::string nameIn, std::string artist, std::string titleIn);
 
+    /**
+     * Add a song from a specific playlist
+     * @param nameIn -- name of playlist
+     * @param artist -- artist of song to add
+     * @param titleIn -- title of song to add
+     */
+    void addToPlaylist(std::string nameIn, std::string artist, std::string titleIn);
 
 
+    /**
+     * Display all songs by a given artist
+     * @param artistIn -- name of the artist to print
+     */
+    void displayArtist(std::string artistIn);
+
+    /**
+     * Display info for a given song
+     * @param artistIn -- name of artist of song to display
+     * @param titleIn -- name of title of song to display
+     */
+    void displaySong(std::string artistIn, std::string titleIn);
+
+    /**
+     * Display info of a given playlist
+     * What songs are left and duration left
+     * @param nameIn -- name of playlist to display
+     */
+    void displayPlaylist(std::string nameIn);
+
+    //play next
+    //new random
 
 
 

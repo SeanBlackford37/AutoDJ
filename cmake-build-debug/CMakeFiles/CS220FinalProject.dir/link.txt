@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 /Library/Developer/CommandLineTools/usr/bin/c++  -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/CS220FinalProject.dir/Library.cpp.o CMakeFiles/CS220FinalProject.dir/Song.cpp.o CMakeFiles/CS220FinalProject.dir/SongTests.cpp.o  -o CS220FinalProject 
+=======
+/Library/Developer/CommandLineTools/usr/bin/c++  -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/CS220FinalProject.dir/Library.cpp.o CMakeFiles/CS220FinalProject.dir/Song.cpp.o  -o CS220FinalProject 
+>>>>>>> 92fff8f1f0a2070eb85da47284abdbf9adb01f2f
