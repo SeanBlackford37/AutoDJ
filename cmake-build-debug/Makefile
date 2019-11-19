@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = "/Users/sean/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/CLion.app/Contents/bin/cmake/mac/bin/cmake"
+CMAKE_COMMAND = "/Users/morganziegler/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/CLion.app/Contents/bin/cmake/mac/bin/cmake"
 
 # The command to remove a file.
-RM = "/Users/sean/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E remove -f
+RM = "/Users/morganziegler/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/sean/Desktop/Comp 220/CS220FinalProject"
+CMAKE_SOURCE_DIR = /Users/morganziegler/Desktop/C++/CS220FinalProject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/sean/Desktop/Comp 220/CS220FinalProject/cmake-build-debug"
+CMAKE_BINARY_DIR = /Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = "/Users/sean/Desktop/Comp 220/CS220FinalProject/cmake-build-d
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"/Users/sean/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/CLion.app/Contents/bin/cmake/mac/bin/cmake" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"/Users/morganziegler/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/CLion.app/Contents/bin/cmake/mac/bin/cmake" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"/Users/sean/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E echo No\ interactive\ CMake\ dialog\ available.
+	"/Users/morganziegler/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/sean/Desktop/Comp 220/CS220FinalProject/cmake-build-debug/CMakeFiles" "/Users/sean/Desktop/Comp 220/CS220FinalProject/cmake-build-debug/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/CMakeFiles /Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/sean/Desktop/Comp 220/CS220FinalProject/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -122,6 +122,33 @@ untitled: cmake_check_build_system
 untitled/fast:
 	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/build
 .PHONY : untitled/fast
+
+Library.o: Library.cpp.o
+
+.PHONY : Library.o
+
+# target to build an object file
+Library.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/Library.cpp.o
+.PHONY : Library.cpp.o
+
+Library.i: Library.cpp.i
+
+.PHONY : Library.i
+
+# target to preprocess a source file
+Library.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/Library.cpp.i
+.PHONY : Library.cpp.i
+
+Library.s: Library.cpp.s
+
+.PHONY : Library.s
+
+# target to generate assembly for a file
+Library.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/Library.cpp.s
+.PHONY : Library.cpp.s
 
 Song.o: Song.cpp.o
 
@@ -186,6 +213,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... untitled"
+	@echo "... Library.o"
+	@echo "... Library.i"
+	@echo "... Library.s"
 	@echo "... Song.o"
 	@echo "... Song.i"
 	@echo "... Song.s"

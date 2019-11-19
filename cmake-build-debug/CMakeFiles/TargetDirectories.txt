@@ -1,3 +1,3 @@
-/Users/sean/Desktop/Comp 220/CS220FinalProject/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/sean/Desktop/Comp 220/CS220FinalProject/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/sean/Desktop/Comp 220/CS220FinalProject/cmake-build-debug/CMakeFiles/untitled.dir
+/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/CMakeFiles/untitled.dir
