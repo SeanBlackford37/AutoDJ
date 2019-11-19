@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/sean/Desktop/Comp 220/CS220FinalProject/Library.cpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="/Users/sean/Desktop/Comp 220/CS220FinalProject/Library.h">
+			<Option target="untitled"/>
+		</Unit>
 		<Unit filename="/Users/sean/Desktop/Comp 220/CS220FinalProject/Song.cpp">
 			<Option target="untitled"/>
 		</Unit>
