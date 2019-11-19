@@ -51,7 +51,7 @@ public:
      * Create a new playlist and add to list of playlists
      * @param nameIn
      */
-    void newPlayist(std::string nameIn);
+    void newPlaylist(std::string nameIn);
 
     /**
      * Removes a song from a specific playlist

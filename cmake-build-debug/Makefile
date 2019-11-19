@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named untitled
+# Target rules for targets named CS220FinalProject
 
 # Build rule for target.
-untitled: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 untitled
-.PHONY : untitled
+CS220FinalProject: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 CS220FinalProject
+.PHONY : CS220FinalProject
 
 # fast build rule for target.
-untitled/fast:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/build
-.PHONY : untitled/fast
+CS220FinalProject/fast:
+	$(MAKE) -f CMakeFiles/CS220FinalProject.dir/build.make CMakeFiles/CS220FinalProject.dir/build
+.PHONY : CS220FinalProject/fast
 
 Library.o: Library.cpp.o
 
@@ -129,7 +129,7 @@ Library.o: Library.cpp.o
 
 # target to build an object file
 Library.cpp.o:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/Library.cpp.o
+	$(MAKE) -f CMakeFiles/CS220FinalProject.dir/build.make CMakeFiles/CS220FinalProject.dir/Library.cpp.o
 .PHONY : Library.cpp.o
 
 Library.i: Library.cpp.i
@@ -138,7 +138,7 @@ Library.i: Library.cpp.i
 
 # target to preprocess a source file
 Library.cpp.i:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/Library.cpp.i
+	$(MAKE) -f CMakeFiles/CS220FinalProject.dir/build.make CMakeFiles/CS220FinalProject.dir/Library.cpp.i
 .PHONY : Library.cpp.i
 
 Library.s: Library.cpp.s
@@ -147,7 +147,7 @@ Library.s: Library.cpp.s
 
 # target to generate assembly for a file
 Library.cpp.s:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/Library.cpp.s
+	$(MAKE) -f CMakeFiles/CS220FinalProject.dir/build.make CMakeFiles/CS220FinalProject.dir/Library.cpp.s
 .PHONY : Library.cpp.s
 
 Song.o: Song.cpp.o
@@ -156,7 +156,7 @@ Song.o: Song.cpp.o
 
 # target to build an object file
 Song.cpp.o:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/Song.cpp.o
+	$(MAKE) -f CMakeFiles/CS220FinalProject.dir/build.make CMakeFiles/CS220FinalProject.dir/Song.cpp.o
 .PHONY : Song.cpp.o
 
 Song.i: Song.cpp.i
@@ -165,7 +165,7 @@ Song.i: Song.cpp.i
 
 # target to preprocess a source file
 Song.cpp.i:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/Song.cpp.i
+	$(MAKE) -f CMakeFiles/CS220FinalProject.dir/build.make CMakeFiles/CS220FinalProject.dir/Song.cpp.i
 .PHONY : Song.cpp.i
 
 Song.s: Song.cpp.s
@@ -174,35 +174,8 @@ Song.s: Song.cpp.s
 
 # target to generate assembly for a file
 Song.cpp.s:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/Song.cpp.s
+	$(MAKE) -f CMakeFiles/CS220FinalProject.dir/build.make CMakeFiles/CS220FinalProject.dir/Song.cpp.s
 .PHONY : Song.cpp.s
-
-main.o: main.cpp.o
-
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/main.cpp.s
-.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -212,16 +185,13 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... untitled"
+	@echo "... CS220FinalProject"
 	@echo "... Library.o"
 	@echo "... Library.i"
 	@echo "... Library.s"
 	@echo "... Song.o"
 	@echo "... Song.i"
 	@echo "... Song.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 .PHONY : help
 
 
