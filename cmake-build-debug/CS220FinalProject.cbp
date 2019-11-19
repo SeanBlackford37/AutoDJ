@@ -92,6 +92,9 @@
 		<Unit filename="/Users/sean/Desktop/Comp 220/CS220FinalProject/Song.h">
 			<Option target="CS220FinalProject"/>
 		</Unit>
+		<Unit filename="/Users/sean/Desktop/Comp 220/CS220FinalProject/SongTests.cpp">
+			<Option target="CS220FinalProject"/>
+		</Unit>
 		<Unit filename="/Users/sean/Desktop/Comp 220/CS220FinalProject/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

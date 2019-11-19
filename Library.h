@@ -2,8 +2,8 @@
 // Created by Morgan Ziegler on 11/19/19.
 //
 
-#ifndef HELLOWORLD_LIBRARY_H
-#define HELLOWORLD_LIBRARY_H
+#ifndef CS220FINALPROEJECT_H
+#define CS220FINALPROEJECT_H
 
 #include <iostream>
 
@@ -69,4 +69,4 @@ public:
 };
 
 
-#endif //HELLOWORLD_LIBRARY_H
+#endif //CS220FINALPROEJECT_H

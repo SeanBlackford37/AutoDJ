@@ -2,8 +2,8 @@
 // Created by Aidan DeBolt on 11/18/19.
 //
 
-#ifndef HELLOWORLD_SONG_H
-#define HELLOWORLD_SONG_H
+#ifndef CS220FINALPROEJECT_SONG_H
+#define CS220FINALPROEJECT_SONG_H
 #include <iostream>
 
 class Song {
@@ -38,4 +38,4 @@ public:
     std::string toString();
 };
 
-#endif //HELLOWORLD_SONG_H
+#endif //CS220FINALPROEJECT_SONG_H
