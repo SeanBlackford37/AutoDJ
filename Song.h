@@ -7,8 +7,15 @@
 
 //have them separating by commas
 
+#include <string>
 
+class Song {
+private:
 
+    std::string artist;
+    std::string songTitle;
+    int duration;
 
+};
 
 #endif //HELLOWORLD_SONG_H
