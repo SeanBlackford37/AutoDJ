@@ -14,6 +14,8 @@ private:
     std::string title;
     //Duration of the song converted into seconds from 3:20 format
     int duration;
+    //Duration in the original format
+    std::string durationString;
     //the number of times the song has been played
     int playCount;
 
@@ -25,6 +27,7 @@ public:
     Song(std::string titleIn, std::string artistIn, std::string durationIn);
 
     //Constructor for reading a text file
+    Song(std::string songInfo);
 
     /**
      * Coverts the given duration from a string to an integer ex) 3:20 -> 200
@@ -36,6 +39,19 @@ public:
      * Turns the given song to a string format and is returned
      */
     std::string toString();
+
+    std::string toStringtoFile();
+
+
+    std::string getArtist();
+
+    std::string getTitle();
+
+    int getDuration();
+
+    int getPlayCount();
+
+    std::string getDurationString();
 };
 
 #endif //CS220FINALPROEJECT_SONG_H

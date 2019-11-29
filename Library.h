@@ -10,8 +10,8 @@
 class Library {
 private:
     //TODO: Add someones list files to the project, and decide whether to work with arrays or linked lists
-    List* songs;
-    List* playlists;
+    //List* songs;
+    //List* playlists;
 
 public:
     Library();

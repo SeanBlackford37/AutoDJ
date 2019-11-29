@@ -177,32 +177,32 @@ Song.cpp.s:
 	$(MAKE) -f CMakeFiles/CS220FinalProject.dir/build.make CMakeFiles/CS220FinalProject.dir/Song.cpp.s
 .PHONY : Song.cpp.s
 
-SongTests.o: SongTests.cpp.o
+Tests.o: Tests.cpp.o
 
-.PHONY : SongTests.o
+.PHONY : Tests.o
 
 # target to build an object file
-SongTests.cpp.o:
-	$(MAKE) -f CMakeFiles/CS220FinalProject.dir/build.make CMakeFiles/CS220FinalProject.dir/SongTests.cpp.o
-.PHONY : SongTests.cpp.o
+Tests.cpp.o:
+	$(MAKE) -f CMakeFiles/CS220FinalProject.dir/build.make CMakeFiles/CS220FinalProject.dir/Tests.cpp.o
+.PHONY : Tests.cpp.o
 
-SongTests.i: SongTests.cpp.i
+Tests.i: Tests.cpp.i
 
-.PHONY : SongTests.i
+.PHONY : Tests.i
 
 # target to preprocess a source file
-SongTests.cpp.i:
-	$(MAKE) -f CMakeFiles/CS220FinalProject.dir/build.make CMakeFiles/CS220FinalProject.dir/SongTests.cpp.i
-.PHONY : SongTests.cpp.i
+Tests.cpp.i:
+	$(MAKE) -f CMakeFiles/CS220FinalProject.dir/build.make CMakeFiles/CS220FinalProject.dir/Tests.cpp.i
+.PHONY : Tests.cpp.i
 
-SongTests.s: SongTests.cpp.s
+Tests.s: Tests.cpp.s
 
-.PHONY : SongTests.s
+.PHONY : Tests.s
 
 # target to generate assembly for a file
-SongTests.cpp.s:
-	$(MAKE) -f CMakeFiles/CS220FinalProject.dir/build.make CMakeFiles/CS220FinalProject.dir/SongTests.cpp.s
-.PHONY : SongTests.cpp.s
+Tests.cpp.s:
+	$(MAKE) -f CMakeFiles/CS220FinalProject.dir/build.make CMakeFiles/CS220FinalProject.dir/Tests.cpp.s
+.PHONY : Tests.cpp.s
 
 # Help Target
 help:
@@ -219,9 +219,9 @@ help:
 	@echo "... Song.o"
 	@echo "... Song.i"
 	@echo "... Song.s"
-	@echo "... SongTests.o"
-	@echo "... SongTests.i"
-	@echo "... SongTests.s"
+	@echo "... Tests.o"
+	@echo "... Tests.i"
+	@echo "... Tests.s"
 .PHONY : help
 
 

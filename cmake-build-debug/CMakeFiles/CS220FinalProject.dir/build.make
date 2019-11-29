@@ -83,38 +83,34 @@ CMakeFiles/CS220FinalProject.dir/Song.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CS220FinalProject.dir/Song.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/morganziegler/Desktop/C++/CS220FinalProject/Song.cpp -o CMakeFiles/CS220FinalProject.dir/Song.cpp.s
 
-CMakeFiles/CS220FinalProject.dir/SongTests.cpp.o: CMakeFiles/CS220FinalProject.dir/flags.make
-CMakeFiles/CS220FinalProject.dir/SongTests.cpp.o: ../SongTests.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/sean/Desktop/Comp 220/CS220FinalProject/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/CS220FinalProject.dir/SongTests.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CS220FinalProject.dir/SongTests.cpp.o -c "/Users/sean/Desktop/Comp 220/CS220FinalProject/SongTests.cpp"
+CMakeFiles/CS220FinalProject.dir/Tests.cpp.o: CMakeFiles/CS220FinalProject.dir/flags.make
+CMakeFiles/CS220FinalProject.dir/Tests.cpp.o: ../Tests.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/CS220FinalProject.dir/Tests.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CS220FinalProject.dir/Tests.cpp.o -c /Users/morganziegler/Desktop/C++/CS220FinalProject/Tests.cpp
 
-CMakeFiles/CS220FinalProject.dir/SongTests.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CS220FinalProject.dir/SongTests.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/sean/Desktop/Comp 220/CS220FinalProject/SongTests.cpp" > CMakeFiles/CS220FinalProject.dir/SongTests.cpp.i
+CMakeFiles/CS220FinalProject.dir/Tests.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CS220FinalProject.dir/Tests.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/morganziegler/Desktop/C++/CS220FinalProject/Tests.cpp > CMakeFiles/CS220FinalProject.dir/Tests.cpp.i
 
-CMakeFiles/CS220FinalProject.dir/SongTests.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CS220FinalProject.dir/SongTests.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/sean/Desktop/Comp 220/CS220FinalProject/SongTests.cpp" -o CMakeFiles/CS220FinalProject.dir/SongTests.cpp.s
+CMakeFiles/CS220FinalProject.dir/Tests.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CS220FinalProject.dir/Tests.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/morganziegler/Desktop/C++/CS220FinalProject/Tests.cpp -o CMakeFiles/CS220FinalProject.dir/Tests.cpp.s
 
 # Object files for target CS220FinalProject
 CS220FinalProject_OBJECTS = \
 "CMakeFiles/CS220FinalProject.dir/Library.cpp.o" \
 "CMakeFiles/CS220FinalProject.dir/Song.cpp.o" \
-"CMakeFiles/CS220FinalProject.dir/SongTests.cpp.o"
+"CMakeFiles/CS220FinalProject.dir/Tests.cpp.o"
 
 # External object files for target CS220FinalProject
 CS220FinalProject_EXTERNAL_OBJECTS =
 
 CS220FinalProject: CMakeFiles/CS220FinalProject.dir/Library.cpp.o
 CS220FinalProject: CMakeFiles/CS220FinalProject.dir/Song.cpp.o
-CS220FinalProject: CMakeFiles/CS220FinalProject.dir/SongTests.cpp.o
+CS220FinalProject: CMakeFiles/CS220FinalProject.dir/Tests.cpp.o
 CS220FinalProject: CMakeFiles/CS220FinalProject.dir/build.make
 CS220FinalProject: CMakeFiles/CS220FinalProject.dir/link.txt
-<<<<<<< HEAD
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/sean/Desktop/Comp 220/CS220FinalProject/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable CS220FinalProject"
-=======
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable CS220FinalProject"
->>>>>>> 92fff8f1f0a2070eb85da47284abdbf9adb01f2f
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable CS220FinalProject"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CS220FinalProject.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

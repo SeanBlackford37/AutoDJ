@@ -90,14 +90,10 @@
 		<Unit filename="/Users/morganziegler/Desktop/C++/CS220FinalProject/Song.h">
 			<Option target="CS220FinalProject"/>
 		</Unit>
-<<<<<<< HEAD
-		<Unit filename="/Users/sean/Desktop/Comp 220/CS220FinalProject/SongTests.cpp">
+		<Unit filename="/Users/morganziegler/Desktop/C++/CS220FinalProject/Tests.cpp">
 			<Option target="CS220FinalProject"/>
 		</Unit>
-		<Unit filename="/Users/sean/Desktop/Comp 220/CS220FinalProject/CMakeLists.txt">
-=======
 		<Unit filename="/Users/morganziegler/Desktop/C++/CS220FinalProject/CMakeLists.txt">
->>>>>>> 92fff8f1f0a2070eb85da47284abdbf9adb01f2f
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
