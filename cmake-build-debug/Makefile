@@ -150,6 +150,33 @@ Library.cpp.s:
 	$(MAKE) -f CMakeFiles/CS220FinalProject.dir/build.make CMakeFiles/CS220FinalProject.dir/Library.cpp.s
 .PHONY : Library.cpp.s
 
+Playlist.o: Playlist.cpp.o
+
+.PHONY : Playlist.o
+
+# target to build an object file
+Playlist.cpp.o:
+	$(MAKE) -f CMakeFiles/CS220FinalProject.dir/build.make CMakeFiles/CS220FinalProject.dir/Playlist.cpp.o
+.PHONY : Playlist.cpp.o
+
+Playlist.i: Playlist.cpp.i
+
+.PHONY : Playlist.i
+
+# target to preprocess a source file
+Playlist.cpp.i:
+	$(MAKE) -f CMakeFiles/CS220FinalProject.dir/build.make CMakeFiles/CS220FinalProject.dir/Playlist.cpp.i
+.PHONY : Playlist.cpp.i
+
+Playlist.s: Playlist.cpp.s
+
+.PHONY : Playlist.s
+
+# target to generate assembly for a file
+Playlist.cpp.s:
+	$(MAKE) -f CMakeFiles/CS220FinalProject.dir/build.make CMakeFiles/CS220FinalProject.dir/Playlist.cpp.s
+.PHONY : Playlist.cpp.s
+
 Song.o: Song.cpp.o
 
 .PHONY : Song.o
@@ -216,6 +243,9 @@ help:
 	@echo "... Library.o"
 	@echo "... Library.i"
 	@echo "... Library.s"
+	@echo "... Playlist.o"
+	@echo "... Playlist.i"
+	@echo "... Playlist.s"
 	@echo "... Song.o"
 	@echo "... Song.i"
 	@echo "... Song.s"

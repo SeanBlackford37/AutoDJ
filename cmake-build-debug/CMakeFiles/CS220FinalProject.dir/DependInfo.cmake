@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/morganziegler/Desktop/C++/CS220FinalProject/Library.cpp" "/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/CMakeFiles/CS220FinalProject.dir/Library.cpp.o"
+  "/Users/morganziegler/Desktop/C++/CS220FinalProject/Playlist.cpp" "/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/CMakeFiles/CS220FinalProject.dir/Playlist.cpp.o"
   "/Users/morganziegler/Desktop/C++/CS220FinalProject/Song.cpp" "/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/CMakeFiles/CS220FinalProject.dir/Song.cpp.o"
   "/Users/morganziegler/Desktop/C++/CS220FinalProject/Tests.cpp" "/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/CMakeFiles/CS220FinalProject.dir/Tests.cpp.o"
   )
