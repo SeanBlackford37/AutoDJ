@@ -21,6 +21,11 @@ public:
     Playlist(std::string nameIn);
 
     /**
+     * Destructor
+     */
+    ~Playlist();
+
+    /**
      * calcs the duration of the songs left in the playlist
      * could return an int instead if we dont want to format it like 1:34:32 or something
      * @returns the duration left

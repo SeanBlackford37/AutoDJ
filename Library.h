@@ -11,7 +11,16 @@ class Library {
 private:
     //TODO: Add someones list files to the project, and decide whether to work with arrays or linked lists
     //List* songs;
+    //TODO: adjust list to work with items that are playlists
     //List* playlists;
+
+    /**
+     * reads everything from the quite file
+     * and recreates the library from the information
+     * including playlists and song lists
+     * probably called within the constructor
+     */
+    void loadLibrary();
 
 public:
     Library();
@@ -89,8 +98,24 @@ public:
      */
     void displayPlaylist(std::string nameIn);
 
-    //play next
-    //new random
+    /**
+     * plays next song and prints the info
+     * add to playcount for that song in the library
+     * remove the playlist if it is now empty
+     */
+    void playNext();
+
+
+    /**
+     * creates a new  playlist with the name given
+     * with random songs that do not repeat within it
+     * and as many as possible that dont go over the duration specified
+     * @param nameIn
+     */
+    void newRandomPlaylist(std::string nameIn, std::string duration);
+
+
+
 
 
 
