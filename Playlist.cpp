@@ -8,3 +8,4 @@ Playlist::Playlist(std::string nameIn) {
     name = nameIn;
     //songs = new List();
 }
+

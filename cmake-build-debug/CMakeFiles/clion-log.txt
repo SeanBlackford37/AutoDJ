@@ -1,4 +1,4 @@
-"/Users/morganziegler/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/morganziegler/Desktop/C++/CS220FinalProject
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/Users/AidanDeBolt/Documents/Fall 2019/COMP 220/CS220FinalProject"
 -- Configuring done
 -- Generating done
--- Build files have been written to: /Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug
+-- Build files have been written to: /Users/AidanDeBolt/Documents/Fall 2019/COMP 220/CS220FinalProject/cmake-build-debug

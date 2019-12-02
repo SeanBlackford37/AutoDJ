@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = "/Users/morganziegler/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/CLion.app/Contents/bin/cmake/mac/bin/cmake"
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = "/Users/morganziegler/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E remove -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/morganziegler/Desktop/C++/CS220FinalProject
+CMAKE_SOURCE_DIR = "/Users/AidanDeBolt/Documents/Fall 2019/COMP 220/CS220FinalProject"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug
+CMAKE_BINARY_DIR = "/Users/AidanDeBolt/Documents/Fall 2019/COMP 220/CS220FinalProject/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-buil
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"/Users/morganziegler/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/CLion.app/Contents/bin/cmake/mac/bin/cmake" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"/Users/morganziegler/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E echo No\ interactive\ CMake\ dialog\ available.
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/CMakeFiles /Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/AidanDeBolt/Documents/Fall 2019/COMP 220/CS220FinalProject/cmake-build-debug/CMakeFiles" "/Users/AidanDeBolt/Documents/Fall 2019/COMP 220/CS220FinalProject/cmake-build-debug/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/AidanDeBolt/Documents/Fall 2019/COMP 220/CS220FinalProject/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -122,6 +122,33 @@ CS220FinalProject: cmake_check_build_system
 CS220FinalProject/fast:
 	$(MAKE) -f CMakeFiles/CS220FinalProject.dir/build.make CMakeFiles/CS220FinalProject.dir/build
 .PHONY : CS220FinalProject/fast
+
+ArrayList.o: ArrayList.cpp.o
+
+.PHONY : ArrayList.o
+
+# target to build an object file
+ArrayList.cpp.o:
+	$(MAKE) -f CMakeFiles/CS220FinalProject.dir/build.make CMakeFiles/CS220FinalProject.dir/ArrayList.cpp.o
+.PHONY : ArrayList.cpp.o
+
+ArrayList.i: ArrayList.cpp.i
+
+.PHONY : ArrayList.i
+
+# target to preprocess a source file
+ArrayList.cpp.i:
+	$(MAKE) -f CMakeFiles/CS220FinalProject.dir/build.make CMakeFiles/CS220FinalProject.dir/ArrayList.cpp.i
+.PHONY : ArrayList.cpp.i
+
+ArrayList.s: ArrayList.cpp.s
+
+.PHONY : ArrayList.s
+
+# target to generate assembly for a file
+ArrayList.cpp.s:
+	$(MAKE) -f CMakeFiles/CS220FinalProject.dir/build.make CMakeFiles/CS220FinalProject.dir/ArrayList.cpp.s
+.PHONY : ArrayList.cpp.s
 
 Library.o: Library.cpp.o
 
@@ -240,6 +267,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... CS220FinalProject"
+	@echo "... ArrayList.o"
+	@echo "... ArrayList.i"
+	@echo "... ArrayList.s"
 	@echo "... Library.o"
 	@echo "... Library.i"
 	@echo "... Library.s"
