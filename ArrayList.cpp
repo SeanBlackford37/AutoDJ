@@ -1,275 +1,156 @@
 //
-// Created by Aidan DeBolt on 12/2/19.
+// Created by Sean Blackford on 10/14/19.
 //
 
-#include "ArrayList.h"
 #include <iostream>
-#include "Math.h"
-#include "Playlist.h"
-#include "Song.h"
+#include "ArrayList.h"
+#include "ArrayLib.h"
 
 
-int genRandInt(int min, int max, int& numLinesRun){
-
-    numLinesRun += 3;
-    numLinesRun += 1; //for if statement
-    numLinesRun += 1; //for first else if statement
-    numLinesRun += 1; //for else statement
-    if (min > max){
-        numLinesRun += 5;
-        int tempMax = max;
-        max = min;
-        min = tempMax;
-        int newRandNum = rand() % ((max - min) + 1) + min;
-        return newRandNum;
-    }
-    else if (min == max){
-        numLinesRun += 1;
-        return max;
+ArrayList::ArrayList(int initialCapacity) {
+    if(initialCapacity < 1){
+        throw std::invalid_argument("Size can't be less than 1");
     }
     else{
-        numLinesRun += 2;
-        int randNum = rand() % ((max - min) + 1) + min;
-        return randNum;
+        this -> currCapacity = initialCapacity;
+        this -> array = new Song[currCapacity];
+        this -> currItemCount = 0;
+
     }
+
 }
+//assignment operator
+//combining two objects listA = listB
+//using destructor and copy constructor
+ArrayList& ArrayList::operator=(const ArrayList& arrayListToCopy){
+    if(this != &arrayListToCopy) {
+        delete[] array;
 
-int* genRandArray(int size, int min, int max, int& numLinesRun){
-    numLinesRun += 4; //parameters
-    numLinesRun += 1; //anArray creation
-    numLinesRun += 2; //if and else if statement
-    int* anArray = new int[size];
-    if (size < 1){
-        numLinesRun += 1;
-        return anArray;
-    }
-    else if (min > max){
-        numLinesRun += 3;
-        int tempMax = min;
-        min = max;
-        max = tempMax;
-
-        numLinesRun += 2;
-        for(int i =0; i<size; i++){
-            numLinesRun += 4;
-            int randomNum = rand() % ((max - min) + 1) + min;
-            anArray[i] = randomNum;
+        this->currCapacity = arrayListToCopy.currCapacity;
+        this->array = new Song[currCapacity];
+        for (int i = 0; i < arrayListToCopy.currItemCount; i++) {
+            array[i] = arrayListToCopy.array[i];
         }
-    }
+        this->currItemCount = arrayListToCopy.currItemCount;
+        return *this;
+    }return *this;
+}
+//Copy constructor
+ArrayList::ArrayList(const ArrayList& arrayListToCopy) {
 
-    numLinesRun += 2;
-    for(int i =0; i<size; i++){
-        numLinesRun += 4;
-        int randomNum = rand() % ((max - min) + 1) + min;
-        anArray[i] = randomNum;
+    this -> currCapacity = arrayListToCopy.currCapacity;
+    this -> array = new Song[currCapacity];
+    for(int i = 0; i < arrayListToCopy.currItemCount; i++){
+        array[i] = arrayListToCopy.array[i];
     }
-    numLinesRun += 1;
-    return anArray;
+    this -> currItemCount = arrayListToCopy.currItemCount;
+}
+//Destructor
+ArrayList::~ArrayList(){
+    delete[] array;
 }
 
-std::string toString(const int* arrayPtr, int size) {
-    std::string finalString = "{";
-    if (size < 1) {
-        finalString = "{}";
-    }
-    else {
-        for (int i = 0; i < size; i++) {
-            finalString += std::to_string(arrayPtr[i]);
+void ArrayList::doubleCapacity() {
+    Song *arrayList = new int[currItemCount * 2];
+    currCapacity = currCapacity * 2;
 
-            if(size - i != 1) {
-                finalString += ", ";
-            }
-        }
-        finalString += "}";
+    for(int i = 0; i < currItemCount;i++){
+        arrayList[i] = array[i];
     }
-    return finalString;
+    delete[] array;
+    array = new int[currItemCount*2];
+
+    for(int i = 0; i < currItemCount;i++){
+        array[i] = arrayList[i];
+    }
+    delete[] arrayList;
 }
 
-int find(const int* arrayPtr, int size, int numToFind, int& numLinesRun){
-    numLinesRun += 4; //parameters
-    numLinesRun += 2; //for loop
-    for(int i = 0; i < size; i++){
-        numLinesRun += 3;
-        if (arrayPtr[i] == numToFind){
-            numLinesRun += 1;
-            return i;
-        }
-    }
-    numLinesRun += 2;
-    int aNum = -1;
-    return aNum;
-}
 
-int findLast(const int* arrayPtr, int size, int numToFind, int& numLinesRun) {
-    (numLinesRun) += 4; //parameters
-    (numLinesRun) += 1; //latestFound declaration
-    int latestFound = -1;
-    (numLinesRun) += 1; //if statement
-    if (size < 1) {
-        (numLinesRun) += 1; //if statement execution
-        return latestFound;
-    }
-    else {
-        (numLinesRun) += 1; //else
-        (numLinesRun) += 1; //found
-        bool found = false;
-        (numLinesRun) += 2; //for loop start
-        for (int i = 0; i < size; i++) {
-            (numLinesRun) += 3; //if statement + loop
-            if (arrayPtr[i] == numToFind) {
-                (numLinesRun) += 1; //if statement execution
-                latestFound = i;
-            }
-        }
-
-        (numLinesRun) += 1; //return
-        return latestFound;
-    }
-}
-
-int findMaxIndex(const int* arrayPtr, int size, int& numLinesRun){
-    (numLinesRun) += 3; //parameters
-    (numLinesRun) += 1; //if statement
-    if (size < 1){
-        (numLinesRun) += 1; //if statement execution
-        throw std::invalid_argument("Size must be greater than or equal to 1");
-    }
-    (numLinesRun) += 1; //max
-    int max = arrayPtr[0];
-    (numLinesRun) += 2; //for loop start
-    for (int i = 0; i < size; i++){
-        (numLinesRun) += 1; //if statement
-        if (arrayPtr[i] > max){
-            (numLinesRun) += 1; //if statement execute
-            max = arrayPtr[i];
-        }
-    }
-    (numLinesRun) += 2; //max index + return
-    int maxIndex = find(arrayPtr, size, max, numLinesRun);
-    return maxIndex;
-}
-
-int* copyArray(const int* arrayToCopy, int size, int& numLinesRun){
-    (numLinesRun) += 3; //parameters
-    (numLinesRun) += 1; //if statement
-    if (size < 1){
-        (numLinesRun) += 1; //if statement execution
-        return nullptr;
-    }
-    (numLinesRun) += 1; //copyArray
-    (numLinesRun) += 2; //for loop start
-    int* copyArray = new int[size];
-    for (int i = 0; i < size; i++){
-        copyArray[i] = arrayToCopy[i];
-        (numLinesRun) += 3; //for loop
-    }
-
-    (numLinesRun) += 1; //return
-    return copyArray;
-}
-
-int* genShuffledArray(int size, int& numLinesRun){
-    numLinesRun += 2; //declaration
-    numLinesRun += 2; //int* and if statement
-    int* shuffledArray = new int[size];
-    if (size < 1){
-        shuffledArray = nullptr;
-    }
-    numLinesRun += 2; //for loop start
-    for (int i = 0; i < size; i++){
-        numLinesRun = 3;
-        shuffledArray[i] = i + 1;
-    }
-    numLinesRun += 2; //for loop start
-    for (int h = 0; h < size; h++){
-        numLinesRun += 3; //for loop/if statement
-        if (shuffledArray[h] == h + 1){
-            numLinesRun += 4;
-            int randIndex = genRandInt(0, size - 1, numLinesRun);
-            int tempInt = shuffledArray[randIndex];
-            shuffledArray[randIndex] = shuffledArray[h];
-            shuffledArray[h] = tempInt;
-        }
-    }
-    numLinesRun += 1; //return
-    return shuffledArray;
-}
-
-int countOccurrences(const int* arrayPtr, int size, int numToFind, int& numLinesRun){
-    numLinesRun += 4; //parameters+count declaration
-    int count = 0;
-    numLinesRun += 2; //for loop
-    for(int i = 0; i < size; i++){
-        numLinesRun += 3; //for loop + if statement
-        if(arrayPtr[i] == numToFind){
-            numLinesRun += 1; //count++
-            count++;
-        }
-    }
-    numLinesRun += 1; //return
-    return count;
-}
-
-//Bubble Sort
-void sort(int* arrayToSort, int size, int& numLinesRun){
-    numLinesRun += 3; //parameters
-    numLinesRun += 2; //for loop
-    for (int i = 0; i < size-1; i++){
-        numLinesRun += 2; //for loop
-        numLinesRun += 2; //for loop
-        for(int j = 0; j<size-i-1; j++){
-            numLinesRun += 2; //for loop
-            numLinesRun += 1; //if statement
-            if(arrayToSort[j]>arrayToSort[j+1]){
-                numLinesRun += 3; //temp set + swap
-                int temp = arrayToSort[j];
-                arrayToSort[j] = arrayToSort[j+1];
-                arrayToSort[j+1] = temp;
-            }
-
-        }
-    }
-}
-
-int binFind(const int* const arrayPtr, const int size, const int numToFind, const int max, const int min, const int mid, int& numLinesRun){
-    numLinesRun += 1; //if statement
-    if (size < 1){
-        return -1;
-    }
-    else if(min <= max){
-        if(arrayPtr[mid] == numToFind){
-            return mid;
-        }
-        else if (arrayPtr[mid] > numToFind){
-            return binFind(arrayPtr,size,numToFind,mid-1,min,(min+max)/2,numLinesRun);
-        }
-        else{
-            return binFind(arrayPtr,size,numToFind,max,mid+1,(min+max)/2,numLinesRun);
-        }
-    }
-    return -1;
-}
-
-int binFind(const int* const arrayPtr, const int size, const int numToFind, int& numLinesRun){
-    return binFind(arrayPtr, size, numToFind, size - 1, 0,floor(0 + ((size-1) - 1) / 2),numLinesRun);
-}
 
 void ArrayList::insertAtEnd(Song itemToAdd) {
     currItemCount+=1;
     doubleCapacity();
     array[currItemCount-1] = itemToAdd;
+
 }
 
-int ArrayList::removeValueAtFront() {
-    if (currItemCount < 0) {
+Song ArrayList::getValueAt(int index) {
+
+    if(index < 0 or index >= currItemCount){
+        throw std::out_of_range("e");
+    }
+    return array[index];
+}
+std::string ArrayList::toString(){
+    return ::toString(array,currItemCount);
+}
+
+
+bool ArrayList::isEmpty() {
+    if(currItemCount < 1){
+        return true;
+    }
+    return false;
+}
+
+int ArrayList::itemCount() {
+    return currItemCount;
+}
+
+void ArrayList::clearList() {
+    for(int i = 0; i < currItemCount;i++){
+        removeValueAtFront();
+    }
+    currItemCount = 0;
+}
+
+void ArrayList::insertAtFront(Song itemToAdd) {
+
+    for(int i = currItemCount; i >= 1;i--){
+        array[i] = array[i-1];
+    }
+
+    currItemCount+=1;
+    array[0] = itemToAdd;
+    doubleCapacity();
+}
+
+void ArrayList::insertAt(Song itemToAdd, int index) {
+
+    if (index < 0 or index > currItemCount) {
+        throw std::out_of_range("e");
+    }
+    for (int i = currItemCount; i >= index; i--) {
+        array[i] = array[i - 1];
+    }
+    currItemCount+=1;
+    array[index] = itemToAdd;
+    doubleCapacity();
+}
+
+Song ArrayList::removeValueAtEnd() {
+    doubleCapacity();
+    if(currItemCount <1){
+        throw std::out_of_range("e");
+    }
+    currItemCount-=1;
+    return array[currItemCount];
+}
+
+Song ArrayList::removeValueAtFront() {
+    if(currItemCount < 0){
         throw std::out_of_range("e");
     }
     Song copy = array[0];
-    for (int i = 1; i < currItemCount; i++) {
-        array[i - 1] = array[i];
+    for(int i = 1; i < currItemCount;i++){
+        array[i-1] = array[i];
     }
-}
 
+    currItemCount--;
+
+    return copy;
+}
 Song ArrayList::removeValueAt(int index) {
     if(index < 0 or index > currItemCount){
         throw std::out_of_range("e");
@@ -284,14 +165,7 @@ Song ArrayList::removeValueAt(int index) {
     for(int i = index+1; i < currItemCount;i++){
         array[i-1] = array[i];
     }
+
     currItemCount--;
     return copy;
-}
-
-int* merge(const int* a1, int size1, const int* a2, int size2, int& numLinesRun){
-    return nullptr;
-}
-
-int* mergeSort(const int* arrayToSort, int size, int& numLinesRun){
-    return nullptr;
 }

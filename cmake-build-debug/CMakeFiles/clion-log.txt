@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-"/Users/morganziegler/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/morganziegler/Desktop/C++/CS220FinalProject
--- The C compiler identification is AppleClang 11.0.0.11000033
--- The CXX compiler identification is AppleClang 11.0.0.11000033
-=======
 "/Users/sean/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/Users/sean/Desktop/Comp 220/CS220FinalProject"
 -- The C compiler identification is AppleClang 10.0.1.10010046
 -- The CXX compiler identification is AppleClang 10.0.1.10010046
->>>>>>> be1de2c43fb01a34612082f29d4cc02d7becbf34
 -- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc
 -- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc -- works
 -- Detecting C compiler ABI info
@@ -21,8 +15,4 @@
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
-<<<<<<< HEAD
--- Build files have been written to: /Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug
-=======
 -- Build files have been written to: /Users/sean/Desktop/Comp 220/CS220FinalProject/cmake-build-debug
->>>>>>> be1de2c43fb01a34612082f29d4cc02d7becbf34
