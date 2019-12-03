@@ -44,12 +44,39 @@ std::string Playlist::calcDuration() {
 }
 
 std::string Playlist::toString() {
+    std::string info = "";
     for (int i = 0; i < songs->itemCount(); i++) {
-        //std::cout << songs->getValueAt(i)->toString() << std::endl;
+        //info += songs->getValueAt(i)->toString() + "\n";
     }
 }
 
 std::string Playlist::playNext() {
-
+    if (!songs->isEmpty()){
+        //std::string temp = songs->getValueAt(0)->toString();
+        //songs->removeValueAtFront();
+        //return temp;
+    }
+    return "Playlist is empty";
 }
 
+void Playlist::addSong(std::string songInfo) {
+    Song temp = Song(songInfo);
+    int index = -1;
+    //int index = songs->find(temp);
+    if (index == -1){
+        //songs->insertAtEnd(new Song(songInfo));
+    }
+}
+
+void Playlist::removeSong(std::string songInfo) {
+    Song temp = Song(songInfo);
+    int index = -1;
+    //int index = songs->find(temp);
+    if (index != -1){
+        songs->removeValueAt(index);
+    }
+}
+
+std::string Playlist::getName(){
+    return name;
+}
