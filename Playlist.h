@@ -54,6 +54,8 @@ public:
       * removes song from the playlist
       */
       void removeSong(std::string songInfo);
+
+      std::string getName();
 };
 
 
