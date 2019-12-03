@@ -35,19 +35,33 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
+<<<<<<< HEAD
 CMAKE_COMMAND = "/Users/morganziegler/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/CLion.app/Contents/bin/cmake/mac/bin/cmake"
 
 # The command to remove a file.
 RM = "/Users/morganziegler/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E remove -f
+=======
+CMAKE_COMMAND = "/Users/sean/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/CLion.app/Contents/bin/cmake/mac/bin/cmake"
+
+# The command to remove a file.
+RM = "/Users/sean/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E remove -f
+>>>>>>> be1de2c43fb01a34612082f29d4cc02d7becbf34
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /Users/morganziegler/Desktop/C++/CS220FinalProject
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug
+=======
+CMAKE_SOURCE_DIR = "/Users/sean/Desktop/Comp 220/CS220FinalProject"
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = "/Users/sean/Desktop/Comp 220/CS220FinalProject/cmake-build-debug"
+>>>>>>> be1de2c43fb01a34612082f29d4cc02d7becbf34
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -74,14 +88,24 @@ preinstall:
 CMakeFiles/CS220FinalProject.dir/all:
 	$(MAKE) -f CMakeFiles/CS220FinalProject.dir/build.make CMakeFiles/CS220FinalProject.dir/depend
 	$(MAKE) -f CMakeFiles/CS220FinalProject.dir/build.make CMakeFiles/CS220FinalProject.dir/build
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target CS220FinalProject"
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/sean/Desktop/Comp 220/CS220FinalProject/cmake-build-debug/CMakeFiles" --progress-num=1,2,3,4,5,6 "Built target CS220FinalProject"
+>>>>>>> be1de2c43fb01a34612082f29d4cc02d7becbf34
 .PHONY : CMakeFiles/CS220FinalProject.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/CS220FinalProject.dir/rule: cmake_check_build_system
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/CS220FinalProject.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/sean/Desktop/Comp 220/CS220FinalProject/cmake-build-debug/CMakeFiles" 6
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/CS220FinalProject.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/sean/Desktop/Comp 220/CS220FinalProject/cmake-build-debug/CMakeFiles" 0
+>>>>>>> be1de2c43fb01a34612082f29d4cc02d7becbf34
 .PHONY : CMakeFiles/CS220FinalProject.dir/rule
 
 # Convenience name for target.

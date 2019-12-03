@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 /Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/CMakeFiles/edit_cache.dir
 /Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/CMakeFiles/CS220FinalProject.dir
+=======
+/Users/sean/Desktop/Comp 220/CS220FinalProject/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/sean/Desktop/Comp 220/CS220FinalProject/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/sean/Desktop/Comp 220/CS220FinalProject/cmake-build-debug/CMakeFiles/CS220FinalProject.dir
+>>>>>>> be1de2c43fb01a34612082f29d4cc02d7becbf34

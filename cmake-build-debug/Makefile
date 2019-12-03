@@ -39,19 +39,33 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
+<<<<<<< HEAD
 CMAKE_COMMAND = "/Users/morganziegler/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/CLion.app/Contents/bin/cmake/mac/bin/cmake"
 
 # The command to remove a file.
 RM = "/Users/morganziegler/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E remove -f
+=======
+CMAKE_COMMAND = "/Users/sean/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/CLion.app/Contents/bin/cmake/mac/bin/cmake"
+
+# The command to remove a file.
+RM = "/Users/sean/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E remove -f
+>>>>>>> be1de2c43fb01a34612082f29d4cc02d7becbf34
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /Users/morganziegler/Desktop/C++/CS220FinalProject
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug
+=======
+CMAKE_SOURCE_DIR = "/Users/sean/Desktop/Comp 220/CS220FinalProject"
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = "/Users/sean/Desktop/Comp 220/CS220FinalProject/cmake-build-debug"
+>>>>>>> be1de2c43fb01a34612082f29d4cc02d7becbf34
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +73,11 @@ CMAKE_BINARY_DIR = /Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-buil
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+<<<<<<< HEAD
 	"/Users/morganziegler/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/CLion.app/Contents/bin/cmake/mac/bin/cmake" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+=======
+	"/Users/sean/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/CLion.app/Contents/bin/cmake/mac/bin/cmake" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+>>>>>>> be1de2c43fb01a34612082f29d4cc02d7becbf34
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +88,11 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+<<<<<<< HEAD
 	"/Users/morganziegler/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E echo No\ interactive\ CMake\ dialog\ available.
+=======
+	"/Users/sean/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E echo No\ interactive\ CMake\ dialog\ available.
+>>>>>>> be1de2c43fb01a34612082f29d4cc02d7becbf34
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +102,15 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/CMakeFiles /Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/sean/Desktop/Comp 220/CS220FinalProject/cmake-build-debug/CMakeFiles" "/Users/sean/Desktop/Comp 220/CS220FinalProject/cmake-build-debug/CMakeFiles/progress.marks"
+	$(MAKE) -f CMakeFiles/Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/sean/Desktop/Comp 220/CS220FinalProject/cmake-build-debug/CMakeFiles" 0
+>>>>>>> be1de2c43fb01a34612082f29d4cc02d7becbf34
 .PHONY : all
 
 # The main clean target

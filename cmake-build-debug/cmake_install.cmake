@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Install script for directory: /Users/morganziegler/Desktop/C++/CS220FinalProject
+=======
+# Install script for directory: /Users/sean/Desktop/Comp 220/CS220FinalProject
+>>>>>>> be1de2c43fb01a34612082f29d4cc02d7becbf34
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +44,9 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
+<<<<<<< HEAD
 file(WRITE "/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+=======
+file(WRITE "/Users/sean/Desktop/Comp 220/CS220FinalProject/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+>>>>>>> be1de2c43fb01a34612082f29d4cc02d7becbf34
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

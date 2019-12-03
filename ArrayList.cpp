@@ -5,6 +5,8 @@
 #include "ArrayList.h"
 #include <iostream>
 #include "Math.h"
+#include "Playlist.h"
+#include "Song.h"
 
 
 int genRandInt(int min, int max, int& numLinesRun){
@@ -250,6 +252,40 @@ int binFind(const int* const arrayPtr, const int size, const int numToFind, cons
 
 int binFind(const int* const arrayPtr, const int size, const int numToFind, int& numLinesRun){
     return binFind(arrayPtr, size, numToFind, size - 1, 0,floor(0 + ((size-1) - 1) / 2),numLinesRun);
+}
+
+void ArrayList::insertAtEnd(Song itemToAdd) {
+    currItemCount+=1;
+    doubleCapacity();
+    array[currItemCount-1] = itemToAdd;
+}
+
+int ArrayList::removeValueAtFront() {
+    if (currItemCount < 0) {
+        throw std::out_of_range("e");
+    }
+    Song copy = array[0];
+    for (int i = 1; i < currItemCount; i++) {
+        array[i - 1] = array[i];
+    }
+}
+
+Song ArrayList::removeValueAt(int index) {
+    if(index < 0 or index > currItemCount){
+        throw std::out_of_range("e");
+    }
+    if(currItemCount < 0){
+        throw std::out_of_range("e");
+    }
+    Song copy = array[index];
+    for(int i = 0; i < index;i++){
+        array[i] = array[i];
+    }
+    for(int i = index+1; i < currItemCount;i++){
+        array[i-1] = array[i];
+    }
+    currItemCount--;
+    return copy;
 }
 
 int* merge(const int* a1, int size1, const int* a2, int size2, int& numLinesRun){
