@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/CS220FinalProject.dir/ArrayLib.cpp.o"
   "CMakeFiles/CS220FinalProject.dir/ArrayList.cpp.o"
   "CMakeFiles/CS220FinalProject.dir/Library.cpp.o"
   "CMakeFiles/CS220FinalProject.dir/Playlist.cpp.o"
