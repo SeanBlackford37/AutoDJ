@@ -2,6 +2,7 @@
 // Created by Morgan Ziegler on 12/1/19.
 //
 #include <iostream>
+#include "ArrayList.h"
 
 #ifndef CS220FINALPROJECT_PLAYLIST_H
 #define CS220FINALPROJECT_PLAYLIST_H
@@ -11,7 +12,7 @@ class Playlist {
 private:
     std::string name;
     //TODO: need a list with items that are songs
-    //List* songs;
+    ArrayList* songs;
 
 public:
     /**

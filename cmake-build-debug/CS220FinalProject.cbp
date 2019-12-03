@@ -8,106 +8,104 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/AidanDeBolt/Documents/Fall 2019/COMP 220/CS220FinalProject/cmake-build-debug"/>
+				<Option working_dir="/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/AidanDeBolt/Documents/Fall\ 2019/COMP\ 220/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/AidanDeBolt/Documents/Fall\ 2019/COMP\ 220/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/AidanDeBolt/Documents/Fall\ 2019/COMP\ 220/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/AidanDeBolt/Documents/Fall\ 2019/COMP\ 220/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/AidanDeBolt/Documents/Fall 2019/COMP 220/CS220FinalProject/cmake-build-debug"/>
+				<Option working_dir="/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/AidanDeBolt/Documents/Fall\ 2019/COMP\ 220/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/AidanDeBolt/Documents/Fall\ 2019/COMP\ 220/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/AidanDeBolt/Documents/Fall\ 2019/COMP\ 220/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/AidanDeBolt/Documents/Fall\ 2019/COMP\ 220/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/AidanDeBolt/Documents/Fall 2019/COMP 220/CS220FinalProject/cmake-build-debug"/>
+				<Option working_dir="/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/AidanDeBolt/Documents/Fall\ 2019/COMP\ 220/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/AidanDeBolt/Documents/Fall\ 2019/COMP\ 220/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/AidanDeBolt/Documents/Fall\ 2019/COMP\ 220/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/AidanDeBolt/Documents/Fall\ 2019/COMP\ 220/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="CS220FinalProject">
-				<Option output="/Users/AidanDeBolt/Documents/Fall 2019/COMP 220/CS220FinalProject/cmake-build-debug/CS220FinalProject" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/AidanDeBolt/Documents/Fall 2019/COMP 220/CS220FinalProject/cmake-build-debug"/>
+				<Option output="/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/CS220FinalProject" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/AidanDeBolt/Documents/Fall\ 2019/COMP\ 220/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 CS220FinalProject"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/AidanDeBolt/Documents/Fall\ 2019/COMP\ 220/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/AidanDeBolt/Documents/Fall\ 2019/COMP\ 220/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/AidanDeBolt/Documents/Fall\ 2019/COMP\ 220/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 CS220FinalProject"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="CS220FinalProject/fast">
-				<Option output="/Users/AidanDeBolt/Documents/Fall 2019/COMP 220/CS220FinalProject/cmake-build-debug/CS220FinalProject" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/AidanDeBolt/Documents/Fall 2019/COMP 220/CS220FinalProject/cmake-build-debug"/>
+				<Option output="/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/CS220FinalProject" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/AidanDeBolt/Documents/Fall\ 2019/COMP\ 220/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 CS220FinalProject/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/AidanDeBolt/Documents/Fall\ 2019/COMP\ 220/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/AidanDeBolt/Documents/Fall\ 2019/COMP\ 220/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/AidanDeBolt/Documents/Fall\ 2019/COMP\ 220/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 CS220FinalProject/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/AidanDeBolt/Documents/Fall 2019/COMP 220/CS220FinalProject/ArrayList.cpp">
+		<Unit filename="/Users/morganziegler/Desktop/C++/CS220FinalProject/ArrayList.cpp">
 			<Option target="CS220FinalProject"/>
 		</Unit>
-		<Unit filename="/Users/AidanDeBolt/Documents/Fall 2019/COMP 220/CS220FinalProject/ArrayList.h">
+		<Unit filename="/Users/morganziegler/Desktop/C++/CS220FinalProject/ArrayList.h">
 			<Option target="CS220FinalProject"/>
 		</Unit>
-		<Unit filename="/Users/AidanDeBolt/Documents/Fall 2019/COMP 220/CS220FinalProject/Library.cpp">
+		<Unit filename="/Users/morganziegler/Desktop/C++/CS220FinalProject/Library.cpp">
 			<Option target="CS220FinalProject"/>
 		</Unit>
-		<Unit filename="/Users/AidanDeBolt/Documents/Fall 2019/COMP 220/CS220FinalProject/Library.h">
+		<Unit filename="/Users/morganziegler/Desktop/C++/CS220FinalProject/Library.h">
 			<Option target="CS220FinalProject"/>
 		</Unit>
-		<Unit filename="/Users/AidanDeBolt/Documents/Fall 2019/COMP 220/CS220FinalProject/Playlist.cpp">
+		<Unit filename="/Users/morganziegler/Desktop/C++/CS220FinalProject/Playlist.cpp">
 			<Option target="CS220FinalProject"/>
 		</Unit>
-		<Unit filename="/Users/AidanDeBolt/Documents/Fall 2019/COMP 220/CS220FinalProject/Playlist.h">
+		<Unit filename="/Users/morganziegler/Desktop/C++/CS220FinalProject/Playlist.h">
 			<Option target="CS220FinalProject"/>
 		</Unit>
-		<Unit filename="/Users/AidanDeBolt/Documents/Fall 2019/COMP 220/CS220FinalProject/Song.cpp">
+		<Unit filename="/Users/morganziegler/Desktop/C++/CS220FinalProject/Song.cpp">
 			<Option target="CS220FinalProject"/>
 		</Unit>
-		<Unit filename="/Users/AidanDeBolt/Documents/Fall 2019/COMP 220/CS220FinalProject/Song.h">
+		<Unit filename="/Users/morganziegler/Desktop/C++/CS220FinalProject/Song.h">
 			<Option target="CS220FinalProject"/>
 		</Unit>
-		<Unit filename="/Users/AidanDeBolt/Documents/Fall 2019/COMP 220/CS220FinalProject/Tests.cpp">
+		<Unit filename="/Users/morganziegler/Desktop/C++/CS220FinalProject/Tests.cpp">
 			<Option target="CS220FinalProject"/>
 		</Unit>
-		<Unit filename="/Users/AidanDeBolt/Documents/Fall 2019/COMP 220/CS220FinalProject/CMakeLists.txt">
+		<Unit filename="/Users/morganziegler/Desktop/C++/CS220FinalProject/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
