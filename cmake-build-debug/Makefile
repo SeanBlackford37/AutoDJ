@@ -231,6 +231,33 @@ Playlist.cpp.s:
 	$(MAKE) -f CMakeFiles/CS220FinalProject.dir/build.make CMakeFiles/CS220FinalProject.dir/Playlist.cpp.s
 .PHONY : Playlist.cpp.s
 
+PlaylistArrayList.o: PlaylistArrayList.cpp.o
+
+.PHONY : PlaylistArrayList.o
+
+# target to build an object file
+PlaylistArrayList.cpp.o:
+	$(MAKE) -f CMakeFiles/CS220FinalProject.dir/build.make CMakeFiles/CS220FinalProject.dir/PlaylistArrayList.cpp.o
+.PHONY : PlaylistArrayList.cpp.o
+
+PlaylistArrayList.i: PlaylistArrayList.cpp.i
+
+.PHONY : PlaylistArrayList.i
+
+# target to preprocess a source file
+PlaylistArrayList.cpp.i:
+	$(MAKE) -f CMakeFiles/CS220FinalProject.dir/build.make CMakeFiles/CS220FinalProject.dir/PlaylistArrayList.cpp.i
+.PHONY : PlaylistArrayList.cpp.i
+
+PlaylistArrayList.s: PlaylistArrayList.cpp.s
+
+.PHONY : PlaylistArrayList.s
+
+# target to generate assembly for a file
+PlaylistArrayList.cpp.s:
+	$(MAKE) -f CMakeFiles/CS220FinalProject.dir/build.make CMakeFiles/CS220FinalProject.dir/PlaylistArrayList.cpp.s
+.PHONY : PlaylistArrayList.cpp.s
+
 Song.o: Song.cpp.o
 
 .PHONY : Song.o
@@ -257,6 +284,33 @@ Song.s: Song.cpp.s
 Song.cpp.s:
 	$(MAKE) -f CMakeFiles/CS220FinalProject.dir/build.make CMakeFiles/CS220FinalProject.dir/Song.cpp.s
 .PHONY : Song.cpp.s
+
+TestLib.o: TestLib.cpp.o
+
+.PHONY : TestLib.o
+
+# target to build an object file
+TestLib.cpp.o:
+	$(MAKE) -f CMakeFiles/CS220FinalProject.dir/build.make CMakeFiles/CS220FinalProject.dir/TestLib.cpp.o
+.PHONY : TestLib.cpp.o
+
+TestLib.i: TestLib.cpp.i
+
+.PHONY : TestLib.i
+
+# target to preprocess a source file
+TestLib.cpp.i:
+	$(MAKE) -f CMakeFiles/CS220FinalProject.dir/build.make CMakeFiles/CS220FinalProject.dir/TestLib.cpp.i
+.PHONY : TestLib.cpp.i
+
+TestLib.s: TestLib.cpp.s
+
+.PHONY : TestLib.s
+
+# target to generate assembly for a file
+TestLib.cpp.s:
+	$(MAKE) -f CMakeFiles/CS220FinalProject.dir/build.make CMakeFiles/CS220FinalProject.dir/TestLib.cpp.s
+.PHONY : TestLib.cpp.s
 
 Tests.o: Tests.cpp.o
 
@@ -306,9 +360,15 @@ help:
 	@echo "... Playlist.o"
 	@echo "... Playlist.i"
 	@echo "... Playlist.s"
+	@echo "... PlaylistArrayList.o"
+	@echo "... PlaylistArrayList.i"
+	@echo "... PlaylistArrayList.s"
 	@echo "... Song.o"
 	@echo "... Song.i"
 	@echo "... Song.s"
+	@echo "... TestLib.o"
+	@echo "... TestLib.i"
+	@echo "... TestLib.s"
 	@echo "... Tests.o"
 	@echo "... Tests.i"
 	@echo "... Tests.s"

@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/morganziegler/Desktop/C++/CS220FinalProject/Song.h
+iostream
+-
+
+/Users/morganziegler/Desktop/C++/CS220FinalProject/TestLib.cpp
+iostream
+-
+TestLib.h
+/Users/morganziegler/Desktop/C++/CS220FinalProject/TestLib.h
+
+/Users/morganziegler/Desktop/C++/CS220FinalProject/TestLib.h
+
+/Users/morganziegler/Desktop/C++/CS220FinalProject/Tests.cpp
+Song.h
+/Users/morganziegler/Desktop/C++/CS220FinalProject/Song.h
+iostream
+-
+TestLib.h
+/Users/morganziegler/Desktop/C++/CS220FinalProject/TestLib.h
+

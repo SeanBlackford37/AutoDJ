@@ -8,7 +8,9 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/morganziegler/Desktop/C++/CS220FinalProject/ArrayList.cpp" "/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/CMakeFiles/CS220FinalProject.dir/ArrayList.cpp.o"
   "/Users/morganziegler/Desktop/C++/CS220FinalProject/Library.cpp" "/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/CMakeFiles/CS220FinalProject.dir/Library.cpp.o"
   "/Users/morganziegler/Desktop/C++/CS220FinalProject/Playlist.cpp" "/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/CMakeFiles/CS220FinalProject.dir/Playlist.cpp.o"
+  "/Users/morganziegler/Desktop/C++/CS220FinalProject/PlaylistArrayList.cpp" "/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/CMakeFiles/CS220FinalProject.dir/PlaylistArrayList.cpp.o"
   "/Users/morganziegler/Desktop/C++/CS220FinalProject/Song.cpp" "/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/CMakeFiles/CS220FinalProject.dir/Song.cpp.o"
+  "/Users/morganziegler/Desktop/C++/CS220FinalProject/TestLib.cpp" "/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/CMakeFiles/CS220FinalProject.dir/TestLib.cpp.o"
   "/Users/morganziegler/Desktop/C++/CS220FinalProject/Tests.cpp" "/Users/morganziegler/Desktop/C++/CS220FinalProject/cmake-build-debug/CMakeFiles/CS220FinalProject.dir/Tests.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")

@@ -102,10 +102,22 @@
 		<Unit filename="/Users/morganziegler/Desktop/C++/CS220FinalProject/Playlist.h">
 			<Option target="CS220FinalProject"/>
 		</Unit>
+		<Unit filename="/Users/morganziegler/Desktop/C++/CS220FinalProject/PlaylistArrayList.cpp">
+			<Option target="CS220FinalProject"/>
+		</Unit>
+		<Unit filename="/Users/morganziegler/Desktop/C++/CS220FinalProject/PlaylistArrayList.h">
+			<Option target="CS220FinalProject"/>
+		</Unit>
 		<Unit filename="/Users/morganziegler/Desktop/C++/CS220FinalProject/Song.cpp">
 			<Option target="CS220FinalProject"/>
 		</Unit>
 		<Unit filename="/Users/morganziegler/Desktop/C++/CS220FinalProject/Song.h">
+			<Option target="CS220FinalProject"/>
+		</Unit>
+		<Unit filename="/Users/morganziegler/Desktop/C++/CS220FinalProject/TestLib.cpp">
+			<Option target="CS220FinalProject"/>
+		</Unit>
+		<Unit filename="/Users/morganziegler/Desktop/C++/CS220FinalProject/TestLib.h">
 			<Option target="CS220FinalProject"/>
 		</Unit>
 		<Unit filename="/Users/morganziegler/Desktop/C++/CS220FinalProject/Tests.cpp">

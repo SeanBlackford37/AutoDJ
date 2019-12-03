@@ -151,6 +151,7 @@ int *copyArray(const int *arrayToCopy, int size, int &numLinesRun) {
 }
 
 
+/*
 //selection sort
 void sort(int *arrayToSort, int size, int &numLinesRun) {
     int *copy = copyArray(arrayToSort, size, numLinesRun);
@@ -204,6 +205,7 @@ void sort(int *arrayToSort, int size, int &numLinesRun) {
 }
 
 
+
 int *merge(const int *a1, int size1, const int *a2, int size2, int &numLinesRun) {
     if (size1 + size2 < 1) {
         numLinesRun += 2;
@@ -232,6 +234,7 @@ int *merge(const int *a1, int size1, const int *a2, int size2, int &numLinesRun)
 
 }
 
+
 int *mergeSort(const int *arrayToSort, int size, int &numLinesRun) {
     if (size < 1) {
         numLinesRun += 2;
@@ -243,3 +246,4 @@ int *mergeSort(const int *arrayToSort, int size, int &numLinesRun) {
     numLinesRun += 3;
     return copyA1;
 }
+ */

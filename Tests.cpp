@@ -3,14 +3,21 @@
 //
 #include "Song.h"
 #include <iostream>
+#include "TestLib.h"
 
 void songTests(){
-    Song test = Song("Darude Sandstorm", "Darude", "3:52" );
-    std::cout << test.getDuration() << std::endl;
-    std::cout << test.getDurationString() << std::endl;
-    Song test2 = Song("darude sandstrom,darude,3:52");
-    std::cout << test2.getDuration() <<std::endl;
-    std::cout << test2.getDurationString() << std::endl;
+    std::cout  << "-----Song Tests-----" << std::endl;
+    Song* test = new Song("Darude Sandstorm", "Darude", "3:52" );
+    printAssertEquals(test->getDurationString(),"3:52");
+    printAssertEquals(test->getDuration(),232);
+    Song* test2;
+    test2 = test;
+    delete test;
+    printAssertEquals(test2->getDurationString(),"3:52");
+    printAssertEquals(test2->getDuration(),232);
+    delete test2;
+
+
 }
 
 
