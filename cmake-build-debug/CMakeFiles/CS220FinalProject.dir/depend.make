@@ -29,6 +29,7 @@ CMakeFiles/CS220FinalProject.dir/Song.cpp.o: ../Song.h
 CMakeFiles/CS220FinalProject.dir/TestLib.cpp.o: ../TestLib.cpp
 CMakeFiles/CS220FinalProject.dir/TestLib.cpp.o: ../TestLib.h
 
+CMakeFiles/CS220FinalProject.dir/Tests.cpp.o: ../ArrayList.h
 CMakeFiles/CS220FinalProject.dir/Tests.cpp.o: ../Song.h
 CMakeFiles/CS220FinalProject.dir/Tests.cpp.o: ../TestLib.h
 CMakeFiles/CS220FinalProject.dir/Tests.cpp.o: ../Tests.cpp

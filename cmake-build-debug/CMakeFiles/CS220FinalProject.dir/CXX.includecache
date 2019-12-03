@@ -6,23 +6,25 @@
 
 #IncludeRegexTransform: 
 
-/Users/morganziegler/Desktop/C++/CS220FinalProject/Song.h
-iostream
+/Users/morganziegler/Desktop/C++/CS220FinalProject/ArrayList.h
+stdexcept
 -
-
-/Users/morganziegler/Desktop/C++/CS220FinalProject/TestLib.cpp
-iostream
+string
 -
-TestLib.h
-/Users/morganziegler/Desktop/C++/CS220FinalProject/TestLib.h
-
-/Users/morganziegler/Desktop/C++/CS220FinalProject/TestLib.h
-
-/Users/morganziegler/Desktop/C++/CS220FinalProject/Tests.cpp
 Song.h
 /Users/morganziegler/Desktop/C++/CS220FinalProject/Song.h
+
+/Users/morganziegler/Desktop/C++/CS220FinalProject/Playlist.cpp
+Playlist.h
+/Users/morganziegler/Desktop/C++/CS220FinalProject/Playlist.h
+
+/Users/morganziegler/Desktop/C++/CS220FinalProject/Playlist.h
 iostream
 -
-TestLib.h
-/Users/morganziegler/Desktop/C++/CS220FinalProject/TestLib.h
+ArrayList.h
+/Users/morganziegler/Desktop/C++/CS220FinalProject/ArrayList.h
+
+/Users/morganziegler/Desktop/C++/CS220FinalProject/Song.h
+iostream
+-
 

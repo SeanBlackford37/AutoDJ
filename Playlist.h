@@ -11,7 +11,6 @@
 class Playlist {
 private:
     std::string name;
-    //TODO: need a list with items that are songs
     ArrayList* songs;
 
 public:

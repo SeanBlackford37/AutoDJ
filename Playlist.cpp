@@ -16,9 +16,7 @@ Playlist::Playlist(std::string nameIn) {
 
 
 Playlist::~Playlist() {
-    while (!songs->isEmpty()){
-        //delete songs->removeValueAtEnd();
-    }
+    delete songs;
 }
 
 std::string Playlist::calcDuration() {
@@ -31,8 +29,7 @@ std::string Playlist::calcDuration() {
     }
     else{
         for (int i = 0; i < songs->itemCount(); i++) {
-            //total += songs->getValueAt(i)->getDuration();
-            //get duration technically
+            total += songs->getValueAt(i).getDuration();
         }
     }
     if (total > 60){
@@ -50,25 +47,27 @@ std::string Playlist::calcDuration() {
 std::string Playlist::toString() {
     std::string info = "";
     for (int i = 0; i < songs->itemCount(); i++) {
-        //info += songs->getValueAt(i)->toString() + "\n";
+        info += songs->getValueAt(i).toString() + "\n";
     }
+    return info;
 }
 
 std::string Playlist::playNext() {
     if (!songs->isEmpty()){
-        //std::string temp = songs->getValueAt(0)->toString();
-        //songs->removeValueAtFront();
-        //return temp;
+        std::string temp = songs->getValueAt(0).toString();
+        songs->removeValueAtFront();
+        return temp;
     }
     return "Playlist is empty";
 }
 
 void Playlist::addSong(std::string songInfo) {
     Song temp = Song(songInfo);
-    int index = -1;
+    //TODO :: find function
     //int index = songs->find(temp);
+    int index = -1;
     if (index == -1){
-        //songs->insertAtEnd(new Song(songInfo));
+        songs->insertAtEnd( Song(songInfo));
     }
 }
 
