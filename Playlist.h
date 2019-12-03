@@ -15,6 +15,8 @@ private:
     ArrayList* songs;
 
 public:
+    Playlist();
+
     /**
      * Constructor
      * @param nameIn -- name of the playlist

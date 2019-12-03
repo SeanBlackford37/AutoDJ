@@ -7,6 +7,14 @@
 #include <iostream>
 
 
+Song::Song(){
+    title = "Untitled";
+    artist = "Unknown";
+    duration = 0;
+    durationString = "0";
+    playCount = 0;
+}
+
 //Adds songs from user
 Song::Song(std::string titleIn, std::string artistIn, std::string durationIn){
     title = titleIn;

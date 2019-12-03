@@ -4,6 +4,10 @@
 
 #include "Playlist.h"
 
+Playlist::Playlist() {
+    name = "unnamed";
+    songs = new ArrayList(10);
+}
 
 Playlist::Playlist(std::string nameIn) {
     name = nameIn;

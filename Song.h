@@ -21,6 +21,10 @@ private:
 
 public:
     /**
+     * default constructor
+     */
+    Song();
+    /**
      * Constructor
      * Takes in title,artist, and duration as strings
      */
