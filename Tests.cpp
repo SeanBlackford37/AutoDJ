@@ -29,6 +29,9 @@ void SongArrayListTests(){
     ArrayList* test = new ArrayList(5);
     test->insertAtFront( Song("Darude Sandstorm,Darude,3:52"));
     printAssertEquals(test->getValueAt(0).toString(),"Title: Darude Sandstorm Artist: Darude Duration: 3:52 Play Count: 0");
+    test->insertAtFront( Song("Wake Me Up,Avicii,4:32"));
+    printAssertEquals(test->getValueAt(0).toString(),"Title: Wake Me Up Artist: Avicii Duration: 4:32 Play Count: 0");
+    printAssertEquals(test->getValueAt(1).toString(),"Title: Darude Sandstorm Artist: Darude Duration: 3:52 Play Count: 0");
 }
 
 void playlistTests() {
@@ -36,13 +39,25 @@ void playlistTests() {
     Playlist *test = new Playlist("Dance Party");
     test->addSong("Shooting Stars,Bag Raiders,3:56");
 
-    //test->addSong("Never Gonna Give You Up,Rick Astley,3:33");
-    printAssertEquals(test->toString(), "Title: Shooting Stars Artist: Bag Raiders Duration: 3:56 Play Count: 0");
+    test->addSong("Never Gonna Give You Up,Rick Astley,3:33");
+    printAssertEquals(test->toString(), "Title: Shooting Stars Artist: Bag Raiders Duration: 3:56 Play Count: 0\n");
 
     test->addSong("Never Gonna Give You Up,Rick Astley,3:33");
+
+
+    printAssertEquals(test->toString(),
+                      "Title: Shooting Stars Artist: Bag Raiders Duration: 3:56 Play Count: 0\nTitle: Never Gonna Give You Up Artist: Rick Astley Duration: 3:33 Play Count: 0\n");
+
+    printAssertEquals(test->toString(),"Title: Shooting Stars Artist: Bag Raiders Duration: 3:56 Play Count: 0\nTitle: Never Gonna Give You Up Artist: Rick Astley Duration: 3:33 Play Count: 0\n");
+
     printAssertEquals(test->toString(),"Title: Shooting Stars Artist: Bag Raiders Duration: 3:56 Play Count: 0\nTitle: Never Gonna Give You Up Artist: Rick Astley Duration: 3:33 Play Count: 0\n");
     test->addSong("w.a.m.s,Fall Out Boy,4:38");
     printAssertEquals("0:12:7",test->calcDuration());
+    test->removeSong("Bag Raiders", "Shooting Stars");
+    test->removeSong("Fall Out Boy", "w.a.m.s");
+    test->removeSong("Rick Astley", "Never Gonna Give You Up");
+    printAssertEquals(test->toString(), "");
+
 
 }
 
