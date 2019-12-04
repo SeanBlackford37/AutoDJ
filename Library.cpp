@@ -3,6 +3,8 @@
 //
 
 #include "Library.h"
+#include "ArrayLib.h"
+
 Library::Library(){
     songs = new ArrayList(30);
     playlists = new PlaylistArrayList(15);
@@ -49,8 +51,8 @@ void Library::newPlaylist(std::string nameIn) {
 }
 
 void Library::removeFromPlaylist(std::string nameIn, std::string artist, std::string titleIn) {
-    //Song temp = Song(artist,titleIn);
-    //int index = playlists
+    int indexOfPlaylist = playlists->find(nameIn);
+    playlists->getValueAt(indexOfPlaylist).removeSong(artist,titleIn);
 }
 
 

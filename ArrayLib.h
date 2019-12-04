@@ -59,7 +59,7 @@ int *genShuffledArray(int size, int &numLinesRun);
  * @param arrayPtr, the size of the array, object Song,
  * @return index of the song
  */
-int findArtistandTitle(Song *const arrayPtr, const int size, Song toFind , int &numLinesRun);
+int findArtistandTitle(Song *const arrayPtr, const int size, std::string artistIn, std::string titleIn);
 
 /**
  * @param arrayPtr, the size of the array, object Song,
