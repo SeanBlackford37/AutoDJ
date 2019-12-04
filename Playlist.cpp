@@ -18,7 +18,7 @@ Playlist::Playlist(std::string nameIn) {
 
 
 Playlist::~Playlist() {
-    delete songs;
+    delete[] songs;
 }
 
 std::string Playlist::calcDuration() {
