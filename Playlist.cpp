@@ -3,6 +3,7 @@
 //
 
 #include "Playlist.h"
+#include "ArrayLib.h"
 
 Playlist::Playlist() {
     name = "unnamed";
@@ -71,10 +72,8 @@ void Playlist::addSong(std::string songInfo) {
     }
 }
 
-void Playlist::removeSong(std::string songInfo) {
-    Song temp = Song(songInfo);
-    int index = -1;
-    //int index = songs->find(temp);
+void Playlist::removeSong(std::string artist, std::string title) {
+    int index = findArtistandTitle(const songs, songs->itemCount(), artist, title);
     if (index != -1){
         songs->removeValueAt(index);
     }
