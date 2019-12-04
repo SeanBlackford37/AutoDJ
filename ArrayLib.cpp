@@ -166,7 +166,7 @@ int find(const int *const arrayPtr, const int index, const int size, const int n
 
 }
 
-int find(const int *const arrayPtr, const int size, const int numToFind, int &numLinesRun) {
+int find(const int *const arrayPtr, const int size, const int s, int &numLinesRun) {
     numLinesRun += 1;
     return find(arrayPtr, 0, size, numToFind, numLinesRun);
 }

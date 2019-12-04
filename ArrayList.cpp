@@ -75,6 +75,12 @@ void ArrayList::insertAtEnd(Song itemToAdd) {
 
 }
 
+void ArrayList::insertAtAlphabetized(Song itemToAdd) {
+    for(int i = 0; i < currItemCount; i++){
+
+    }
+}
+
 Song ArrayList::getValueAt(int index) {
 
     if(index < 0 or index >= currItemCount){

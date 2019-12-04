@@ -95,7 +95,15 @@ public:
      *        all further values have been shifted down by one index
      * @throws out_of_range exception if index is invalid (< 0 or > currItemCount)
      */
+
     void insertAt(Song itemToAdd, int index);
+
+    /**
+     * insertAtAlphabetized
+     * @param index to the location of the arist in that it would come after going from A->Z order
+     * @return a copy of the item at the end
+     */
+    void insertAtAlphabetized(Song itemToAdd);
 
     /**
      * removes the item at the end of the list, and returns a copy of that item
@@ -121,6 +129,7 @@ public:
      * @throws out_of_range exception if index is invalid
      */
     Song removeValueAt(int index);
+
 
 };
 
