@@ -56,6 +56,18 @@ int *genShuffledArray(int size, int &numLinesRun);
 
 
 /**
+ * @param arrayPtr, the size of the array, object Song,
+ * @return index of the song
+ */
+int findArtistandTitle(Song *const arrayPtr, const int size, Song toFind , int &numLinesRun);
+
+/**
+ * @param arrayPtr, the size of the array, object Song,
+ * @return index of the artist
+ */
+int findArtist(Song *const arrayPtr, const int size, Song toFind , int &numLinesRun);
+
+/**
  * uses binary search on an int array for a certain value
  * @pre the array must be sorted before this function is called
  * @return the index of the first occurrence of numToFind if it is present, otherwise returns -1
