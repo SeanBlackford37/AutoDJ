@@ -149,27 +149,20 @@ int *copyArray(const int *arrayToCopy, int size, int &numLinesRun) {
     numLinesRun += 1;
     return temp;
 }
+//Artist and title
+//Just Artist
+//Need to add to the .h
+int findArtistandTitle(const int *const arrayPtr, const int index, const int size, Song toFind , int &numLinesRun) {
+    std::string title = toFind.getTitle();
+    std::string artist = toFind.getArtist();
 
-int find(const int *const arrayPtr, const int index, const int size, const int numToFind, int &numLinesRun) {
+    for(int i = 0; i <size; i++){
+        if(title.compare(arrayPtr[i]) > 0){
 
-    if (index == size) {
-        numLinesRun += 2;
-        return -1;
+        }
     }
-
-    if (arrayPtr[index] == numToFind) {
-        numLinesRun += 2;
-        return index;
-    }
-    numLinesRun += 1;
-    return find(arrayPtr, index + 1, size, numToFind, numLinesRun);
-
 }
 
-int find(const int *const arrayPtr, const int size, const int s, int &numLinesRun) {
-    numLinesRun += 1;
-    return find(arrayPtr, 0, size, numToFind, numLinesRun);
-}
 
 
 

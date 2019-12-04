@@ -6,25 +6,91 @@
 
 #IncludeRegexTransform: 
 
-/Users/morganziegler/Desktop/C++/CS220FinalProject/ArrayList.h
+/Users/sean/Desktop/Comp 220/CS220FinalProject/ArrayLib.cpp
+iostream
+-
+string
+-
+Song.h
+/Users/sean/Desktop/Comp 220/CS220FinalProject/Song.h
+
+/Users/sean/Desktop/Comp 220/CS220FinalProject/ArrayLib.h
+string
+-
+
+/Users/sean/Desktop/Comp 220/CS220FinalProject/ArrayList.cpp
+iostream
+-
+ArrayList.h
+/Users/sean/Desktop/Comp 220/CS220FinalProject/ArrayList.h
+ArrayLib.h
+/Users/sean/Desktop/Comp 220/CS220FinalProject/ArrayLib.h
+
+/Users/sean/Desktop/Comp 220/CS220FinalProject/ArrayList.h
 stdexcept
 -
 string
 -
 Song.h
-/Users/morganziegler/Desktop/C++/CS220FinalProject/Song.h
+/Users/sean/Desktop/Comp 220/CS220FinalProject/Song.h
 
-/Users/morganziegler/Desktop/C++/CS220FinalProject/Playlist.cpp
+/Users/sean/Desktop/Comp 220/CS220FinalProject/Library.cpp
+Library.h
+/Users/sean/Desktop/Comp 220/CS220FinalProject/Library.h
+
+/Users/sean/Desktop/Comp 220/CS220FinalProject/Library.h
+iostream
+-
+
+/Users/sean/Desktop/Comp 220/CS220FinalProject/Playlist.cpp
 Playlist.h
-/Users/morganziegler/Desktop/C++/CS220FinalProject/Playlist.h
+/Users/sean/Desktop/Comp 220/CS220FinalProject/Playlist.h
 
-/Users/morganziegler/Desktop/C++/CS220FinalProject/Playlist.h
+/Users/sean/Desktop/Comp 220/CS220FinalProject/Playlist.h
 iostream
 -
 ArrayList.h
-/Users/morganziegler/Desktop/C++/CS220FinalProject/ArrayList.h
+/Users/sean/Desktop/Comp 220/CS220FinalProject/ArrayList.h
 
-/Users/morganziegler/Desktop/C++/CS220FinalProject/Song.h
+/Users/sean/Desktop/Comp 220/CS220FinalProject/PlaylistArrayList.cpp
+PlaylistArrayList.h
+/Users/sean/Desktop/Comp 220/CS220FinalProject/PlaylistArrayList.h
 iostream
 -
+
+/Users/sean/Desktop/Comp 220/CS220FinalProject/PlaylistArrayList.h
+Playlist.h
+/Users/sean/Desktop/Comp 220/CS220FinalProject/Playlist.h
+iostream
+-
+
+/Users/sean/Desktop/Comp 220/CS220FinalProject/Song.cpp
+Song.h
+/Users/sean/Desktop/Comp 220/CS220FinalProject/Song.h
+sstream
+-
+iostream
+-
+
+/Users/sean/Desktop/Comp 220/CS220FinalProject/Song.h
+iostream
+-
+
+/Users/sean/Desktop/Comp 220/CS220FinalProject/TestLib.cpp
+iostream
+-
+TestLib.h
+/Users/sean/Desktop/Comp 220/CS220FinalProject/TestLib.h
+
+/Users/sean/Desktop/Comp 220/CS220FinalProject/TestLib.h
+
+/Users/sean/Desktop/Comp 220/CS220FinalProject/Tests.cpp
+Song.h
+/Users/sean/Desktop/Comp 220/CS220FinalProject/Song.h
+iostream
+-
+TestLib.h
+/Users/sean/Desktop/Comp 220/CS220FinalProject/TestLib.h
+ArrayList.h
+/Users/sean/Desktop/Comp 220/CS220FinalProject/ArrayList.h
 
