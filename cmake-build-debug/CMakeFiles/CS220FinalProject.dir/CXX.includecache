@@ -72,7 +72,23 @@ sstream
 iostream
 -
 
+<<<<<<< HEAD
 /Users/sean/Desktop/Comp 220/CS220FinalProject/Song.h
+=======
+/Users/morganziegler/Desktop/C++/CS220FinalProject/PlaylistArrayList.cpp
+PlaylistArrayList.h
+/Users/morganziegler/Desktop/C++/CS220FinalProject/PlaylistArrayList.h
+iostream
+-
+
+/Users/morganziegler/Desktop/C++/CS220FinalProject/PlaylistArrayList.h
+Playlist.h
+/Users/morganziegler/Desktop/C++/CS220FinalProject/Playlist.h
+iostream
+-
+
+/Users/morganziegler/Desktop/C++/CS220FinalProject/Song.h
+>>>>>>> d75962983ce83168e68c9897f702c4e5e5316b5c
 iostream
 -
 

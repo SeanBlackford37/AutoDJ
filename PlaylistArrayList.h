@@ -122,6 +122,12 @@ class PlaylistArrayList {
          */
         Playlist removeValueAt(int index);
 
+        /**
+         *
+         * @param name name of the playlist to find
+         * @return the index of the playlist or -1 if not there
+         */
+        int find(std::string name);
 
 };
 
