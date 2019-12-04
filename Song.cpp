@@ -71,7 +71,7 @@ int Song::durationToInt(std::string durationIn) {
 
 
 std::string Song::toString(){
-    return "Title: " + title + " Artist: " + artist + " Duration: " + durationString + "Play Count: " + std::to_string(playCount);
+    return "Title: " + title + " Artist: " + artist + " Duration: " + durationString + " Play Count: " + std::to_string(playCount);
 }
 
 std::string Song::toStringtoFile() {

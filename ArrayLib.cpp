@@ -101,7 +101,7 @@ int* genShuffledArray(int size, int& numLinesRun){
     numLinesRun += 1; //return
     return shuffledArray;
 }
-
+/*
 int *copyArray(const Song *arrayToCopy, int size, int &numLinesRun) {
 
     //Keyword new
@@ -114,6 +114,7 @@ int *copyArray(const Song *arrayToCopy, int size, int &numLinesRun) {
     numLinesRun += 1;
     return temp;
 }
+ */
 
 int findArtistandTitle(Song *const arrayPtr, const int size, Song toFind , int &numLinesRun) {
     std::string title = toFind.getTitle();
