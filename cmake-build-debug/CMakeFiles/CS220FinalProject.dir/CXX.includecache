@@ -24,6 +24,18 @@ iostream
 ArrayList.h
 /Users/morganziegler/Desktop/C++/CS220FinalProject/ArrayList.h
 
+/Users/morganziegler/Desktop/C++/CS220FinalProject/PlaylistArrayList.cpp
+PlaylistArrayList.h
+/Users/morganziegler/Desktop/C++/CS220FinalProject/PlaylistArrayList.h
+iostream
+-
+
+/Users/morganziegler/Desktop/C++/CS220FinalProject/PlaylistArrayList.h
+Playlist.h
+/Users/morganziegler/Desktop/C++/CS220FinalProject/Playlist.h
+iostream
+-
+
 /Users/morganziegler/Desktop/C++/CS220FinalProject/Song.h
 iostream
 -

@@ -174,3 +174,12 @@ Playlist PlaylistArrayList::removeValueAt(int index) {
     currItemCount--;
     return copy;
 }
+
+int PlaylistArrayList::find(std::string name){
+    for(int i = 0; i < currItemCount;i++){
+        if (array[i].getName() == name){
+            return i;
+        }
+    }
+    return -1;
+}
