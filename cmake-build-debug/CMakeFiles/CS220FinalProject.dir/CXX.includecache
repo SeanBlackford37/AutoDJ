@@ -6,26 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/Users/sean/Desktop/Comp 220/CS220FinalProject/ArrayLib.cpp
-iostream
--
-string
--
-Song.h
-/Users/sean/Desktop/Comp 220/CS220FinalProject/Song.h
-
-/Users/sean/Desktop/Comp 220/CS220FinalProject/ArrayLib.h
-string
--
-
-/Users/sean/Desktop/Comp 220/CS220FinalProject/ArrayList.cpp
-iostream
--
-ArrayList.h
-/Users/sean/Desktop/Comp 220/CS220FinalProject/ArrayList.h
-ArrayLib.h
-/Users/sean/Desktop/Comp 220/CS220FinalProject/ArrayLib.h
-
 /Users/sean/Desktop/Comp 220/CS220FinalProject/ArrayList.h
 stdexcept
 -
@@ -34,69 +14,15 @@ string
 Song.h
 /Users/sean/Desktop/Comp 220/CS220FinalProject/Song.h
 
-/Users/sean/Desktop/Comp 220/CS220FinalProject/Library.cpp
-Library.h
-/Users/sean/Desktop/Comp 220/CS220FinalProject/Library.h
-
-/Users/sean/Desktop/Comp 220/CS220FinalProject/Library.h
-iostream
--
-
-/Users/sean/Desktop/Comp 220/CS220FinalProject/Playlist.cpp
-Playlist.h
-/Users/sean/Desktop/Comp 220/CS220FinalProject/Playlist.h
-
 /Users/sean/Desktop/Comp 220/CS220FinalProject/Playlist.h
 iostream
 -
 ArrayList.h
 /Users/sean/Desktop/Comp 220/CS220FinalProject/ArrayList.h
 
-/Users/sean/Desktop/Comp 220/CS220FinalProject/PlaylistArrayList.cpp
-PlaylistArrayList.h
-/Users/sean/Desktop/Comp 220/CS220FinalProject/PlaylistArrayList.h
-iostream
--
-
-/Users/sean/Desktop/Comp 220/CS220FinalProject/PlaylistArrayList.h
-Playlist.h
-/Users/sean/Desktop/Comp 220/CS220FinalProject/Playlist.h
-iostream
--
-
-/Users/sean/Desktop/Comp 220/CS220FinalProject/Song.cpp
-Song.h
 /Users/sean/Desktop/Comp 220/CS220FinalProject/Song.h
-sstream
--
 iostream
 -
-
-<<<<<<< HEAD
-/Users/sean/Desktop/Comp 220/CS220FinalProject/Song.h
-=======
-/Users/morganziegler/Desktop/C++/CS220FinalProject/PlaylistArrayList.cpp
-PlaylistArrayList.h
-/Users/morganziegler/Desktop/C++/CS220FinalProject/PlaylistArrayList.h
-iostream
--
-
-/Users/morganziegler/Desktop/C++/CS220FinalProject/PlaylistArrayList.h
-Playlist.h
-/Users/morganziegler/Desktop/C++/CS220FinalProject/Playlist.h
-iostream
--
-
-/Users/morganziegler/Desktop/C++/CS220FinalProject/Song.h
->>>>>>> d75962983ce83168e68c9897f702c4e5e5316b5c
-iostream
--
-
-/Users/sean/Desktop/Comp 220/CS220FinalProject/TestLib.cpp
-iostream
--
-TestLib.h
-/Users/sean/Desktop/Comp 220/CS220FinalProject/TestLib.h
 
 /Users/sean/Desktop/Comp 220/CS220FinalProject/TestLib.h
 
@@ -109,4 +35,6 @@ TestLib.h
 /Users/sean/Desktop/Comp 220/CS220FinalProject/TestLib.h
 ArrayList.h
 /Users/sean/Desktop/Comp 220/CS220FinalProject/ArrayList.h
+Playlist.h
+/Users/sean/Desktop/Comp 220/CS220FinalProject/Playlist.h
 
