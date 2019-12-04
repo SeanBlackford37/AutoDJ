@@ -6,26 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/Users/sean/Desktop/Comp 220/CS220FinalProject/ArrayLib.cpp
-iostream
--
-string
--
-Song.h
-/Users/sean/Desktop/Comp 220/CS220FinalProject/Song.h
-
-/Users/sean/Desktop/Comp 220/CS220FinalProject/ArrayLib.h
-string
--
-
-/Users/sean/Desktop/Comp 220/CS220FinalProject/ArrayList.cpp
-iostream
--
-ArrayList.h
-/Users/sean/Desktop/Comp 220/CS220FinalProject/ArrayList.h
-ArrayLib.h
-/Users/sean/Desktop/Comp 220/CS220FinalProject/ArrayLib.h
-
 /Users/sean/Desktop/Comp 220/CS220FinalProject/ArrayList.h
 stdexcept
 -
@@ -34,53 +14,11 @@ string
 Song.h
 /Users/sean/Desktop/Comp 220/CS220FinalProject/Song.h
 
-/Users/sean/Desktop/Comp 220/CS220FinalProject/Library.cpp
-Library.h
-/Users/sean/Desktop/Comp 220/CS220FinalProject/Library.h
-ArrayLib.h
-/Users/sean/Desktop/Comp 220/CS220FinalProject/ArrayLib.h
-
-/Users/sean/Desktop/Comp 220/CS220FinalProject/Library.h
-iostream
--
-ArrayList.h
-/Users/sean/Desktop/Comp 220/CS220FinalProject/ArrayList.h
-PlaylistArrayList.h
-/Users/sean/Desktop/Comp 220/CS220FinalProject/PlaylistArrayList.h
-
-/Users/sean/Desktop/Comp 220/CS220FinalProject/Playlist.cpp
-Playlist.h
-/Users/sean/Desktop/Comp 220/CS220FinalProject/Playlist.h
-ArrayLib.h
-/Users/sean/Desktop/Comp 220/CS220FinalProject/ArrayLib.h
-ArrayList.h
-/Users/sean/Desktop/Comp 220/CS220FinalProject/ArrayList.h
-
 /Users/sean/Desktop/Comp 220/CS220FinalProject/Playlist.h
 iostream
 -
 ArrayList.h
 /Users/sean/Desktop/Comp 220/CS220FinalProject/ArrayList.h
-
-/Users/sean/Desktop/Comp 220/CS220FinalProject/PlaylistArrayList.cpp
-PlaylistArrayList.h
-/Users/sean/Desktop/Comp 220/CS220FinalProject/PlaylistArrayList.h
-iostream
--
-
-/Users/sean/Desktop/Comp 220/CS220FinalProject/PlaylistArrayList.h
-Playlist.h
-/Users/sean/Desktop/Comp 220/CS220FinalProject/Playlist.h
-iostream
--
-
-/Users/sean/Desktop/Comp 220/CS220FinalProject/Song.cpp
-Song.h
-/Users/sean/Desktop/Comp 220/CS220FinalProject/Song.h
-sstream
--
-iostream
--
 
 /Users/sean/Desktop/Comp 220/CS220FinalProject/Song.h
 iostream
