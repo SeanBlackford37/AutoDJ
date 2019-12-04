@@ -1,19 +1,20 @@
 //
-// Created by Sean Blackford on 10/14/19.
+// Created by Morgan Ziegler on 12/3/19.
 //
 
+#include "PlaylistArrayList.h"
+
 #include <iostream>
-#include "ArrayList.h"
-#include "ArrayLib.h"
 
 
-ArrayList::ArrayList(int initialCapacity) {
+
+PlaylistArrayList::PlaylistArrayList(int initialCapacity) {
     if(initialCapacity < 1){
         throw std::invalid_argument("Size can't be less than 1");
     }
     else{
         this -> currCapacity = initialCapacity;
-        this -> array = new Song[currCapacity];
+        this -> array = new Playlist[currCapacity];
         this -> currItemCount = 0;
 
     }
@@ -22,12 +23,12 @@ ArrayList::ArrayList(int initialCapacity) {
 //assignment operator
 //combining two objects listA = listB
 //using destructor and copy constructor
-ArrayList& ArrayList::operator=(const ArrayList& arrayListToCopy){
+PlaylistArrayList& PlaylistArrayList::operator=(const PlaylistArrayList& arrayListToCopy){
     if(this != &arrayListToCopy) {
         delete[] array;
 
         this->currCapacity = arrayListToCopy.currCapacity;
-        this->array = new Song[currCapacity];
+        this->array = new Playlist[currCapacity];
         for (int i = 0; i < arrayListToCopy.currItemCount; i++) {
             array[i] = arrayListToCopy.array[i];
         }
@@ -35,30 +36,33 @@ ArrayList& ArrayList::operator=(const ArrayList& arrayListToCopy){
         return *this;
     }return *this;
 }
+/*
 //Copy constructor
-ArrayList::ArrayList(const ArrayList& arrayListToCopy) {
+PlaylistArrayList::PlaylistArrayList(const PlaylistArrayList& arrayListToCopy) {
 
     this -> currCapacity = arrayListToCopy.currCapacity;
-    this -> array = new Song[currCapacity];
+    this -> array = new Playlist[currCapacity];
     for(int i = 0; i < arrayListToCopy.currItemCount; i++){
         array[i] = arrayListToCopy.array[i];
     }
     this -> currItemCount = arrayListToCopy.currItemCount;
 }
+ */
+
 //Destructor
-ArrayList::~ArrayList(){
+PlaylistArrayList::~PlaylistArrayList(){
     delete[] array;
 }
 
-void ArrayList::doubleCapacity() {
-    Song *arrayList = new Song[currItemCount * 2];
+void PlaylistArrayList::doubleCapacity() {
+    Playlist *arrayList = new Playlist[currItemCount * 2];
     currCapacity = currCapacity * 2;
 
     for(int i = 0; i < currItemCount;i++){
         arrayList[i] = array[i];
     }
     delete[] array;
-    array = new Song[currItemCount*2];
+    array = new Playlist[currItemCount*2];
 
     for(int i = 0; i < currItemCount;i++){
         array[i] = arrayList[i];
@@ -68,45 +72,45 @@ void ArrayList::doubleCapacity() {
 
 
 
-void ArrayList::insertAtEnd(Song itemToAdd) {
+void PlaylistArrayList::insertAtEnd(Playlist itemToAdd) {
     currItemCount+=1;
     doubleCapacity();
     array[currItemCount-1] = itemToAdd;
 
 }
 
-Song ArrayList::getValueAt(int index) {
+Playlist PlaylistArrayList::getValueAt(int index) {
 
     if(index < 0 or index >= currItemCount){
         throw std::out_of_range("e");
     }
     return array[index];
 }
-std::string ArrayList::toString(){
+std::string PlaylistArrayList::toString(){
     //return ::toString(array,currItemCount);
-    return "not done yet";
+    return "finish this";
 }
 
 
-bool ArrayList::isEmpty() {
+bool PlaylistArrayList::isEmpty() {
     if(currItemCount < 1){
         return true;
     }
     return false;
 }
 
-int ArrayList::itemCount() {
+int PlaylistArrayList::itemCount() {
     return currItemCount;
 }
 
-void ArrayList::clearList() {
+void PlaylistArrayList::clearList() {
     for(int i = 0; i < currItemCount;i++){
         removeValueAtFront();
     }
     currItemCount = 0;
 }
 
-void ArrayList::insertAtFront(Song itemToAdd) {
+void PlaylistArrayList::insertAtFront(Playlist itemToAdd) {
 
     for(int i = currItemCount; i >= 1;i--){
         array[i] = array[i-1];
@@ -117,7 +121,7 @@ void ArrayList::insertAtFront(Song itemToAdd) {
     doubleCapacity();
 }
 
-void ArrayList::insertAt(Song itemToAdd, int index) {
+void PlaylistArrayList::insertAt(Playlist itemToAdd, int index) {
 
     if (index < 0 or index > currItemCount) {
         throw std::out_of_range("e");
@@ -130,7 +134,7 @@ void ArrayList::insertAt(Song itemToAdd, int index) {
     doubleCapacity();
 }
 
-Song ArrayList::removeValueAtEnd() {
+Playlist PlaylistArrayList::removeValueAtEnd() {
     doubleCapacity();
     if(currItemCount <1){
         throw std::out_of_range("e");
@@ -139,11 +143,11 @@ Song ArrayList::removeValueAtEnd() {
     return array[currItemCount];
 }
 
-Song ArrayList::removeValueAtFront() {
+Playlist PlaylistArrayList::removeValueAtFront() {
     if(currItemCount < 0){
         throw std::out_of_range("e");
     }
-    Song copy = array[0];
+    Playlist copy = array[0];
     for(int i = 1; i < currItemCount;i++){
         array[i-1] = array[i];
     }
@@ -152,19 +156,19 @@ Song ArrayList::removeValueAtFront() {
 
     return copy;
 }
-Song ArrayList::removeValueAt(int index) {
-    if(index < 0 or index > currItemCount){
+Playlist PlaylistArrayList::removeValueAt(int index) {
+    if (index < 0 or index > currItemCount) {
         throw std::out_of_range("e");
     }
-    if(currItemCount < 0){
+    if (currItemCount < 0) {
         throw std::out_of_range("e");
     }
-    Song copy = array[index];
-    for(int i = 0; i < index;i++){
+    Playlist copy = array[index];
+    for (int i = 0; i < index; i++) {
         array[i] = array[i];
     }
-    for(int i = index+1; i < currItemCount;i++){
-        array[i-1] = array[i];
+    for (int i = index + 1; i < currItemCount; i++) {
+        array[i - 1] = array[i];
     }
 
     currItemCount--;

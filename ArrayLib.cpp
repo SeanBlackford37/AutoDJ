@@ -150,7 +150,31 @@ int *copyArray(const int *arrayToCopy, int size, int &numLinesRun) {
     return temp;
 }
 
+int find(const int *const arrayPtr, const int index, const int size, const int numToFind, int &numLinesRun) {
 
+    if (index == size) {
+        numLinesRun += 2;
+        return -1;
+    }
+
+    if (arrayPtr[index] == numToFind) {
+        numLinesRun += 2;
+        return index;
+    }
+    numLinesRun += 1;
+    return find(arrayPtr, index + 1, size, numToFind, numLinesRun);
+
+}
+
+int find(const int *const arrayPtr, const int size, const int numToFind, int &numLinesRun) {
+    numLinesRun += 1;
+    return find(arrayPtr, 0, size, numToFind, numLinesRun);
+}
+
+
+
+
+/*
 //selection sort
 void sort(int *arrayToSort, int size, int &numLinesRun) {
     int *copy = copyArray(arrayToSort, size, numLinesRun);
@@ -204,6 +228,7 @@ void sort(int *arrayToSort, int size, int &numLinesRun) {
 }
 
 
+
 int *merge(const int *a1, int size1, const int *a2, int size2, int &numLinesRun) {
     if (size1 + size2 < 1) {
         numLinesRun += 2;
@@ -232,6 +257,7 @@ int *merge(const int *a1, int size1, const int *a2, int size2, int &numLinesRun)
 
 }
 
+
 int *mergeSort(const int *arrayToSort, int size, int &numLinesRun) {
     if (size < 1) {
         numLinesRun += 2;
@@ -243,3 +269,4 @@ int *mergeSort(const int *arrayToSort, int size, int &numLinesRun) {
     numLinesRun += 3;
     return copyA1;
 }
+ */

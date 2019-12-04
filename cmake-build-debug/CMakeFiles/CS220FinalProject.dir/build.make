@@ -135,6 +135,32 @@ CMakeFiles/CS220FinalProject.dir/ArrayLib.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CS220FinalProject.dir/ArrayLib.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/sean/Desktop/Comp 220/CS220FinalProject/ArrayLib.cpp" -o CMakeFiles/CS220FinalProject.dir/ArrayLib.cpp.s
 
+CMakeFiles/CS220FinalProject.dir/PlaylistArrayList.cpp.o: CMakeFiles/CS220FinalProject.dir/flags.make
+CMakeFiles/CS220FinalProject.dir/PlaylistArrayList.cpp.o: ../PlaylistArrayList.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/sean/Desktop/Comp 220/CS220FinalProject/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/CS220FinalProject.dir/PlaylistArrayList.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CS220FinalProject.dir/PlaylistArrayList.cpp.o -c "/Users/sean/Desktop/Comp 220/CS220FinalProject/PlaylistArrayList.cpp"
+
+CMakeFiles/CS220FinalProject.dir/PlaylistArrayList.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CS220FinalProject.dir/PlaylistArrayList.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/sean/Desktop/Comp 220/CS220FinalProject/PlaylistArrayList.cpp" > CMakeFiles/CS220FinalProject.dir/PlaylistArrayList.cpp.i
+
+CMakeFiles/CS220FinalProject.dir/PlaylistArrayList.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CS220FinalProject.dir/PlaylistArrayList.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/sean/Desktop/Comp 220/CS220FinalProject/PlaylistArrayList.cpp" -o CMakeFiles/CS220FinalProject.dir/PlaylistArrayList.cpp.s
+
+CMakeFiles/CS220FinalProject.dir/TestLib.cpp.o: CMakeFiles/CS220FinalProject.dir/flags.make
+CMakeFiles/CS220FinalProject.dir/TestLib.cpp.o: ../TestLib.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/sean/Desktop/Comp 220/CS220FinalProject/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/CS220FinalProject.dir/TestLib.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CS220FinalProject.dir/TestLib.cpp.o -c "/Users/sean/Desktop/Comp 220/CS220FinalProject/TestLib.cpp"
+
+CMakeFiles/CS220FinalProject.dir/TestLib.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CS220FinalProject.dir/TestLib.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/sean/Desktop/Comp 220/CS220FinalProject/TestLib.cpp" > CMakeFiles/CS220FinalProject.dir/TestLib.cpp.i
+
+CMakeFiles/CS220FinalProject.dir/TestLib.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CS220FinalProject.dir/TestLib.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/sean/Desktop/Comp 220/CS220FinalProject/TestLib.cpp" -o CMakeFiles/CS220FinalProject.dir/TestLib.cpp.s
+
 # Object files for target CS220FinalProject
 CS220FinalProject_OBJECTS = \
 "CMakeFiles/CS220FinalProject.dir/Library.cpp.o" \
@@ -142,7 +168,9 @@ CS220FinalProject_OBJECTS = \
 "CMakeFiles/CS220FinalProject.dir/Tests.cpp.o" \
 "CMakeFiles/CS220FinalProject.dir/Playlist.cpp.o" \
 "CMakeFiles/CS220FinalProject.dir/ArrayList.cpp.o" \
-"CMakeFiles/CS220FinalProject.dir/ArrayLib.cpp.o"
+"CMakeFiles/CS220FinalProject.dir/ArrayLib.cpp.o" \
+"CMakeFiles/CS220FinalProject.dir/PlaylistArrayList.cpp.o" \
+"CMakeFiles/CS220FinalProject.dir/TestLib.cpp.o"
 
 # External object files for target CS220FinalProject
 CS220FinalProject_EXTERNAL_OBJECTS =
@@ -153,9 +181,11 @@ CS220FinalProject: CMakeFiles/CS220FinalProject.dir/Tests.cpp.o
 CS220FinalProject: CMakeFiles/CS220FinalProject.dir/Playlist.cpp.o
 CS220FinalProject: CMakeFiles/CS220FinalProject.dir/ArrayList.cpp.o
 CS220FinalProject: CMakeFiles/CS220FinalProject.dir/ArrayLib.cpp.o
+CS220FinalProject: CMakeFiles/CS220FinalProject.dir/PlaylistArrayList.cpp.o
+CS220FinalProject: CMakeFiles/CS220FinalProject.dir/TestLib.cpp.o
 CS220FinalProject: CMakeFiles/CS220FinalProject.dir/build.make
 CS220FinalProject: CMakeFiles/CS220FinalProject.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/sean/Desktop/Comp 220/CS220FinalProject/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable CS220FinalProject"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/sean/Desktop/Comp 220/CS220FinalProject/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable CS220FinalProject"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CS220FinalProject.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

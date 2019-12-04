@@ -8,7 +8,9 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/sean/Desktop/Comp 220/CS220FinalProject/ArrayList.cpp" "/Users/sean/Desktop/Comp 220/CS220FinalProject/cmake-build-debug/CMakeFiles/CS220FinalProject.dir/ArrayList.cpp.o"
   "/Users/sean/Desktop/Comp 220/CS220FinalProject/Library.cpp" "/Users/sean/Desktop/Comp 220/CS220FinalProject/cmake-build-debug/CMakeFiles/CS220FinalProject.dir/Library.cpp.o"
   "/Users/sean/Desktop/Comp 220/CS220FinalProject/Playlist.cpp" "/Users/sean/Desktop/Comp 220/CS220FinalProject/cmake-build-debug/CMakeFiles/CS220FinalProject.dir/Playlist.cpp.o"
+  "/Users/sean/Desktop/Comp 220/CS220FinalProject/PlaylistArrayList.cpp" "/Users/sean/Desktop/Comp 220/CS220FinalProject/cmake-build-debug/CMakeFiles/CS220FinalProject.dir/PlaylistArrayList.cpp.o"
   "/Users/sean/Desktop/Comp 220/CS220FinalProject/Song.cpp" "/Users/sean/Desktop/Comp 220/CS220FinalProject/cmake-build-debug/CMakeFiles/CS220FinalProject.dir/Song.cpp.o"
+  "/Users/sean/Desktop/Comp 220/CS220FinalProject/TestLib.cpp" "/Users/sean/Desktop/Comp 220/CS220FinalProject/cmake-build-debug/CMakeFiles/CS220FinalProject.dir/TestLib.cpp.o"
   "/Users/sean/Desktop/Comp 220/CS220FinalProject/Tests.cpp" "/Users/sean/Desktop/Comp 220/CS220FinalProject/cmake-build-debug/CMakeFiles/CS220FinalProject.dir/Tests.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
