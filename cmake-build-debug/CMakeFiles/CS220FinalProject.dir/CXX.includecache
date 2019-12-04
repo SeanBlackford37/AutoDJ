@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/Users/sean/Desktop/Comp 220/CS220FinalProject/ArrayLib.h
-string
--
-
 /Users/sean/Desktop/Comp 220/CS220FinalProject/ArrayList.h
 stdexcept
 -
@@ -18,14 +14,6 @@ string
 Song.h
 /Users/sean/Desktop/Comp 220/CS220FinalProject/Song.h
 
-/Users/sean/Desktop/Comp 220/CS220FinalProject/Playlist.cpp
-Playlist.h
-/Users/sean/Desktop/Comp 220/CS220FinalProject/Playlist.h
-ArrayLib.h
-/Users/sean/Desktop/Comp 220/CS220FinalProject/ArrayLib.h
-ArrayList.h
-/Users/sean/Desktop/Comp 220/CS220FinalProject/ArrayList.h
-
 /Users/sean/Desktop/Comp 220/CS220FinalProject/Playlist.h
 iostream
 -
@@ -35,4 +23,18 @@ ArrayList.h
 /Users/sean/Desktop/Comp 220/CS220FinalProject/Song.h
 iostream
 -
+
+/Users/sean/Desktop/Comp 220/CS220FinalProject/TestLib.h
+
+/Users/sean/Desktop/Comp 220/CS220FinalProject/Tests.cpp
+Song.h
+/Users/sean/Desktop/Comp 220/CS220FinalProject/Song.h
+iostream
+-
+TestLib.h
+/Users/sean/Desktop/Comp 220/CS220FinalProject/TestLib.h
+ArrayList.h
+/Users/sean/Desktop/Comp 220/CS220FinalProject/ArrayList.h
+Playlist.h
+/Users/sean/Desktop/Comp 220/CS220FinalProject/Playlist.h
 
