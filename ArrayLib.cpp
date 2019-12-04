@@ -8,7 +8,7 @@
 
 
 //tail-recursive
-std::string toString(const int *const arrayPtr, const int size, const int index, const std::string str) {
+std::string toString(Song *const arrayPtr, const int size, const int index, const std::string str) {
     if (size < 1) {
         return "{}";
     }
@@ -18,56 +18,21 @@ std::string toString(const int *const arrayPtr, const int size, const int index,
     std::string str1 = str;
 
     if (index == size - 1) {
-        str1 += std::to_string(arrayPtr[index]);
+        str1 += arrayPtr[index].getTitle();
     } else {
-        str1 += std::to_string(arrayPtr[index]) + ", ";
+        str1 += arrayPtr[index].getTitle() + ", ";
     }
 
 
     return toString(arrayPtr, size, index + 1, str1);
 
 }
-std::string toString(const int *const arrayPtr, const int size) {
+std::string toString(Song *const arrayPtr, const int size) {
     return toString(arrayPtr, size, 0, "{");
 }
 
 
-//tail-recursive
-int binFind(const int *const arrayPtr, const int size, const int numToFind, const int low, const int high,
-            int &numLinesRun) {
-    int mid = (low + high) / 2;
-    numLinesRun += 1;
 
-    if (numToFind == arrayPtr[mid]) {
-        numLinesRun += 2;
-        return mid;
-    }
-    if (low >= high) {
-        numLinesRun += 2;
-        return -1;
-    } else if (numToFind < arrayPtr[mid]) {
-        numLinesRun += 1;
-        if (low != high) {
-            numLinesRun += 2;
-            return binFind(arrayPtr, size, numToFind, low, mid - 1, numLinesRun);
-        }
-    } else if (numToFind > arrayPtr[mid]) {
-        numLinesRun += 1;
-        if (low != high) {
-            numLinesRun += 2;
-            return binFind(arrayPtr, size, numToFind, mid + 1, high, numLinesRun);
-        }
-    }
-    numLinesRun += 1;
-    return -1;
-
-
-}
-
-int binFind(const int *const arrayPtr, const int size, const int numToFind, int &numLinesRun) {
-    numLinesRun += 1;
-    return binFind(arrayPtr, size, numToFind, 0, size - 1, numLinesRun);
-}
 
 
 
@@ -137,7 +102,7 @@ int* genShuffledArray(int size, int& numLinesRun){
     return shuffledArray;
 }
 
-int *copyArray(const int *arrayToCopy, int size, int &numLinesRun) {
+int *copyArray(const Song *arrayToCopy, int size, int &numLinesRun) {
 
     //Keyword new
     int *temp = new int[size];
@@ -153,8 +118,13 @@ int *copyArray(const int *arrayToCopy, int size, int &numLinesRun) {
 int findArtistandTitle(Song *const arrayPtr, const int size, std::string artistIn, std::string titleIn) {
 
     for(int i = 0; i < size; i++){
+<<<<<<< HEAD
         if(artistIn == arrayPtr[i].getArtist()){
             if(titleIn ==arrayPtr[i].getTitle()){
+=======
+        if(artist == arrayPtr[i].getArtist()){
+            if(title == arrayPtr[i].getTitle()){
+>>>>>>> 9a4b8b37cde7eb40833c500cbb3952270e974ac6
                 return i;
             }
 
@@ -179,6 +149,42 @@ int findArtist(Song *const arrayPtr, const int size, Song toFind , int &numLines
 
 
 /*
+ //tail-recursive
+int binFind(const Song *const arrayPtr, const int size, const int numToFind, const int low, const int high,
+            int &numLinesRun) {
+    int mid = (low + high) / 2;
+    numLinesRun += 1;
+
+    if (numToFind == arrayPtr[mid]) {
+        numLinesRun += 2;
+        return mid;
+    }
+    if (low >= high) {
+        numLinesRun += 2;
+        return -1;
+    } else if (numToFind < arrayPtr[mid]) {
+        numLinesRun += 1;
+        if (low != high) {
+            numLinesRun += 2;
+            return binFind(arrayPtr, size, numToFind, low, mid - 1, numLinesRun);
+        }
+    } else if (numToFind > arrayPtr[mid]) {
+        numLinesRun += 1;
+        if (low != high) {
+            numLinesRun += 2;
+            return binFind(arrayPtr, size, numToFind, mid + 1, high, numLinesRun);
+        }
+    }
+    numLinesRun += 1;
+    return -1;
+
+
+}
+
+int binFind(const Song *const arrayPtr, const int size, const int numToFind, int &numLinesRun) {
+    numLinesRun += 1;
+    return binFind(arrayPtr, size, numToFind, 0, size - 1, numLinesRun);
+}
 //selection sort
 void sort(int *arrayToSort, int size, int &numLinesRun) {
     int *copy = copyArray(arrayToSort, size, numLinesRun);
