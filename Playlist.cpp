@@ -56,19 +56,18 @@ std::string Playlist::toString() {
 std::string Playlist::playNext() {
     if (!songs->isEmpty()){
         std::string temp = songs->getValueAt(0).toString();
+        //TODO:: FIND SONG IN THE LIBRARY AND ADD PLAYCOUNT
         songs->removeValueAtFront();
         return temp;
     }
     return "Playlist is empty";
 }
 
-void Playlist::addSong(std::string songInfo) {
-    Song temp = Song(songInfo);
+void Playlist::addSong(std::string artist, std::string title) {
     //TODO :: find function
-    //int index = songs->find(temp);
-    int index = -1;
+    int index = findArtistandTitle(const songs, songs->itemCount(), artist, title);
     if (index == -1){
-        songs->insertAtEnd( Song(songInfo));
+        songs->insertAtEnd( songs->getValueAt(index));
     }
 }
 
@@ -76,6 +75,9 @@ void Playlist::removeSong(std::string artist, std::string title) {
     int index = findArtistandTitle(const songs, songs->itemCount(), artist, title);
     if (index != -1){
         songs->removeValueAt(index);
+    }
+    else{
+        std::cout << "Song was not in the given Playlist" << std::endl;
     }
 }
 
