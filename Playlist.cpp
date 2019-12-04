@@ -43,7 +43,7 @@ std::string Playlist::calcDuration() {
         minutes = minutes % 60;
         hours = (minutes - temp) /60;
     }
-    return std::to_string(hours) + ":" + std::to_string(minutes) + std::to_string(seconds);
+    return std::to_string(hours) + ":" + std::to_string(minutes) +":"+ std::to_string(seconds);
 }
 
 std::string Playlist::toString() {
