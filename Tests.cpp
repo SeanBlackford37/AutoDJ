@@ -37,6 +37,8 @@ void playlistTests(){
     test->addSong("Shooting Stars,Bag Raiders,3:56");
     test->addSong("Never Gonna Give You Up,Rick Astley,3:33");
     printAssertEquals(test->toString(),"Title: Shooting Stars Artist: Bag Raiders Duration: 3:56 Play Count: 0\nTitle: Never Gonna Give You Up Artist: Rick Astley Duration: 3:33 Play Count: 0\n");
+    test->addSong("w.a.m.s,Fall Out Boy,4:38");
+    printAssertEquals("0:12:07",test->calcDuration());
 }
 
 
