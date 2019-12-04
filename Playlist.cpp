@@ -72,7 +72,7 @@ void Playlist::addSong(std::string artist, std::string title) {
 }
 
 void Playlist::removeSong(std::string artist, std::string title) {
-    int index = findArtistandTitle(const songs, songs->itemCount(), artist, title);
+    int index = findArtistandTitle(songs, songs->itemCount(), artist, title);
     if (index != -1){
         songs->removeValueAt(index);
     }
