@@ -40,8 +40,12 @@ void playlistTests() {
     printAssertEquals(test->toString(), "Title: Shooting Stars Artist: Bag Raiders Duration: 3:56 Play Count: 0");
 
     test->addSong("Never Gonna Give You Up,Rick Astley,3:33");
+<<<<<<< HEAD
     printAssertEquals(test->toString(),
                       "Title: Shooting Stars Artist: Bag Raiders Duration: 3:56 Play Count: 0\nTitle: Never Gonna Give You Up Artist: Rick Astley Duration: 3:33 Play Count: 0");
+=======
+    printAssertEquals(test->toString(),"Title: Shooting Stars Artist: Bag Raiders Duration: 3:56 Play Count: 0\nTitle: Never Gonna Give You Up Artist: Rick Astley Duration: 3:33 Play Count: 0\n");
+>>>>>>> 9559eff9462b071349ffeba31fea5189a21a4209
 }
 
 
