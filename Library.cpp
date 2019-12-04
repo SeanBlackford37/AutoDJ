@@ -80,12 +80,21 @@ void Library::displayPlaylist(std::string nameIn) {
     std::cout << playlists->getValueAt(index).toString()<<std::endl;
 }
 
-void Library::playNext() {
-    if (!playlists->isEmpty())   {
-        std::string msg = playlists->getValueAt(0).playNext();
-        if (msg == )
+void Library::playNext(std::string nameIn) {
+    int index = playlists->find(nameIn);
+    std::string msg = playlists->getValueAt(index).playNext();
+    if (msg == "Playlist is empty"){
+            playlists->removeValueAtFront();
+    }
+    else{
+        std::cout << msg << std::endl;
     }
 
+}
+
+void Library::newRandomPlaylist(std::string nameIn, std::string duration) {
+    playlists->insertAtEnd(Playlist(nameIn));
+    //TODO get the random working
 }
 
 

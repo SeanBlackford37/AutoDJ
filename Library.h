@@ -105,7 +105,7 @@ public:
      * add to playcount for that song in the library
      * remove the playlist if it is now empty
      */
-    void playNext();
+    void playNext(std::string nameIn);
 
 
     /**
