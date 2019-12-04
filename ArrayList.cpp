@@ -123,6 +123,19 @@ void ArrayList::insertAtFront(Song itemToAdd) {
     doubleCapacity();
 }
 
+int ArrayList::findArtistandTitle(const int size, std::string artistIn, std::string titleIn) {
+
+
+    for(int i = 0; i < size; i++){
+        if(artistIn == array[i].getArtist()){
+            if(titleIn == array[i].getTitle()){
+                return i;
+            }
+        }
+    }
+    return -1;
+}
+
 void ArrayList::insertAt(Song itemToAdd, int index) {
 
     if (index < 0 or index > currItemCount) {

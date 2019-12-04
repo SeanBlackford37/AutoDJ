@@ -112,29 +112,7 @@ int *copyArray(const Song *arrayToCopy, int size, int &numLinesRun) {
 }
  */
 
-int findArtistandTitle(Song *arrayPtr, const int size, std::string artistIn, std::string titleIn) {
 
-
-    for(int i = 0; i < size; i++){
-        if(artistIn == arrayPtr[i].getArtist()){
-            if(titleIn ==arrayPtr[i].getTitle()){
-                return i;
-            }
-        }
-    }
-    return -1;
-}
-int findArtist(Song *const arrayPtr, const int size, Song toFind , int &numLinesRun) {
-
-    std::string artist = toFind.getArtist();
-
-    for(int i = 0; i < size; i++){
-        if(artist == arrayPtr[i].getArtist()){
-            return i;
-        }
-    }
-    return -1;
-}
 
 
 

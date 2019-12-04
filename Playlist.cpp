@@ -4,6 +4,7 @@
 
 #include "Playlist.h"
 #include "ArrayLib.h"
+#include "ArrayList.h"
 
 Playlist::Playlist() {
     name = "unnamed";
@@ -65,16 +66,17 @@ std::string Playlist::playNext() {
 
 void Playlist::addSong(std::string artist, std::string title) {
     //TODO :: find function
-    int index = findArtistandTitle(const songs, songs->itemCount(), artist, title);
+    int index = songs->findArtistandTitle(songs->itemCount(),artist,title);
     if (index == -1){
         songs->insertAtEnd( songs->getValueAt(index));
     }
 }
 
 void Playlist::removeSong(std::string artist, std::string title) {
-    int index = findArtistandTitle(songs, songs->itemCount(), artist, title);
+    int index = songs->findArtistandTitle(songs->itemCount(),artist,title);
     if (index != -1){
         songs->removeValueAt(index);
+
     }
     else{
         std::cout << "Song was not in the given Playlist" << std::endl;
