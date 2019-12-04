@@ -50,7 +50,7 @@ public:
      /**
       * adds a song to the end of the playlist
       */
-     void addSong(std::string artist, std::string title);
+     void addSong(std::string SongIn);
 
      /**
       * removes song from the playlist

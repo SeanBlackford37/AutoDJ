@@ -64,11 +64,13 @@ std::string Playlist::playNext() {
     return "Playlist is empty";
 }
 
-void Playlist::addSong(std::string artist, std::string title) {
+void Playlist::addSong(std::string SongIn) {
     //TODO :: find function
+    std::string artist = Song(SongIn).getArtist();
+    std::string title = Song(SongIn).getTitle();
     int index = songs->findArtistandTitle(songs->itemCount(),artist,title);
     if (index == -1){
-        songs->insertAtEnd( songs->getValueAt(index));
+        songs->insertAtEnd(SongIn);
     }
 }
 

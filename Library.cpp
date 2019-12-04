@@ -54,15 +54,19 @@ void Library::removeFromPlaylist(std::string nameIn, std::string artist, std::st
     int indexOfPlaylist = playlists->find(nameIn);
     playlists->getValueAt(indexOfPlaylist).removeSong(artist,titleIn);
 }
-
+//Fix
+/*
 void Library::addToPlaylist(std::string nameIn, std::string artist, std::string titleIn) {
     int indexOfPlaylist = playlists->find(nameIn);
     playlists->getValueAt(indexOfPlaylist).addSong(artist,titleIn);
 }
+ */
 
 void Library::displayArtist(std::string artistIn) {
     //TODO
 }
+/*
+fix
 
 void Library::displaySong(std::string artistIn, std::string titleIn) {
     int index = findArtistandTitle(const songs, songs->itemCount(), artistIn, titleIn);
@@ -73,6 +77,7 @@ void Library::displaySong(std::string artistIn, std::string titleIn) {
         std::cout << "Song was not in the given Playlist" << std::endl;
     }
 }
+ */
 
 void Library::displayPlaylist(std::string nameIn) {
     int index = playlists->find(nameIn);
