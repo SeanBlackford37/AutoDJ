@@ -5,6 +5,7 @@
 #include <iostream>
 #include "TestLib.h"
 #include "ArrayList.h"
+#include "Playlist.h"
 
 void songTests(){
     std::cout  << "-----Song Tests-----" << std::endl;
@@ -28,6 +29,14 @@ void SongArrayListTests(){
     ArrayList* test = new ArrayList(5);
     test->insertAtFront( Song("Darude Sandstorm,Darude,3:52"));
     printAssertEquals(test->getValueAt(0).toString(),"Title: Darude Sandstorm Artist: Darude Duration: 3:52");
+}
+
+void playlistTests(){
+    std::cout << "-----Playlist Tests-----" << std::endl;
+    Playlist* test = new Playlist("Dance Party");
+    test->addSong("Shooting Stars,Bag Raiders,3:56");
+    test->addSong("Never Gonna Give You Up,Rick Astley,3:33");
+    printAssertEquals(test->toString(),"Title: Shooting Stars Artist: Bag Raiders Duration: 3:56 Play Count: 0 \nTitle: Never Gonna Give You Up Artist: Rick Astley Duration:3:33 Play Count: 0");
 }
 
 
