@@ -51,14 +51,14 @@ ArrayList::~ArrayList(){
 }
 
 void ArrayList::doubleCapacity() {
-    Song *arrayList = new int[currItemCount * 2];
+    Song *arrayList = new Song[currItemCount * 2];
     currCapacity = currCapacity * 2;
 
     for(int i = 0; i < currItemCount;i++){
         arrayList[i] = array[i];
     }
     delete[] array;
-    array = new int[currItemCount*2];
+    array = new Song[currItemCount*2];
 
     for(int i = 0; i < currItemCount;i++){
         array[i] = arrayList[i];
