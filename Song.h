@@ -46,6 +46,7 @@ public:
 
     std::string toStringtoFile();
 
+    void incrementPlayCount();
 
     std::string getArtist();
 
