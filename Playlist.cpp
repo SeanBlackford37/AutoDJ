@@ -3,7 +3,7 @@
 //
 
 #include "Playlist.h"
-#include "ArrayLib.h"
+#include "ArrayList.h"
 
 Playlist::Playlist() {
     name = "unnamed";
@@ -17,7 +17,7 @@ Playlist::Playlist(std::string nameIn) {
 
 
 Playlist::~Playlist() {
-    delete songs;
+    delete[] songs;
 }
 
 std::string Playlist::calcDuration() {
