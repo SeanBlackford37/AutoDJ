@@ -56,8 +56,7 @@ std::string Playlist::toString() {
 
 std::string Playlist::playNext() {
     if (!songs->isEmpty()){
-        std::string temp = songs->getValueAt(0).toString();
-        //TODO:: FIND SONG IN THE LIBRARY AND ADD PLAYCOUNT
+        std::string temp = songs->getValueAt(0).toStringtoFile();
         songs->removeValueAtFront();
         return temp;
     }

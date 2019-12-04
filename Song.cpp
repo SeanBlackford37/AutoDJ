@@ -69,6 +69,9 @@ int Song::durationToInt(std::string durationIn) {
     return currDuration;
 }
 
+void Song::incrementPlayCount(){
+    playCount++;
+}
 
 std::string Song::toString(){
     return "Title: " + title + " Artist: " + artist + " Duration: " + durationString + " Play Count: " + std::to_string(playCount);

@@ -92,7 +92,9 @@ void Library::playNext(std::string nameIn) {
             playlists->removeValueAtFront();
     }
     else{
-        std::cout << msg << std::endl;
+        Song temp = Song(msg);
+        int index = songs->findArtistandTitle(songs->itemCount(),temp.getArtist(),temp.getTitle());
+        songs->getValueAt(index).incrementPlayCount();
     }
 
 }

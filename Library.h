@@ -11,9 +11,7 @@
 
 class Library {
 private:
-    //TODO: Add someones list files to the project, and decide whether to work with arrays or linked lists
     ArrayList* songs;
-    //TODO: adjust list to work with items that are playlists
     PlaylistArrayList* playlists;
 
     /**
