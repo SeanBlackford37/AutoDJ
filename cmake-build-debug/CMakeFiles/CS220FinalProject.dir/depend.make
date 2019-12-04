@@ -9,9 +9,15 @@ CMakeFiles/CS220FinalProject.dir/ArrayList.cpp.o: ../ArrayList.cpp
 CMakeFiles/CS220FinalProject.dir/ArrayList.cpp.o: ../ArrayList.h
 CMakeFiles/CS220FinalProject.dir/ArrayList.cpp.o: ../Song.h
 
+CMakeFiles/CS220FinalProject.dir/Library.cpp.o: ../ArrayLib.h
+CMakeFiles/CS220FinalProject.dir/Library.cpp.o: ../ArrayList.h
 CMakeFiles/CS220FinalProject.dir/Library.cpp.o: ../Library.cpp
 CMakeFiles/CS220FinalProject.dir/Library.cpp.o: ../Library.h
+CMakeFiles/CS220FinalProject.dir/Library.cpp.o: ../Playlist.h
+CMakeFiles/CS220FinalProject.dir/Library.cpp.o: ../PlaylistArrayList.h
+CMakeFiles/CS220FinalProject.dir/Library.cpp.o: ../Song.h
 
+CMakeFiles/CS220FinalProject.dir/Playlist.cpp.o: ../ArrayLib.h
 CMakeFiles/CS220FinalProject.dir/Playlist.cpp.o: ../ArrayList.h
 CMakeFiles/CS220FinalProject.dir/Playlist.cpp.o: ../Playlist.cpp
 CMakeFiles/CS220FinalProject.dir/Playlist.cpp.o: ../Playlist.h

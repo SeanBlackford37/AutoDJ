@@ -32,10 +32,6 @@ std::string toString(Song *const arrayPtr, const int size) {
 }
 
 
-
-
-
-
 int genRandInt(int min, int max, int &numLinesRun) {
     int num = max;
     numLinesRun += 1;
@@ -116,19 +112,14 @@ int *copyArray(const Song *arrayToCopy, int size, int &numLinesRun) {
 }
  */
 
-int findArtistandTitle(Song *const arrayPtr, const int size, std::string artistIn, std::string titleIn) {
+int findArtistandTitle(Song *arrayPtr, const int size, std::string artistIn, std::string titleIn) {
+
 
     for(int i = 0; i < size; i++){
-<<<<<<< HEAD
         if(artistIn == arrayPtr[i].getArtist()){
             if(titleIn ==arrayPtr[i].getTitle()){
-=======
-        if(artist == arrayPtr[i].getArtist()){
-            if(title == arrayPtr[i].getTitle()){
->>>>>>> 9a4b8b37cde7eb40833c500cbb3952270e974ac6
                 return i;
             }
-
         }
     }
     return -1;
