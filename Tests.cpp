@@ -36,7 +36,7 @@ void playlistTests(){
     Playlist* test = new Playlist("Dance Party");
     test->addSong("Shooting Stars,Bag Raiders,3:56");
     test->addSong("Never Gonna Give You Up,Rick Astley,3:33");
-    printAssertEquals(test->toString(),"Title: Shooting Stars Artist: Bag Raiders Duration: 3:56 Play Count: 0\nTitle: Never Gonna Give You Up Artist: Rick Astley Duration: 3:33 Play Count: 0");
+    printAssertEquals(test->toString(),"Title: Shooting Stars Artist: Bag Raiders Duration: 3:56 Play Count: 0\nTitle: Never Gonna Give You Up Artist: Rick Astley Duration: 3:33 Play Count: 0\n");
 }
 
 
