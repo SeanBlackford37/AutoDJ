@@ -3,3 +3,13 @@
 //
 
 #include "Library.h"
+void Library::AddSongsFromFile(std::string filename) {
+
+}
+
+void Library::displaySongs() {
+    for (int i =0; i < songs->itemCount(); i++){
+        std::cout << songs->toString();
+    }
+
+}

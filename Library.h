@@ -6,13 +6,15 @@
 #define CS220FINALPROEJECT_H
 
 #include <iostream>
+#include "ArrayList.h"
+#include "PlaylistArrayList.h"
 
 class Library {
 private:
     //TODO: Add someones list files to the project, and decide whether to work with arrays or linked lists
-    //List* songs;
+    ArrayList* songs;
     //TODO: adjust list to work with items that are playlists
-    //List* playlists;
+    PlaylistArrayList* playlists;
 
     /**
      * reads everything from the quite file
