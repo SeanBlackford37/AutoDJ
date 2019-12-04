@@ -150,6 +150,29 @@ int *copyArray(const int *arrayToCopy, int size, int &numLinesRun) {
     return temp;
 }
 
+int find(const int *const arrayPtr, const int index, const int size, const int numToFind, int &numLinesRun) {
+
+    if (index == size) {
+        numLinesRun += 2;
+        return -1;
+    }
+
+    if (arrayPtr[index] == numToFind) {
+        numLinesRun += 2;
+        return index;
+    }
+    numLinesRun += 1;
+    return find(arrayPtr, index + 1, size, numToFind, numLinesRun);
+
+}
+
+int find(const int *const arrayPtr, const int size, const int numToFind, int &numLinesRun) {
+    numLinesRun += 1;
+    return find(arrayPtr, 0, size, numToFind, numLinesRun);
+}
+
+
+
 
 /*
 //selection sort
