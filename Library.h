@@ -114,6 +114,7 @@ public:
      */
     void newRandomPlaylist(std::string nameIn, std::string duration);
 
+    void addSongToLibrary(std::string songIn);
 
 
 

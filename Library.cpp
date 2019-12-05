@@ -25,9 +25,9 @@ void Library::AddSongsFromFile(std::string filename) {
 }
 
 void Library::displaySongs() {
-    std::cout << "Library: \n" << std::endl;
+    std::cout << "Library: " << std::endl;
     for (int i =0; i < songs->itemCount(); i++){
-        std::cout << songs->toString();
+        std::cout << songs->getValueAt(i).toString() + "\n";
     }
 }
 
@@ -54,30 +54,29 @@ void Library::removeFromPlaylist(std::string nameIn, std::string artist, std::st
     int indexOfPlaylist = playlists->find(nameIn);
     playlists->getValueAt(indexOfPlaylist).removeSong(artist,titleIn);
 }
-//Fix
-/*
+
 void Library::addToPlaylist(std::string nameIn, std::string artist, std::string titleIn) {
     int indexOfPlaylist = playlists->find(nameIn);
-    playlists->getValueAt(indexOfPlaylist).addSong(artist,titleIn);
+    int indexOfSong = songs->findArtistandTitle(songs->itemCount(),artist,titleIn);
+    Song temp = songs->getValueAt(indexOfSong);
+    playlists->getValueAt(indexOfPlaylist).addSong(temp.toStringtoFile());
 }
- */
+
 
 void Library::displayArtist(std::string artistIn) {
     //TODO
 }
-/*
-fix
 
 void Library::displaySong(std::string artistIn, std::string titleIn) {
-    int index = findArtistandTitle(const songs, songs->itemCount(), artistIn, titleIn);
+    int index = songs->findArtistandTitle(songs->itemCount(),artistIn,titleIn);
     if (index != -1){
-        songs->getValueAt(index).toString();
+        std::cout << songs->getValueAt(index).toString() << std::endl;
     }
     else{
         std::cout << "Song was not in the given Playlist" << std::endl;
     }
 }
- */
+
 
 void Library::displayPlaylist(std::string nameIn) {
     int index = playlists->find(nameIn);
@@ -89,7 +88,7 @@ void Library::playNext(std::string nameIn) {
     int index = playlists->find(nameIn);
     std::string msg = playlists->getValueAt(index).playNext();
     if (msg == "Playlist is empty"){
-            playlists->removeValueAtFront();
+        playlists->removeValueAtFront();
     }
     else{
         Song temp = Song(msg);
@@ -102,6 +101,18 @@ void Library::playNext(std::string nameIn) {
 void Library::newRandomPlaylist(std::string nameIn, std::string duration) {
     playlists->insertAtEnd(Playlist(nameIn));
     //TODO get the random working
+}
+
+void Library::addSongToLibrary(std::string songIn) {
+    //TODO: add alphabetically
+    Song temp = Song(songIn);
+    if (songs->findArtistandTitle(songs->itemCount(),temp.getArtist(), temp.getTitle())==-1){
+        songs->insertAtEnd(Song(songIn));
+    }
+    else{
+        std::cout << "Song already in" << std::endl;
+    }
+
 }
 
 
