@@ -17,8 +17,13 @@ Song::Song(){
 
 //Adds songs from user
 Song::Song(std::string titleIn, std::string artistIn, std::string durationIn){
+
+    if(artistIn == ""){
+        artist = "Unknown";
+    }else{
+        artist = artistIn;
+    }
     title = titleIn;
-    artist = artistIn;
     duration = durationToInt(durationIn);
     durationString = durationIn;
     playCount = 0;

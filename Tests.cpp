@@ -20,8 +20,14 @@ void songTests(){
     printAssertEquals(test2->toStringtoFile(),"Darude Sandstorm,Darude,3:52");
     printAssertEquals(test2->getDurationString(),"3:52");
     printAssertEquals(test2->getDuration(),232);
+
+    Song* test3 = new Song("Party Rock Anthem", "", "6:16" );
+    printAssertEquals(test3->toString(),"Title: Party Rock Anthem Artist: Unknown Duration: 6:16 Play Count: 0");
+
     delete test;
     delete test2;
+    delete test3;
+    std::cout << "--done--" <<std::endl;
 }
 
 void SongArrayListTests(){
@@ -32,6 +38,7 @@ void SongArrayListTests(){
     test->insertAtFront( Song("Wake Me Up,Avicii,4:32"));
     printAssertEquals(test->getValueAt(0).toString(),"Title: Wake Me Up Artist: Avicii Duration: 4:32 Play Count: 0");
     printAssertEquals(test->getValueAt(1).toString(),"Title: Darude Sandstorm Artist: Darude Duration: 3:52 Play Count: 0");
+    std::cout << "--done--" <<std::endl;
 }
 
 void playlistTests() {
@@ -39,7 +46,7 @@ void playlistTests() {
     Playlist *test = new Playlist("Dance Party");
     test->addSong("Shooting Stars,Bag Raiders,3:56");
 
-    test->addSong("Never Gonna Give You Up,Rick Astley,3:33");
+
     printAssertEquals(test->toString(), "Title: Shooting Stars Artist: Bag Raiders Duration: 3:56 Play Count: 0\n");
 
     test->addSong("Never Gonna Give You Up,Rick Astley,3:33");
@@ -57,6 +64,7 @@ void playlistTests() {
     test->removeSong("Fall Out Boy", "w.a.m.s");
     test->removeSong("Rick Astley", "Never Gonna Give You Up");
     printAssertEquals(test->toString(), "");
+    std::cout << "--done--" <<std::endl;
 
 
 }
