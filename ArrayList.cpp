@@ -70,7 +70,9 @@ void ArrayList::doubleCapacity() {
 
 void ArrayList::insertAtEnd(Song itemToAdd) {
     currItemCount+=1;
-    doubleCapacity();
+    if (currItemCount > currCapacity){
+        doubleCapacity();
+    }
     array[currItemCount-1] = itemToAdd;
 
 }
