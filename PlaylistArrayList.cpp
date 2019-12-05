@@ -113,14 +113,16 @@ void PlaylistArrayList::clearList() {
 }
 
 void PlaylistArrayList::insertAtFront(Playlist itemToAdd) {
-
+    if (currItemCount+1 > currCapacity){
+        doubleCapacity();
+    }
     for(int i = currItemCount; i >= 1;i--){
         array[i] = array[i-1];
     }
 
     currItemCount+=1;
     array[0] = itemToAdd;
-    doubleCapacity();
+
 }
 
 void PlaylistArrayList::insertAt(Playlist itemToAdd, int index) {
@@ -128,16 +130,17 @@ void PlaylistArrayList::insertAt(Playlist itemToAdd, int index) {
     if (index < 0 or index > currItemCount) {
         throw std::out_of_range("e");
     }
+    if (currItemCount + 1 > currCapacity){
+        doubleCapacity();
+    }
     for (int i = currItemCount; i >= index; i--) {
         array[i] = array[i - 1];
     }
     currItemCount+=1;
     array[index] = itemToAdd;
-    doubleCapacity();
 }
 
 Playlist PlaylistArrayList::removeValueAtEnd() {
-    doubleCapacity();
     if(currItemCount <1){
         throw std::out_of_range("e");
     }

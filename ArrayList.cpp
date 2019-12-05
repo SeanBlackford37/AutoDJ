@@ -115,14 +115,16 @@ void ArrayList::clearList() {
 }
 
 void ArrayList::insertAtFront(Song itemToAdd) {
-
+    if (currItemCount +1 > currCapacity){
+        doubleCapacity();
+    }
     for(int i = currItemCount; i >= 1;i--){
         array[i] = array[i-1];
     }
 
     currItemCount+=1;
     array[0] = itemToAdd;
-    doubleCapacity();
+
 }
 
 int ArrayList::findArtistandTitle(const int size, std::string artistIn, std::string titleIn) {
@@ -139,20 +141,22 @@ int ArrayList::findArtistandTitle(const int size, std::string artistIn, std::str
 }
 
 void ArrayList::insertAt(Song itemToAdd, int index) {
-
     if (index < 0 or index > currItemCount) {
         throw std::out_of_range("e");
+    }
+    if (currItemCount + 1 > currCapacity){
+        doubleCapacity();
     }
     for (int i = currItemCount; i >= index; i--) {
         array[i] = array[i - 1];
     }
     currItemCount+=1;
     array[index] = itemToAdd;
-    doubleCapacity();
+
 }
 
 Song ArrayList::removeValueAtEnd() {
-    doubleCapacity();
+
     if(currItemCount <1){
         throw std::out_of_range("e");
     }
