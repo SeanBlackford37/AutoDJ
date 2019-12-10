@@ -86,7 +86,18 @@ void Library::addToPlaylist(std::string nameIn, std::string artist, std::string 
 
 
 void Library::displayArtist(std::string artistIn) {
-    //TODO
+    int count = 0;
+    std::cout << "Songs by " + artistIn + ": " << std::endl;
+    for (int i =0; i < songs->itemCount(); i++){
+        if (artistIn == songs->getValueAt(i).getArtist()){
+            count += 1;
+            std::cout << "\t"+songs->getValueAt(i).toString() << std::endl;
+        }
+    }
+    if (count ==0){
+        std::cout << "No songs by that artist were found" << std::endl;
+    }
+
 }
 
 void Library::displaySong(std::string artistIn, std::string titleIn) {
