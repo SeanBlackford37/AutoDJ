@@ -91,7 +91,6 @@ std::string Playlist::playNext() {
 }
 
 void Playlist::addSong(std::string SongIn) {
-    //TODO :: find function
     std::string artist = Song(SongIn).getArtist();
     std::string title = Song(SongIn).getTitle();
     int index = songs->findArtistandTitle(songs->itemCount(),artist,title);

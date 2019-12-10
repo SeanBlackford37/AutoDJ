@@ -8,6 +8,7 @@
 #include "Song.h"
 #include <iostream>
 #include <fstream>
+#include <sstream>
 
 Library::Library(){
     songs = new ArrayList(30);
@@ -140,7 +141,32 @@ void Library::playNext(std::string nameIn) {
 
 void Library::newRandomPlaylist(std::string nameIn, std::string duration) {
     //playlists->insertAtEnd(Playlist(nameIn));
-    Playlist* randPlaylist = new Playlist(nameIn);
+    Playlist randPlaylist = Playlist(nameIn);
+    std::stringstream splitter (duration);
+    std::string words;
+    int count = 0;
+    int maxDuration = 0;
+    if (splitter){
+        getline(splitter, words, ':');
+        while (splitter){
+            std::stringstream stringToInt(words);
+            // it to the integer x
+            int x = 0;
+            stringToInt >> x;
+            if(count == 0) {
+                count++;
+                maxDuration = x * 60 * 60;
+            }
+            if(count == 1) {
+                count++;
+                maxDuration = x * 60;
+            }
+            else{
+                maxDuration += x;
+            }
+            getline(splitter, words, ':');
+        }
+    }
 
     //TODO get the random working
     bool endpoint = false;
