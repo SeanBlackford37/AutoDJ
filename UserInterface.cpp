@@ -10,9 +10,11 @@
 int maine(){
     std::string command = "";
     Library djBoard = Library();
+    //WE'd get rid of this
     djBoard.addSongToLibrary("Darude Sandstorm,Darude,3:52");
     djBoard.addSongToLibrary("Wake Me Up,Avicii,4:32");
     djBoard.addSongToLibrary("Hey Brother,Avicii,4:21");
+    //to here, this was for testing
     std::cout << "Enter help for a list of commands" << std::endl;
     std::cout << "Enter your command: " <<std::endl;
     std::getline(std::cin, command);
@@ -52,9 +54,13 @@ int maine(){
             djBoard.displaySong(artist,title);
         }
         else if(words == "import"){
+            std::string filename;
+            getline(splitter, filename, '>');
             //TODO
         }
         else if(words == "discontinue"){
+            std::string filename;
+            getline(splitter, filename, '>');
             //TODO
         }
         else if(command == "playlists"){
