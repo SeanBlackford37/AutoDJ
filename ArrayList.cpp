@@ -48,6 +48,7 @@ ArrayList::ArrayList(const ArrayList& arrayListToCopy) {
 //Destructor
 ArrayList::~ArrayList(){
     delete[] array;
+    array = nullptr;
 }
 
 void ArrayList::doubleCapacity() {
@@ -205,4 +206,8 @@ Song ArrayList::removeValueAt(int index) {
 
     currItemCount--;
     return copy;
+}
+
+int ArrayList::getCurrCapacity(){
+    return currCapacity;
 }

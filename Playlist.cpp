@@ -16,9 +16,23 @@ Playlist::Playlist(std::string nameIn) {
     songs = new ArrayList(10);
 }
 
+/*
+Playlist& Playlist::operator=(const Playlist& PlaylistToCopy){
+    if (&PlaylistToCopy != this){
+        delete this->songs;
+        this->songs = new ArrayList(PlaylistToCopy.songs->getCurrCapacity());
+        for (int i =0; i < PlaylistToCopy.songs->itemCount(); i++){
+            this->songs->insertAtEnd(PlaylistToCopy.songs->getValueAt(i));
+        }
+    }
+}
+ */
+
 
 Playlist::~Playlist() {
-    delete[] songs;
+    if (!songs->isEmpty()){
+        songs->clearList();
+    }
 }
 
 std::string Playlist::calcDuration() {
@@ -27,7 +41,7 @@ std::string Playlist::calcDuration() {
     int minutes = 0;
     int hours = 0;
     if (songs->isEmpty()) {
-        return 0;
+        return "0";
     }
     else{
         for (int i = 0; i < songs->itemCount(); i++) {

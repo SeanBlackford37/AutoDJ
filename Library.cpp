@@ -79,7 +79,9 @@ void Library::addToPlaylist(std::string nameIn, std::string artist, std::string 
     int indexOfPlaylist = playlists->find(nameIn);
     int indexOfSong = songs->findArtistandTitle(songs->itemCount(),artist,titleIn);
     Song temp = songs->getValueAt(indexOfSong);
-    playlists->getValueAt(indexOfPlaylist).addSong(temp.toStringtoFile());
+    Playlist tempPlay = playlists->getValueAt(indexOfPlaylist);
+    tempPlay.addSong(temp.toStringtoFile());
+    playlists->getValueAt(indexOfPlaylist) = tempPlay;
 }
 
 

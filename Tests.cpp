@@ -89,6 +89,10 @@ void libraryTests() {
     testLib->addSongToLibrary("Hey Brother,Avicii,4:23,3");
     testLib->displaySongs();
 
+    testLib->newPlaylist("Vibes");
+    //testLib->addToPlaylist("Vibes", "Avicii", "Hey Brother");
+    //TODO: FIX HOW WHEN ADDING THINGS A DESTRUCTOR IS CALLED ON PLAYLIST FOR SOME REASON
+    testLib->displayPlaylist("Vibes");
 }
 
 

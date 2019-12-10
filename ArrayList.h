@@ -131,6 +131,8 @@ public:
     Song removeValueAt(int index);
 
     int findArtistandTitle(const int size, std::string artistIn, std::string titleIn);
+
+    int getCurrCapacity();
 };
 
 

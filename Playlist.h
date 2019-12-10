@@ -34,6 +34,7 @@ public:
      */
      std::string calcDuration();
 
+   // Playlist& operator=(const Playlist& PlaylistToCopy);
 
      /**
       *
