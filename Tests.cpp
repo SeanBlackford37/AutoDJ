@@ -91,7 +91,7 @@ void libraryTests() {
     testLib->displaySongs();
 
     testLib->newPlaylist("Vibes");
-    //testLib->addToPlaylist("Vibes", "Avicii", "Hey Brother");
+    testLib->addToPlaylist("Vibes", "Avicii", "Hey Brother");
     //TODO: FIX HOW WHEN ADDING THINGS A DESTRUCTOR IS CALLED ON PLAYLIST FOR SOME REASON
     testLib->displayPlaylist("Vibes");
 }

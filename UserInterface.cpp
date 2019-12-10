@@ -63,6 +63,11 @@ int maine(){
         else if(words == "playlist"){
             std::string name;
             getline(splitter, name, '>');
+            djBoard.displayPlaylist(name);
+        }
+        else if(words == "new"){
+            std::string name;
+            getline(splitter, name, '>');
             djBoard.newPlaylist(name);
         }
         else if(words == "add"){
@@ -75,10 +80,18 @@ int maine(){
             djBoard.addToPlaylist(name,artist,title);
         }
         else if(words == "remove"){
-            //TODO
+            std::string name;
+            std::string title;
+            std::string artist;
+            getline(splitter, name, ',');
+            getline(splitter, artist, ',');
+            getline(splitter, title, '>');
+            djBoard.removeFromPlaylist(name,artist,title);
         }
         else if(words == "playnext"){
-            //TODO
+            std::string name;
+            getline(splitter, name, '>');
+            djBoard.playNext(name);
         }
         else if(words == "newrandom"){
             //TODO
