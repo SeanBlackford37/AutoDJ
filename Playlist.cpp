@@ -34,6 +34,18 @@ Playlist::~Playlist() {
         songs->clearList();
     }
 }
+int Playlist::calcIntDuration() {
+    int total = 0;
+    int seconds = 0;
+    if (songs->isEmpty()) {
+        return 0;
+    }
+    else{
+        for (int i = 0; i < songs->itemCount(); i++) {
+            total += songs->getValueAt(i).getDuration();
+        }
+    }
+}
 
 std::string Playlist::calcDuration() {
     int total = 0;
