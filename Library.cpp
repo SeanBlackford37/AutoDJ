@@ -105,12 +105,16 @@ void Library::newRandomPlaylist(std::string nameIn, std::string duration) {
 
 void Library::addSongToLibrary(std::string songIn) {
     //TODO: add alphabetically
-    Song temp = Song(songIn);
-    if (songs->findArtistandTitle(songs->itemCount(),temp.getArtist(), temp.getTitle())==-1){
-        songs->insertAtEnd(Song(songIn));
+    if (songs->isEmpty()){
+        songs->insertAtFront(Song(songIn));
     }
-    else{
-        std::cout << "Song already in" << std::endl;
+    else {
+        Song temp = Song(songIn);
+        if (songs->findArtistandTitle(songs->itemCount(), temp.getArtist(), temp.getTitle()) == -1) {
+            songs->insertAtAlphabetized(Song(songIn));
+        } else {
+            std::cout << "Song already in" << std::endl;
+        }
     }
 
 }

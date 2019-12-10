@@ -6,6 +6,7 @@
 #include "TestLib.h"
 #include "ArrayList.h"
 #include "Playlist.h"
+#include "Library.h"
 
 void songTests(){
     std::cout  << "-----Song Tests-----" << std::endl;
@@ -69,10 +70,18 @@ void playlistTests() {
 
 }
 
+void libraryTests(){
+    Library* testLib = new Library();
+    testLib->addSongToLibrary("Never Gonna Give You Up,Rick Astley,3:33");
+    testLib->addSongToLibrary("Wake Me Up,Avicii,4:32 ");
+    testLib->displaySongs();
+}
+
 
 int main(){
     songTests();
     SongArrayListTests();
     playlistTests();
+    libraryTests();
 
 }
