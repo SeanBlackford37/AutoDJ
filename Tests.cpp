@@ -4,14 +4,12 @@
 #include "Song.h"
 #include <iostream>
 #include <fstream>
+
 #include "TestLib.h"
 #include "ArrayList.h"
 #include "Playlist.h"
 #include "Library.h"
-<<<<<<< HEAD
 
-=======
->>>>>>> d682478fd38a9b61a1c948a417361c7ca359babb
 
 void songTests(){
     std::cout  << "-----Song Tests-----" << std::endl;
@@ -81,36 +79,36 @@ void playlistTests() {
 
 
 }
-void LibraryTests() {
-    std::cout << "-----Library Tests-----" << std::endl;
-}
 
-void libraryTests(){
+
+void LibraryTests(){
     std::cout << "----Library Tests----" << std::endl;
-    Library* testLib = new Library();
-    testLib->addSongToLibrary("Never Gonna Give You Up,Rick Astley,3:33");
-    testLib->addSongToLibrary("Wake Me Up,Avicii,4:32,3");
-    testLib->addSongToLibrary("Hey Brother,Avicii,4:23");
-    testLib->addSongToLibrary("Hey Brother,Avicii,4:23,3");
-    testLib->displaySongs();
+    std::cout << "testing..." << std::endl;
+    std::string filename = "CS220FinalProject/Songs.txt";
+    std::ifstream infile(filename);
+    if (infile){
+        while (infile){
+            std::string line;
+            getline(infile, line);
+            std::cout << line << std::endl;
+        }
+    }else {
+        std::cout << "can't read file!"  << std::endl;
 
-
-
-    std::cout << "--done--" <<std::endl;
+    }
+    std::cout << "closing" << std::endl;
+    infile.close();
 }
 
 
 int main(){
-<<<<<<< HEAD
-    //songTests();
-    //SongArrayListTests();
-    //playlistTests();
+
+
     LibraryTests();
-=======
     songTests();
     SongArrayListTests();
     playlistTests();
-    libraryTests();
->>>>>>> d682478fd38a9b61a1c948a417361c7ca359babb
+
+
 
 }

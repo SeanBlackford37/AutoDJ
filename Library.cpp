@@ -24,7 +24,7 @@ void Library::loadLibrary(){
 
 void Library::AddSongsFromFile(std::string file_name) {
     std::cout << "testing..." << std::endl;
-    std::string filename = "/Users/sean/Desktop/Comp 220/CS220FinalProject/Songs.txt";
+    std::string filename = "Songs.txt";
     std::ifstream infile(filename);
     if (infile){
         while (infile){
