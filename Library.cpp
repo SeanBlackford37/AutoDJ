@@ -126,7 +126,7 @@ void Library::playNext(std::string nameIn) {
     int index = playlists->find(nameIn);
     std::string msg = playlists->getValueAt(index).playNext();
     if (msg == "Playlist is empty"){
-        playlists->removeValueAtFront();
+        playlists->removeValueAt(index);
     }
     else{
         Song temp = Song(msg);
