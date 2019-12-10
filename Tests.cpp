@@ -3,7 +3,10 @@
 //
 #include "Song.h"
 #include <iostream>
+<<<<<<< HEAD
 #include <fstream>
+=======
+>>>>>>> a0c264fdecaa55deb5776ed5a46a215c4b669106
 
 #include "TestLib.h"
 #include "ArrayList.h"
@@ -79,6 +82,20 @@ void playlistTests() {
 
 
 }
+<<<<<<< HEAD
+=======
+
+
+void libraryTests(){
+    std::cout << "----Library Tests----" << std::endl;
+    Library* testLib = new Library();
+    testLib->addSongToLibrary("Never Gonna Give You Up,Rick Astley,3:33");
+    testLib->addSongToLibrary("Wake Me Up,Avicii,4:32,3");
+    testLib->addSongToLibrary("Hey Brother,Avicii,4:23");
+    testLib->addSongToLibrary("Hey Brother,Avicii,4:23,3");
+    testLib->displaySongs();
+
+>>>>>>> a0c264fdecaa55deb5776ed5a46a215c4b669106
 
 
 void LibraryTests(){
@@ -103,12 +120,19 @@ void LibraryTests(){
 
 int main(){
 
+<<<<<<< HEAD
 
     LibraryTests();
     songTests();
     SongArrayListTests();
     playlistTests();
 
+=======
+    songTests();
+    SongArrayListTests();
+    playlistTests();
+    libraryTests();
+>>>>>>> a0c264fdecaa55deb5776ed5a46a215c4b669106
 
 
 }
