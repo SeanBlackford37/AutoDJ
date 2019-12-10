@@ -26,13 +26,13 @@ int maine(){
             std::cout << "artist<artist> \n\tDisplay all songs for the given artist." << std::endl;
             std::cout << "song<artist,title> \n\tDisplay all information for the given song." <<std::endl;
             std::cout << "import<filename>\n\tAdd all songs from the given file to the library." <<std::endl;
-            std::cout<< "discontinue<filename>\n\tRemove all songs from the given file from the library. Also remove these songs from any playlist in which they occur." <<std::endl;
-            std::cout << "playlists\n\tdisplay the names of all playlists and their durations." << std::endl;
-            std::cout << "playlist<name>\n\t display all songs left in the given playlist, and the duration (time it will take to play the remaining songs)" << std::endl;
+            std::cout << "discontinue<filename>\n\tRemove all songs from the given file from the library. Also remove these songs from any playlist in which they occur." <<std::endl;
+            std::cout << "playlists\n\tDisplay the names of all playlists and their durations." << std::endl;
+            std::cout << "playlist<name>\n\tDisplay all songs left in the given playlist, and the duration (time it will take to play the remaining songs)" << std::endl;
             std::cout << "new<name>\n\tMake a new empty playlist with the given name." <<std::endl;
             std::cout << "add<name,artist,title>\n\tAdd the given song to the end of the given playlist" << std::endl;
-            std::cout << "remove <name, artist, title>\n\tremove the given song from the playlist" << std::endl;
-            std::cout << "playnext <name>\n\tPrint all information about the next song to be played from the given playlist to the screen." <<std::endl;
+            std::cout << "remove<name, artist, title>\n\tremove the given song from the playlist" << std::endl;
+            std::cout << "playnext<name>\n\tPrint all information about the next song to be played from the given playlist to the screen." <<std::endl;
             std::cout << "newrandom<name,duration>\n\tMake a new playlist with the given name, and populate it with a random group of songs that do not repeat" << std::endl;
             std::cout << "quit\n\tSave the library and all playlists and terminate execution." << std::endl;
         }
@@ -58,13 +58,21 @@ int maine(){
             //TODO
         }
         else if(command == "playlists"){
-            //TODO
+            djBoard.displayPlaylists();
         }
         else if(words == "playlist"){
-            //TODO
+            std::string name;
+            getline(splitter, name, '>');
+            djBoard.newPlaylist(name);
         }
         else if(words == "add"){
-            //TODO
+            std::string name;
+            std::string title;
+            std::string artist;
+            getline(splitter, name, ',');
+            getline(splitter, artist, ',');
+            getline(splitter, title, '>');
+            djBoard.addToPlaylist(name,artist,title);
         }
         else if(words == "remove"){
             //TODO

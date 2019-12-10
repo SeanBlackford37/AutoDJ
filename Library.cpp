@@ -78,10 +78,15 @@ void Library::removeFromPlaylist(std::string nameIn, std::string artist, std::st
 void Library::addToPlaylist(std::string nameIn, std::string artist, std::string titleIn) {
     int indexOfPlaylist = playlists->find(nameIn);
     int indexOfSong = songs->findArtistandTitle(songs->itemCount(),artist,titleIn);
-    Song temp = songs->getValueAt(indexOfSong);
-    Playlist tempPlay = playlists->getValueAt(indexOfPlaylist);
-    tempPlay.addSong(temp.toStringtoFile());
-    playlists->getValueAt(indexOfPlaylist) = tempPlay;
+    if (indexOfSong == -1){
+        std::cout << "\tSong is not in Library" <<std::endl;
+    }
+    else{
+        Song temp = songs->getValueAt(indexOfSong);
+        Playlist tempPlay = playlists->getValueAt(indexOfPlaylist);
+        tempPlay.addSong(temp.toStringtoFile());
+        playlists->getValueAt(indexOfPlaylist) = tempPlay;
+    }
 }
 
 
