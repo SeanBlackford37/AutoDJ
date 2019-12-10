@@ -134,6 +134,7 @@ void Library::playNext(std::string nameIn) {
 void Library::newRandomPlaylist(std::string nameIn, std::string duration) {
     playlists->insertAtEnd(Playlist(nameIn));
     //TODO get the random working
+    int randIndex = genRandInt(0, songs->itemCount());
 }
 
 void Library::addSongToLibrary(std::string songIn) {
