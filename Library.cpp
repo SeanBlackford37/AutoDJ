@@ -95,7 +95,7 @@ void Library::displayArtist(std::string artistIn) {
         }
     }
     if (count ==0){
-        std::cout << "No songs by that artist were found" << std::endl;
+        std::cout << "\tNo songs by that artist were found" << std::endl;
     }
 
 }
@@ -106,7 +106,7 @@ void Library::displaySong(std::string artistIn, std::string titleIn) {
         std::cout << songs->getValueAt(index).toString() << std::endl;
     }
     else{
-        std::cout << "Song was not in the given Playlist" << std::endl;
+        std::cout << "\tSong was not in the Library" << std::endl;
     }
 }
 
