@@ -4,6 +4,8 @@
 
 #include "Library.h"
 #include "ArrayLib.h"
+#include "Playlist.h"
+#include "Song.h"
 #include <iostream>
 #include <fstream>
 
@@ -137,12 +139,14 @@ void Library::playNext(std::string nameIn) {
 }
 
 void Library::newRandomPlaylist(std::string nameIn, std::string duration) {
-    playlists->insertAtEnd(Playlist(nameIn));
+    //playlists->insertAtEnd(Playlist(nameIn));
+    Playlist* randPlaylist = new Playlist(nameIn);
+
     //TODO get the random working
     bool endpoint = false;
     while(endpoint == false) {
         int randIndex = genRandInt(0, songs->itemCount());
-        Song randSong = songs->getValueAt(randIndex);
+        Song randSong = songs->getValueAt(randIndex);;
     }
 }
 
