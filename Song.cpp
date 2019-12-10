@@ -44,6 +44,11 @@ Song::Song(std::string songInfo){
         durationString = words;
         duration = durationToInt(words);
         playCount = 0;
+        std::string temp = words;
+        getline(splitter, words, ',');
+        if (temp != words){
+            playCount = stoi(words);
+        }
     }
 
 }

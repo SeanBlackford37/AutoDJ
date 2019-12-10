@@ -27,7 +27,7 @@ void Library::AddSongsFromFile(std::string filename) {
 void Library::displaySongs() {
     std::cout << "Library: " << std::endl;
     for (int i =0; i < songs->itemCount(); i++){
-        std::cout << songs->getValueAt(i).toString() + "\n";
+        std::cout << "\t" + songs->getValueAt(i).toString() + "\n";
     }
 }
 
@@ -104,7 +104,6 @@ void Library::newRandomPlaylist(std::string nameIn, std::string duration) {
 }
 
 void Library::addSongToLibrary(std::string songIn) {
-    //TODO: add alphabetically
     if (songs->isEmpty()){
         songs->insertAtFront(Song(songIn));
     }
