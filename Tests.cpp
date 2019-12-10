@@ -8,7 +8,10 @@
 #include "ArrayList.h"
 #include "Playlist.h"
 #include "Library.h"
+<<<<<<< HEAD
 
+=======
+>>>>>>> d682478fd38a9b61a1c948a417361c7ca359babb
 
 void songTests(){
     std::cout  << "-----Song Tests-----" << std::endl;
@@ -27,9 +30,16 @@ void songTests(){
     Song* test3 = new Song("Party Rock Anthem", "", "6:16" );
     printAssertEquals(test3->toString(),"Title: Party Rock Anthem Artist: Unknown Duration: 6:16 Play Count: 0");
 
+    Song* test4 = new Song("Nobody's Perfect,Hannah Montana,3:21, 4");
+    printAssertEquals(test4->toString(),"Title: Nobody's Perfect Artist: Hannah Montana Duration: 3:21 Play Count: 4");
+    printAssertEquals(test4->getDurationString(),"3:21");
+    printAssertEquals(test4->getDuration(),201);
+
+
     delete test;
     delete test2;
     delete test3;
+    delete test4;
     std::cout << "--done--" <<std::endl;
 }
 
@@ -75,11 +85,32 @@ void LibraryTests() {
     std::cout << "-----Library Tests-----" << std::endl;
 }
 
+void libraryTests(){
+    std::cout << "----Library Tests----" << std::endl;
+    Library* testLib = new Library();
+    testLib->addSongToLibrary("Never Gonna Give You Up,Rick Astley,3:33");
+    testLib->addSongToLibrary("Wake Me Up,Avicii,4:32,3");
+    testLib->addSongToLibrary("Hey Brother,Avicii,4:23");
+    testLib->addSongToLibrary("Hey Brother,Avicii,4:23,3");
+    testLib->displaySongs();
+
+
+
+    std::cout << "--done--" <<std::endl;
+}
+
 
 int main(){
+<<<<<<< HEAD
     //songTests();
     //SongArrayListTests();
     //playlistTests();
     LibraryTests();
+=======
+    songTests();
+    SongArrayListTests();
+    playlistTests();
+    libraryTests();
+>>>>>>> d682478fd38a9b61a1c948a417361c7ca359babb
 
 }
