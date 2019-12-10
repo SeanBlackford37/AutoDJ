@@ -3,9 +3,12 @@
 //
 #include "Song.h"
 #include <iostream>
+#include <fstream>
 #include "TestLib.h"
 #include "ArrayList.h"
 #include "Playlist.h"
+#include "Library.h"
+
 
 void songTests(){
     std::cout  << "-----Song Tests-----" << std::endl;
@@ -68,11 +71,15 @@ void playlistTests() {
 
 
 }
+void LibraryTests() {
+    std::cout << "-----Library Tests-----" << std::endl;
+}
 
 
 int main(){
-    songTests();
-    SongArrayListTests();
-    playlistTests();
+    //songTests();
+    //SongArrayListTests();
+    //playlistTests();
+    LibraryTests();
 
 }

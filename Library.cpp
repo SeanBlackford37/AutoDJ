@@ -4,6 +4,8 @@
 
 #include "Library.h"
 #include "ArrayLib.h"
+#include <iostream>
+#include <fstream>
 
 Library::Library(){
     songs = new ArrayList(30);
@@ -20,9 +22,26 @@ void Library::loadLibrary(){
     //TODO
 }
 
-void Library::AddSongsFromFile(std::string filename) {
-    //TODO
+void Library::AddSongsFromFile(std::string file_name) {
+    std::cout << "testing..." << std::endl;
+    std::string filename = "/Users/sean/Desktop/Comp 220/CS220FinalProject/Songs.txt";
+    std::ifstream infile(filename);
+    if (infile){
+        while (infile){
+            std::string line;
+            getline(infile, line);
+            std::cout << line << std::endl;
+        }
+    }else {
+        std::cout << "can't read file!"  << std::endl;
+
+    }
+    std::cout << "closing" << std::endl;
+    infile.close();
+
 }
+
+
 
 void Library::displaySongs() {
     std::cout << "Library: " << std::endl;
@@ -31,7 +50,8 @@ void Library::displaySongs() {
     }
 }
 
-void Library::discontinue(std::string filename) {
+void Library::discontinue(std::string file_name) {
+
     //TODO
 }
 
