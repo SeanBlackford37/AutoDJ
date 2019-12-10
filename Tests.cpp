@@ -3,11 +3,6 @@
 //
 #include "Song.h"
 #include <iostream>
-<<<<<<< HEAD
-#include <fstream>
-=======
->>>>>>> a0c264fdecaa55deb5776ed5a46a215c4b669106
-
 #include "TestLib.h"
 #include "ArrayList.h"
 #include "Playlist.h"
@@ -82,8 +77,7 @@ void playlistTests() {
 
 
 }
-<<<<<<< HEAD
-=======
+
 
 
 void libraryTests(){
@@ -95,44 +89,18 @@ void libraryTests(){
     testLib->addSongToLibrary("Hey Brother,Avicii,4:23,3");
     testLib->displaySongs();
 
->>>>>>> a0c264fdecaa55deb5776ed5a46a215c4b669106
 
 
-void LibraryTests(){
-    std::cout << "----Library Tests----" << std::endl;
-    std::cout << "testing..." << std::endl;
-    std::string filename = "CS220FinalProject/Songs.txt";
-    std::ifstream infile(filename);
-    if (infile){
-        while (infile){
-            std::string line;
-            getline(infile, line);
-            std::cout << line << std::endl;
-        }
-    }else {
-        std::cout << "can't read file!"  << std::endl;
 
-    }
-    std::cout << "closing" << std::endl;
-    infile.close();
-}
 
 
 int main(){
 
-<<<<<<< HEAD
-
-    LibraryTests();
-    songTests();
-    SongArrayListTests();
-    playlistTests();
-
-=======
     songTests();
     SongArrayListTests();
     playlistTests();
     libraryTests();
->>>>>>> a0c264fdecaa55deb5776ed5a46a215c4b669106
+
 
 
 }
