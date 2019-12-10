@@ -88,7 +88,12 @@ std::string Song::toString(){
 }
 
 std::string Song::toStringtoFile() {
-    return title + "," + artist + "," + durationString;
+    if (playCount ==0 ){
+        return title + "," + artist + "," + durationString;
+    }
+    else{
+        return title + "," + artist + "," + durationString + "," + std::to_string(playCount);
+    }
 }
 
  std::string Song::getArtist() {
