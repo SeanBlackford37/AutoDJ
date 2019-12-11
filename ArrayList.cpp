@@ -180,17 +180,15 @@ Song ArrayList::removeValueAtEnd() {
 }
 
 Song ArrayList::removeValueAtFront() {
-    if(currItemCount < 0){
-        throw std::out_of_range("e");
+    if(currItemCount<=0){
+        throw std::out_of_range("In removeValueAtFront, List must have items");
     }
-    Song copy = array[0];
-    for(int i = 1; i < currItemCount;i++){
-        array[i-1] = array[i];
+    Song temp = array[0];
+    for (int i =0; i<currItemCount-1;i++){
+        array[i] = array[i+1];
     }
-
     currItemCount--;
-
-    return copy;
+    return temp;
 }
 Song ArrayList::removeValueAt(int index) {
     if(index < 0 or index > currItemCount){

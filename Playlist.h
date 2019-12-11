@@ -65,6 +65,8 @@ public:
       void removeSong(std::string artist, std::string title);
 
       std::string getName();
+
+      bool isEmpty();
 };
 
 

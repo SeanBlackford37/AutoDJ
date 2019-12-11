@@ -115,13 +115,22 @@ void libraryTests() {
     //testLib->displayPlaylist("Work It");
 
 
+<<<<<<< HEAD
     //testLib->AddSongsFromFile("songList.txt");
     //testLib->displaySongs();
+=======
+    testLib->playNext("Vibes");
+    testLib->displayPlaylist("Vibes");
+
+
+    testLib->AddSongsFromFile("songList.txt");
+>>>>>>> 83beece1469f43ff282381e61e572b0024bed2ea
 
     //testLib->displaySongs();
     testLib->discontinue("songList.txt");
     //testLib->displayPlaylists();
     //testLib->displaySongs();
+
 
 
 }
