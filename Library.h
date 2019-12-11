@@ -123,6 +123,8 @@ public:
 
 
     void removeSongFromLibrary(std::string songIn);
+
+    void quit();
 };
 
 

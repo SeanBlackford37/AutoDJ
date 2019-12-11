@@ -62,27 +62,8 @@ int maine(){
 
         }
         else if(words == "discontinue"){
-            //TODO Remove all songs from the given file from the library?
             std::string filename;
-            getline(splitter, filename, '>');
-            std::cout << "reading..." << std::endl;
-            filename = "Songs.txt";
-            std::ifstream infile(filename);
-            if (infile){
-                while (infile){
-                    std::string line;
-                    getline(infile, line);
-                    getline(splitter, filename, '>');
-                    djBoard.discontinue(line);
-                }
-            }else {
-                std::cout << "can't read file!"  << std::endl;
-            }
-            std::cout << "read....closing" << std::endl;
-            infile.close();
-
-
-            //djBoard.discontinue(filename);
+            djBoard.discontinue(filename);
             //TODO in prog
 
         }

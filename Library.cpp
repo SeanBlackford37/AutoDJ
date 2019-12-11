@@ -25,6 +25,10 @@ void Library::loadLibrary(){
     //TODO
 }
 
+void Library::quit(){
+
+}
+
 void Library::AddSongsFromFile(std::string file_name){
     std::cout << "reading..." << std::endl;
     std::string filename = file_name;
@@ -37,7 +41,6 @@ void Library::AddSongsFromFile(std::string file_name){
             if(line != ""){
                 addSongToLibrary(line);
             }
-
         }
     }else {
         std::cout << "file can not be read file!"  << std::endl;
