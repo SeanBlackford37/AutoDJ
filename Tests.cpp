@@ -114,8 +114,16 @@ void libraryTests() {
     testLib->newRandomPlaylist("Work It", "0:12:30");
     testLib->displayPlaylist("Work It");
 
+
     testLib->playNext("Vibes");
     testLib->displayPlaylist("Vibes");
+
+
+    testLib->AddSongsFromFile("songList.txt");
+
+    testLib->displaySongs();
+
+
 
 }
 
@@ -124,9 +132,9 @@ void libraryTests() {
 
 int main(){
 
-    songTests();
-    SongArrayListTests();
-    playlistTests();
+    //songTests();
+    //SongArrayListTests();
+    //playlistTests();
     libraryTests();
 
 
