@@ -105,7 +105,23 @@ void libraryTests() {
 
     testLib->newPlaylist("Vibes");
     testLib->addToPlaylist("Vibes", "Avicii", "Hey Brother");
+
+
+    testLib->addToPlaylist("Vibes", "Rick Astley", "Never Gonna Give You Up");
     testLib->displayPlaylist("Vibes");
+
+    //testLib->displayPlaylist("Vibes");
+
+    testLib->displayPlaylist("Vibes");
+
+
+
+    testLib->playNext("Vibes");
+    testLib->displayPlaylist("Vibes");
+    testLib->removeFromPlaylist("Vibes","Rick Astley", "Never Gonna Give You Up");
+    testLib->displayPlaylist("Vibes");
+
+
 
     testLib->addSongToLibrary("Darude Sandstorm,Darude,3:52");
     testLib->addSongToLibrary("w.a.m.s,Fall Out Boy,4:38");
@@ -117,14 +133,22 @@ void libraryTests() {
 
 
 
+
+
+    //testLib->AddSongsFromFile("songList.txt");
+    //testLib->displaySongs();
+
     testLib->AddSongsFromFile("songList.txt");
     testLib->displaySongs();
+
 
     testLib->playNext("Vibes");
     testLib->displayPlaylist("Vibes");
     */
 
+
     testLib->AddSongsFromFile("songList.txt");
+
 
 
     testLib->displaySongs();

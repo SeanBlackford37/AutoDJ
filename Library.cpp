@@ -95,6 +95,7 @@ void Library::newPlaylist(std::string nameIn) {
 
 void Library::removeFromPlaylist(std::string nameIn, std::string artist, std::string titleIn) {
     int indexOfPlaylist = playlists->find(nameIn);
+    //TODO
     playlists->getValueAt(indexOfPlaylist).removeSong(artist,titleIn);
 }
 void Library::removeFromPlaylists(std::string artist, std::string titleIn) {
@@ -178,6 +179,7 @@ void Library::playNext(std::string nameIn) {
     playlists->insertAt(tempPlay,index);
     if (msg == "Playlist is empty"){
         playlists->removeValueAt(index);
+        std::cout << "Playlist is already empty, it will now be removed" << std::endl;
     }
     else{
         Song temp = Song(msg);
