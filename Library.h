@@ -30,7 +30,7 @@ public:
      * print songs that already existed in the library
      * @param filename -- name of the file we are importing from
      */
-    void AddSongsFromFile(std::string filename);
+    void AddSongsFromFile(std::string file_name);
 
 
     /**
@@ -43,7 +43,7 @@ public:
      * and print those that were not removed (weren't within the library)
      * @param filename
      */
-    void discontinue(std::string songIn);
+    void discontinue(std::string file_name);
 
     /**
      * Writes the current library to a file to save the data when the command quit is typed
@@ -119,11 +119,10 @@ public:
 
 
 
-    void removeFromPlaylist(std::string artist, std::string titleIn);
+    void removeFromPlaylists(std::string artist, std::string titleIn);
 
 
-
-
+    void removeSongFromLibrary(std::string songIn);
 };
 
 

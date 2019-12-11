@@ -58,28 +58,7 @@ int maine(){
         }
         else if(words == "import"){
             std::string filename;
-
-            std::cout << "reading..." << std::endl;
-            filename = "Songs.txt";
-            std::ifstream infile(filename);
-            if (infile){
-                while (infile){
-                    std::string line;
-                    getline(infile, line);
-                    getline(splitter, filename, '>');
-                    djBoard.addSongToLibrary(line);
-                }
-            }else {
-                std::cout << "can't read file!"  << std::endl;
-            }
-            std::cout << "read....closing" << std::endl;
-            infile.close();
-
-
-
-            getline(splitter, filename, '>');
-            //djBoard.AddSongsFromFile(filename);
-            //TODO in prog
+            djBoard.AddSongsFromFile(filename);
 
         }
         else if(words == "discontinue"){

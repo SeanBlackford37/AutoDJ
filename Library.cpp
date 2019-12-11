@@ -25,18 +25,19 @@ void Library::loadLibrary(){
     //TODO
 }
 
-void Library::AddSongsFromFile(std::string file_name) {
-    std::cout << "testing..." << std::endl;
-    std::string filename = "Songs.txt";
+void Library::AddSongsFromFile(std::string file_name){
+    std::cout << "reading..." << std::endl;
+    std::string filename = file_name;
     std::ifstream infile(filename);
     if (infile){
         while (infile){
             std::string line;
             getline(infile, line);
             std::cout << line << std::endl;
+            addSongToLibrary(line);
         }
     }else {
-        std::cout << "can't read file!"  << std::endl;
+        std::cout << "file can not be read file!"  << std::endl;
 
     }
     std::cout << "closing" << std::endl;
@@ -52,17 +53,25 @@ void Library::displaySongs() {
         std::cout << "\t" + songs->getValueAt(i).toString() + "\n";
     }
 }
-void Library::discontinue(std::string songIn) {
-    Song temp = Song(songIn);
-    for (int i = 0; i < playlists->itemCount(); i++) {
-        playlists->getValueAt(i).removeSong(temp.getArtist(), temp.getTitle());
+void Library::discontinue(std::string file_name) {
+    std::cout << "reading..." << std::endl;
+    std::string filename = file_name;
+    std::ifstream infile(filename);
+    if (infile){
+        while (infile){
+            std::string line;
+            getline(infile, line);
+            std::cout << line << std::endl;
+            Song songin(line);
+            removeFromPlaylists(songin.getArtist(),songin.getTitle());
+            removeSongFromLibrary(line);
+        }
+    }else {
+        std::cout << "file can not be read file!"  << std::endl;
+
     }
-    int index = songs->findArtistandTitle(songs->itemCount(), temp.getArtist(), temp.getTitle()) == -1;
-    if (songs->findArtistandTitle(songs->itemCount(), temp.getArtist(), temp.getTitle()) == -1) {
-        songs->removeValueAt(index);
-    } else {
-        std::cout << songIn << "does not exist" << std::endl;
-    }
+    std::cout << "closing" << std::endl;
+    infile.close();
 }
 
 void Library::saveLibrary() {
@@ -83,6 +92,13 @@ void Library::newPlaylist(std::string nameIn) {
 void Library::removeFromPlaylist(std::string nameIn, std::string artist, std::string titleIn) {
     int indexOfPlaylist = playlists->find(nameIn);
     playlists->getValueAt(indexOfPlaylist).removeSong(artist,titleIn);
+}
+void Library::removeFromPlaylists(std::string artist, std::string titleIn) {
+
+    for (int i = 0; i < playlists->itemCount(); i++){
+        playlists->getValueAt(i).removeSong(artist,titleIn);
+    }
+
 }
 
 
@@ -212,6 +228,22 @@ void Library::addSongToLibrary(std::string songIn) {
             std::cout << Song(songIn).toString() << " is already in the library" << std::endl;
         }
     }
+
+}
+
+
+void Library::removeSongFromLibrary(std::string songIn) {
+
+        Song temp = Song(songIn);
+        int indexSong = songs->findArtistandTitle(songs->itemCount(), temp.getArtist(), temp.getTitle());
+        if(indexSong != -1) {
+            songs->removeValueAt(indexSong);
+        }else{
+            std::cout << Song(songIn).toString() << " is not in the library" << std::endl;
+        }
+
+
+
 
 }
 

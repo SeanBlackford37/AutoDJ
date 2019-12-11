@@ -103,8 +103,19 @@ void libraryTests() {
 
     testLib->newPlaylist("Vibes");
     testLib->addToPlaylist("Vibes", "Avicii", "Hey Brother");
-    //TODO: FIX HOW WHEN ADDING THINGS A DESTRUCTOR IS CALLED ON PLAYLIST FOR SOME REASON
     testLib->displayPlaylist("Vibes");
+
+    testLib->addSongToLibrary("Darude Sandstorm,Darude,3:52");
+    testLib->addSongToLibrary("w.a.m.s,Fall Out Boy,4:38");
+    testLib->addSongToLibrary("Nobody's Perfect,Hannah Montana,3:21");
+    testLib->displaySongs();
+
+    testLib->newRandomPlaylist("Work It", "0:12:30");
+    testLib->displayPlaylist("Work It");
+
+    testLib->AddSongsFromFile("songList.txt");
+
+    testLib->displaySongs();
 }
 
 
@@ -112,9 +123,9 @@ void libraryTests() {
 
 int main(){
 
-    songTests();
-    SongArrayListTests();
-    playlistTests();
+    //songTests();
+    //SongArrayListTests();
+    //playlistTests();
     libraryTests();
 
 
