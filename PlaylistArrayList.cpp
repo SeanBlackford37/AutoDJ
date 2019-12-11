@@ -151,17 +151,15 @@ Playlist PlaylistArrayList::removeValueAtEnd() {
 }
 
 Playlist PlaylistArrayList::removeValueAtFront() {
-    if(currItemCount < 0){
-        throw std::out_of_range("e");
+    if(currItemCount<=0){
+        throw std::out_of_range("In removeValueAtFront, List must have items");
     }
-    Playlist copy = array[0];
-    for(int i = 1; i < currItemCount;i++){
-        array[i-1] = array[i];
+    Playlist temp = array[0];
+    for (int i =0; i<currItemCount-1;i++){
+        array[i] = array[i+1];
     }
-
     currItemCount--;
-
-    return copy;
+    return temp;
 }
 Playlist PlaylistArrayList::removeValueAt(int index) {
     if(currItemCount<=0){

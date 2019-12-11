@@ -129,3 +129,6 @@ int Playlist::find(std::string artistIn, std::string titleIn){
 std::string Playlist::getName(){
     return name;
 }
+bool Playlist::isEmpty(){
+    return songs->isEmpty();
+}
