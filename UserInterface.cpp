@@ -64,7 +64,7 @@ int maine(){
         else if(words == "discontinue"){
             std::string filename;
             djBoard.discontinue(filename);
-            //TODO in prog
+
 
         }
         else if(command == "playlists"){

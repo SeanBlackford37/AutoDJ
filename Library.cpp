@@ -22,10 +22,44 @@ Library::~Library(){
 }
 
 void Library::loadLibrary(){
-    //TODO
+
+    std::string filename = "library.txt";
+    std::ifstream infile(filename);
+    if (infile){
+        while (infile){
+            std::string line;
+            getline(infile, line);
+            std::cout << line << std::endl;
+            if(line != ""){
+                addSongToLibrary(line);
+            }
+        }
+    }else {
+        std::cout << "file can not be read file!"  << std::endl;
+
+    }
+    std::cout << "closing" << std::endl;
+    infile.close();
 }
 
 void Library::quit(){
+    std::ofstream myfile;
+    std::cout << "writing..." << std::endl;
+    myfile.open("library.txt");
+    for(int i = 0; i <songs->itemCount();i++){
+        myfile << songs->getValueAt(i).toStringtoFile();
+        myfile << "\n";
+    }
+    for(int i = 0; i<playlists->itemCount();i++){
+        myfile <<"Title: " + playlists->getValueAt(i).getName();
+        myfile<<"\n";
+        for(int j = 0; j < playlists->getValueAt(i).playListLength(); j++) {
+            myfile << playlists->getValueAt(i).getSong(j);
+            myfile<<"\n";
+        }
+    }
+    std::cout << "file has been written" << std::endl;
+    myfile.close();
 
 }
 

@@ -125,7 +125,14 @@ void Playlist::removeSong(std::string artist, std::string title) {
 int Playlist::find(std::string artistIn, std::string titleIn){
     return songs->findArtistandTitle(songs->itemCount(),artistIn,titleIn);
 }
+int Playlist::playListLength(){
+   return songs->itemCount();
 
+}
+
+std::string Playlist::getSong(int location){
+    return songs->getValueAt(location).toStringtoFile();
+}
 std::string Playlist::getName(){
     return name;
 }

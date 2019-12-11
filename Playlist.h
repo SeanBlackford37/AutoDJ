@@ -40,6 +40,8 @@ public:
 
     Playlist(const Playlist& PlaylistToCopy);
 
+    std::string getSong(int location);
+
     int find(std::string artistIn, std::string titleIn);
 
      /**
@@ -67,6 +69,8 @@ public:
       std::string getName();
 
       bool isEmpty();
+
+    int playListLength();
 };
 
 
