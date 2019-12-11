@@ -10,7 +10,7 @@
 
 
 //First we'd load in a file but need that to work first
-int main(){
+int maine(){
     std::string command = "";
     Library djBoard = Library();
     //WE'd get rid of this
