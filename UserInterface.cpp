@@ -80,12 +80,12 @@ int maine(){
             getline(splitter, filename, '>');
             //djBoard.AddSongsFromFile(filename);
             //TODO in prog
->>>>>>> 391f30d579a4c729784009f728ce4d2658e29521
+
         }
         else if(words == "discontinue"){
             //TODO Remove all songs from the given file from the library?
             std::string filename;
-<<<<<<< HEAD
+            getline(splitter, filename, '>');
             std::cout << "reading..." << std::endl;
             filename = "Songs.txt";
             std::ifstream infile(filename);
@@ -102,11 +102,10 @@ int maine(){
             std::cout << "read....closing" << std::endl;
             infile.close();
 
-=======
-            getline(splitter, filename, '>');
+
             //djBoard.discontinue(filename);
             //TODO in prog
->>>>>>> 391f30d579a4c729784009f728ce4d2658e29521
+
         }
         else if(command == "playlists"){
             djBoard.displayPlaylists();

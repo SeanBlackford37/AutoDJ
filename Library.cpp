@@ -98,14 +98,20 @@ void Library::removeFromPlaylist(std::string nameIn, std::string artist, std::st
 void Library::addToPlaylist(std::string nameIn, std::string artist, std::string titleIn) {
     int indexOfPlaylist = playlists->find(nameIn);
     int indexOfSong = songs->findArtistandTitle(songs->itemCount(),artist,titleIn);
-    if (indexOfSong == -1){
+    if (indexOfSong == -1) {
         std::cout << "\tSong is not in Library" <<std::endl;
+    }
+    else if (indexOfPlaylist == -1){
+        std::cout << "\tPlaylist with that name does not exist" << std::endl;
     }
     else{
         Song temp = songs->getValueAt(indexOfSong);
-        Playlist tempPlay = playlists->getValueAt(indexOfPlaylist);
-        tempPlay.addSong(temp.toStringtoFile());
-        playlists->getValueAt(indexOfPlaylist) = tempPlay;
+        playlists->getValueAt(indexOfPlaylist).addSong(temp.toStringtoFile());
+
+//        Song temp = songs->getValueAt(indexOfSong);
+//        Playlist tempPlay = playlists->getValueAt(indexOfPlaylist);
+//        tempPlay.addSong(temp.toStringtoFile());
+//        playlists->getValueAt(indexOfPlaylist) = tempPlay;
     }
 }
 
@@ -202,7 +208,7 @@ void Library::addSongToLibrary(std::string songIn) {
         if (songs->findArtistandTitle(songs->itemCount(), temp.getArtist(), temp.getTitle()) == -1) {
             songs->insertAtAlphabetized(Song(songIn));
         } else {
-            std::cout << songIn << " is already in the library" << std::endl;
+            std::cout << Song(songIn).toString() << " is already in the library" << std::endl;
         }
     }
 
