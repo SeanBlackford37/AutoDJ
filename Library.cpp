@@ -85,7 +85,7 @@ void Library::saveLibrary() {
 void Library::displayPlaylists() {
     std::cout << "Playlists: " << std::endl;
     for (int i =0; i< playlists->itemCount(); i++){
-        std::cout << "Name: " + playlists->getValueAt(i).getName() + "Duration: " + playlists->getValueAt(i).calcDuration() << std::endl;
+        std::cout << "Name: " + playlists->getValueAt(i).getName() + " Duration: " + playlists->getValueAt(i).calcDuration() << std::endl;
     }
 }
 
@@ -95,8 +95,13 @@ void Library::newPlaylist(std::string nameIn) {
 
 void Library::removeFromPlaylist(std::string nameIn, std::string artist, std::string titleIn) {
     int indexOfPlaylist = playlists->find(nameIn);
-    //TODO
-    playlists->getValueAt(indexOfPlaylist).removeSong(artist,titleIn);
+    if (indexOfPlaylist != -1){
+        Playlist temp = playlists->getValueAt(indexOfPlaylist);
+        temp.removeSong(artist,titleIn);
+        playlists->removeValueAt(indexOfPlaylist);
+        playlists->insertAt(temp,indexOfPlaylist);
+    }
+
 }
 void Library::removeFromPlaylists(std::string artist, std::string titleIn) {
 
