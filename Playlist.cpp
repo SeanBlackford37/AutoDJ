@@ -83,6 +83,7 @@ std::string Playlist::calcDuration() {
 std::string Playlist::toString() {
     std::string info = "";
     for (int i = 0; i < songs->itemCount(); i++) {
+        info += "\t";
         info += songs->getValueAt(i).toString();
         info += "\n";
     }
@@ -105,6 +106,9 @@ void Playlist::addSong(std::string SongIn) {
     if (index == -1){
         songs->insertAtEnd(SongIn);
     }
+    else{
+        std::cout << "This song is already in the given playlist" << std::endl;
+    }
 }
 
 void Playlist::removeSong(std::string artist, std::string title) {
@@ -116,6 +120,10 @@ void Playlist::removeSong(std::string artist, std::string title) {
     else{
         std::cout << "Song was not in the given Playlist" << std::endl;
     }
+}
+
+int Playlist::find(std::string artistIn, std::string titleIn){
+    return songs->findArtistandTitle(songs->itemCount(),artistIn,titleIn);
 }
 
 std::string Playlist::getName(){

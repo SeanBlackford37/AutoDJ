@@ -27,7 +27,7 @@ void songTests(){
     Song* test3 = new Song("Party Rock Anthem", "", "6:16" );
     printAssertEquals(test3->toString(),"Title: Party Rock Anthem Artist: Unknown Duration: 6:16 Play Count: 0");
 
-    Song* test4 = new Song("Nobody's Perfect,Hannah Montana,3:21, 4");
+    Song* test4 = new Song("Nobody's Perfect,Hannah Montana,3:21,4");
     printAssertEquals(test4->toString(),"Title: Nobody's Perfect Artist: Hannah Montana Duration: 3:21 Play Count: 4");
     printAssertEquals(test4->getDurationString(),"3:21");
     printAssertEquals(test4->getDuration(),201);
@@ -85,6 +85,7 @@ void playlistTests() {
 
 
 
+
     std::cout << "--done--" <<std::endl;
 
 
@@ -103,8 +104,16 @@ void libraryTests() {
 
     testLib->newPlaylist("Vibes");
     testLib->addToPlaylist("Vibes", "Avicii", "Hey Brother");
-    //TODO: FIX HOW WHEN ADDING THINGS A DESTRUCTOR IS CALLED ON PLAYLIST FOR SOME REASON
     testLib->displayPlaylist("Vibes");
+
+    testLib->addSongToLibrary("Darude Sandstorm,Darude,3:52");
+    testLib->addSongToLibrary("w.a.m.s,Fall Out Boy,4:38");
+    testLib->addSongToLibrary("Nobody's Perfect,Hannah Montana,3:21");
+    testLib->displaySongs();
+
+    testLib->newRandomPlaylist("Work It", "0:12:30");
+    testLib->displayPlaylist("Work It");
+
 }
 
 

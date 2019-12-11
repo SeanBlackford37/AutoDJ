@@ -91,6 +91,7 @@ void Library::removeFromPlaylist(std::string nameIn, std::string artist, std::st
 void Library::addToPlaylist(std::string nameIn, std::string artist, std::string titleIn) {
     int indexOfPlaylist = playlists->find(nameIn);
     int indexOfSong = songs->findArtistandTitle(songs->itemCount(),artist,titleIn);
+    Playlist tempPlay = playlists->getValueAt(indexOfPlaylist);
     if (indexOfSong == -1) {
         std::cout << "\tSong is not in Library" <<std::endl;
     }
@@ -99,7 +100,6 @@ void Library::addToPlaylist(std::string nameIn, std::string artist, std::string 
     }
     else{
         Song temp = songs->getValueAt(indexOfSong);
-        Playlist tempPlay = playlists->getValueAt(indexOfPlaylist);
         tempPlay.addSong(temp.toStringtoFile());
         playlists->removeValueAt(indexOfPlaylist);
         playlists->insertAt(tempPlay,indexOfPlaylist);
@@ -159,7 +159,6 @@ void Library::playNext(std::string nameIn) {
 }
 
 void Library::newRandomPlaylist(std::string nameIn, std::string duration) {
-    //playlists->insertAtEnd(Playlist(nameIn));
     Playlist randPlaylist = Playlist(nameIn);
     std::stringstream splitter (duration);
     std::string words;
@@ -168,36 +167,44 @@ void Library::newRandomPlaylist(std::string nameIn, std::string duration) {
     if (splitter){
         getline(splitter, words, ':');
         while (splitter){
-            std::stringstream stringToInt(words);
+            int temp = stoi(words);
             // it to the integer x
-            int x = 0;
-            stringToInt >> x;
             if(count == 0) {
                 count++;
-                maxDuration = x * 60 * 60;
+                maxDuration += temp * 60 * 60;
             }
-            if(count == 1) {
+            else if(count == 1) {
                 count++;
-                maxDuration = x * 60;
+                maxDuration += temp * 60;
             }
             else{
-                maxDuration += x;
+                maxDuration += temp;
             }
             getline(splitter, words, ':');
         }
     }
     int failCount = 0;
+    int runningDuration = 0;
     while (failCount != 10){
-        int randIndex = genRandInt(0, songs->itemCount());
-        Song randSong = songs->getValueAt(randIndex);;
-        failCount++;
+        int randIndex = genRandInt(0, songs->itemCount()-1);
+        Song randSong = songs->getValueAt(randIndex);
+        if (randPlaylist.find(randSong.getArtist(),randSong.getTitle()) != -1){
+            failCount++;
+        }
+        else{
+            if (runningDuration + randSong.getDuration() > maxDuration){
+                failCount ++;
+            }
+            else{
+                failCount = 0;
+                runningDuration += randSong.getDuration();
+                randPlaylist.addSong(randSong.toStringtoFile());
+            }
+        }
     }
-    //TODO get the random working
-    bool endpoint = false;
-    while(endpoint == false) {
-        int randIndex = genRandInt(0, songs->itemCount());
-        Song randSong = songs->getValueAt(randIndex);;
-    }
+    playlists->insertAtEnd(randPlaylist);
+
+
 }
 
 void Library::addSongToLibrary(std::string songIn) {
