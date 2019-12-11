@@ -33,7 +33,7 @@ void Library::AddSongsFromFile(std::string file_name){
         while (infile){
             std::string line;
             getline(infile, line);
-            std::cout << line << std::endl;
+
             addSongToLibrary(line);
         }
     }else {
@@ -61,7 +61,7 @@ void Library::discontinue(std::string file_name) {
         while (infile){
             std::string line;
             getline(infile, line);
-            std::cout << line << std::endl;
+
             Song songin(line);
             removeFromPlaylists(songin.getArtist(),songin.getTitle());
             removeSongFromLibrary(line);
@@ -96,7 +96,7 @@ void Library::removeFromPlaylist(std::string nameIn, std::string artist, std::st
 }
 void Library::removeFromPlaylists(std::string artist, std::string titleIn) {
 
-    for (int i = 0; i < playlists->itemCount(); i++){
+    for (int i = 0; i < 1; i++){
         playlists->getValueAt(i).removeSong(artist,titleIn);
     }
 

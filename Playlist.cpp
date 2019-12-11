@@ -118,7 +118,7 @@ void Playlist::removeSong(std::string artist, std::string title) {
 
     }
     else{
-        std::cout << "Song was not in the given Playlist" << std::endl;
+        std::cout << title << " " << artist << "  : couldn't be removed" << std::endl;
     }
 }
 
