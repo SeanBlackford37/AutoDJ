@@ -10,7 +10,7 @@
 
 
 //First we'd load in a file but need that to work first
-int maine(){
+int main(){
     std::string command = "";
     Library djBoard = Library();
     //WE'd get rid of this
@@ -64,8 +64,6 @@ int maine(){
         else if(words == "discontinue"){
             std::string filename;
             djBoard.discontinue(filename);
-            //TODO in prog
-
         }
         else if(command == "playlists"){
             djBoard.displayPlaylists();

@@ -162,7 +162,7 @@ void libraryTests() {
 
 
 
-int main(){
+int maine(){
 
     //songTests();
     //SongArrayListTests();

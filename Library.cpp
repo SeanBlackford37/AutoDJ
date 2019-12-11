@@ -87,8 +87,13 @@ void Library::saveLibrary() {
 
 void Library::displayPlaylists() {
     std::cout << "Playlists: " << std::endl;
+    int count = 0;
     for (int i =0; i< playlists->itemCount(); i++){
         std::cout << "Name: " + playlists->getValueAt(i).getName() + " Duration: " + playlists->getValueAt(i).calcDuration() << std::endl;
+        count ++;
+    }
+    if (count ==0){
+        std::cout << "\tNo Playlists available" << std::endl;
     }
 }
 
@@ -120,7 +125,7 @@ void Library::removeFromPlaylists(std::string artist, std::string titleIn) {
 void Library::addToPlaylist(std::string nameIn, std::string artist, std::string titleIn) {
     int indexOfPlaylist = playlists->find(nameIn);
     int indexOfSong = songs->findArtistandTitle(songs->itemCount(),artist,titleIn);
-    Playlist tempPlay = playlists->getValueAt(indexOfPlaylist);
+
     if (indexOfSong == -1) {
         std::cout << "\tSong is not in Library" <<std::endl;
     }
@@ -128,15 +133,12 @@ void Library::addToPlaylist(std::string nameIn, std::string artist, std::string 
         std::cout << "\tPlaylist with that name does not exist" << std::endl;
     }
     else{
+        Playlist tempPlay = playlists->getValueAt(indexOfPlaylist);
         Song temp = songs->getValueAt(indexOfSong);
         tempPlay.addSong(temp.toStringtoFile());
         playlists->removeValueAt(indexOfPlaylist);
         playlists->insertAt(tempPlay,indexOfPlaylist);
 
-//        Song temp = songs->getValueAt(indexOfSong);
-//        Playlist tempPlay = playlists->getValueAt(indexOfPlaylist);
-//        tempPlay.addSong(temp.toStringtoFile());
-//        playlists->getValueAt(indexOfPlaylist) = tempPlay;
     }
 }
 
@@ -181,25 +183,29 @@ void Library::displayPlaylist(std::string nameIn) {
 
 void Library::playNext(std::string nameIn) {
     int index = playlists->find(nameIn);
-    Playlist tempPlay =playlists->getValueAt(index);
-    std::string msg = tempPlay.playNext();
-    playlists->removeValueAt(index);
-    playlists->insertAt(tempPlay,index);
-    if (msg == "Playlist is empty"){
+    if (index != -1) {
+        Playlist tempPlay = playlists->getValueAt(index);
+        std::string msg = tempPlay.playNext();
         playlists->removeValueAt(index);
-        std::cout << "Playlist is already empty, it will now be removed" << std::endl;
+        playlists->insertAt(tempPlay, index);
+        if (msg == "Playlist is empty") {
+            playlists->removeValueAt(index);
+            std::cout << "Playlist is already empty, it will now be removed" << std::endl;
+        } else {
+            Song temp = Song(msg);
+            int songindex = songs->findArtistandTitle(songs->itemCount(), temp.getArtist(), temp.getTitle());
+            std::cout << "Song being played: " + songs->getValueAt(songindex).toString() << std::endl;
+            Song real = songs->getValueAt(songindex);
+            real.incrementPlayCount();
+            songs->removeValueAt(songindex);
+            songs->insertAt(real, songindex);
+            if (playlists->getValueAt(index).isEmpty()) {
+                playlists->removeValueAt(index);
+            }
+        }
     }
     else{
-        Song temp = Song(msg);
-        int index = songs->findArtistandTitle(songs->itemCount(),temp.getArtist(),temp.getTitle());
-        std::cout << "Song being played: " + songs->getValueAt(index).toString() << std::endl;
-        Song real = songs->getValueAt(index);
-        real.incrementPlayCount();
-        songs->removeValueAt(index);
-        songs->insertAt(real ,index);
-        if (playlists->getValueAt(index).isEmpty()){
-            playlists->removeValueAt(index);
-        }
+        std::cout<< "Playlist with this name does not exist" <<std::endl;
     }
 
 }
