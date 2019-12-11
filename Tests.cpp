@@ -96,6 +96,7 @@ void playlistTests() {
 void libraryTests() {
     std::cout << "----Library Tests----" << std::endl;
     Library *testLib = new Library();
+    /*
     testLib->addSongToLibrary("Never Gonna Give You Up,Rick Astley,3:33");
     testLib->addSongToLibrary("Wake Me Up,Avicii,4:32,3");
     testLib->addSongToLibrary("Hey Brother,Avicii,4:23");
@@ -121,15 +122,14 @@ void libraryTests() {
 
     testLib->playNext("Vibes");
     testLib->displayPlaylist("Vibes");
-
+    */
 
     testLib->AddSongsFromFile("songList.txt");
 
 
     testLib->displaySongs();
-    testLib->discontinue("songList.txt");
-    testLib->displayPlaylists();
-    testLib->displaySongs();
+
+
 
 
 

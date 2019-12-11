@@ -33,8 +33,11 @@ void Library::AddSongsFromFile(std::string file_name){
         while (infile){
             std::string line;
             getline(infile, line);
+            std::cout << line << std::endl;
+            if(line != ""){
+                addSongToLibrary(line);
+            }
 
-            addSongToLibrary(line);
         }
     }else {
         std::cout << "file can not be read file!"  << std::endl;
@@ -61,10 +64,11 @@ void Library::discontinue(std::string file_name) {
         while (infile){
             std::string line;
             getline(infile, line);
-
-            Song songin(line);
-            removeFromPlaylists(songin.getArtist(),songin.getTitle());
-            removeSongFromLibrary(line);
+            if(line != line) {
+                Song songin(line);
+                removeFromPlaylists(songin.getArtist(), songin.getTitle());
+                removeSongFromLibrary(line);
+            }
         }
     }else {
         std::cout << "file can not be read file!"  << std::endl;
