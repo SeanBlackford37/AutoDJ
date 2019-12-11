@@ -65,13 +65,6 @@ void Library::discontinue(std::string songIn) {
     }
 }
 
-
-
-
-
-
-
-
 void Library::saveLibrary() {
     //TODO
 }
@@ -193,7 +186,12 @@ void Library::newRandomPlaylist(std::string nameIn, std::string duration) {
             getline(splitter, words, ':');
         }
     }
-
+    int failCount = 0;
+    while (failCount != 10){
+        int randIndex = genRandInt(0, songs->itemCount());
+        Song randSong = songs->getValueAt(randIndex);;
+        failCount++;
+    }
     //TODO get the random working
     bool endpoint = false;
     while(endpoint == false) {

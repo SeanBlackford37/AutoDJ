@@ -130,12 +130,13 @@ void ArrayList::insertAtFront(Song itemToAdd) {
     if (currItemCount +1 > currCapacity){
         doubleCapacity();
     }
-    for(int i = currItemCount; i >= 1;i--){
-        array[i] = array[i-1];
-    }
 
-    currItemCount+=1;
-    array[0] = itemToAdd;
+    for (int i = 0; i<currItemCount+1;i++){
+        Song temp = array[i];
+        array[i] = itemToAdd;
+        itemToAdd = temp;
+    }
+    currItemCount ++;
 
 }
 
@@ -153,17 +154,18 @@ int ArrayList::findArtistandTitle(const int size, std::string artistIn, std::str
 }
 
 void ArrayList::insertAt(Song itemToAdd, int index) {
-    if (index < 0 or index > currItemCount) {
-        throw std::out_of_range("e");
+    if (index < 0 or index > currItemCount){
+        throw std::out_of_range("Bad index given to insertAt: " + std::to_string(index));
     }
-    if (currItemCount + 1 > currCapacity){
+    if (currItemCount +1 > currCapacity){
         doubleCapacity();
     }
-    for (int i = currItemCount; i >= index; i--) {
-        array[i] = array[i - 1];
+    for (int i = index; i<currItemCount+1;i++){
+        Song temp = array[i];
+        array[i] = itemToAdd;
+        itemToAdd = temp;
     }
-    currItemCount+=1;
-    array[index] = itemToAdd;
+    currItemCount ++;
 
 }
 

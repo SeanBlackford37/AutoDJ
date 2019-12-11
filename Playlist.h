@@ -36,7 +36,9 @@ public:
 
     int calcIntDuration();
 
-    Playlist operator=(const Playlist PlaylistToCopy);
+    Playlist& operator=(const Playlist &PlaylistToCopy);
+
+    Playlist(const Playlist& PlaylistToCopy);
 
      /**
       *

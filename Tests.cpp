@@ -74,6 +74,17 @@ void playlistTests() {
     test->removeSong("Fall Out Boy", "w.a.m.s");
     test->removeSong("Rick Astley", "Never Gonna Give You Up");
     printAssertEquals(test->toString(), "");
+    std::cout << "Copy constructor test" << std::endl;
+
+    Playlist original = Playlist("Please");
+    original.addSong("Never Gonna Give You Up,Rick Astley,3:33");
+    original.addSong("Shooting Stars,Bag Raiders,3:56");
+    std::cout << original.toString() << std::endl;
+    Playlist copy = Playlist(original);
+    std::cout << copy.toString() << std::endl;
+
+
+
     std::cout << "--done--" <<std::endl;
 
 

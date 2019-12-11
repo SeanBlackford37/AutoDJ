@@ -113,31 +113,33 @@ void PlaylistArrayList::clearList() {
 }
 
 void PlaylistArrayList::insertAtFront(Playlist itemToAdd) {
-    if (currItemCount+1 > currCapacity){
+    if (currItemCount +1 > currCapacity){
         doubleCapacity();
     }
-    for(int i = currItemCount; i >= 1;i--){
-        array[i] = array[i-1];
-    }
 
-    currItemCount+=1;
-    array[0] = itemToAdd;
+    for (int i = 0; i<currItemCount+1;i++){
+        Playlist temp = array[i];
+        array[i] = itemToAdd;
+        itemToAdd = temp;
+    }
+    currItemCount ++;
 
 }
 
 void PlaylistArrayList::insertAt(Playlist itemToAdd, int index) {
 
-    if (index < 0 or index > currItemCount) {
-        throw std::out_of_range("e");
+    if (index < 0 or index > currItemCount){
+        throw std::out_of_range("Bad index given to insertAt: " + std::to_string(index));
     }
-    if (currItemCount + 1 > currCapacity){
+    if (currItemCount +1 > currCapacity){
         doubleCapacity();
     }
-    for (int i = currItemCount; i >= index; i--) {
-        array[i] = array[i - 1];
+    for (int i = index; i<currItemCount+1;i++){
+        Playlist temp = array[i];
+        array[i] = itemToAdd;
+        itemToAdd = temp;
     }
-    currItemCount+=1;
-    array[index] = itemToAdd;
+    currItemCount ++;
 }
 
 Playlist PlaylistArrayList::removeValueAtEnd() {
@@ -162,22 +164,15 @@ Playlist PlaylistArrayList::removeValueAtFront() {
     return copy;
 }
 Playlist PlaylistArrayList::removeValueAt(int index) {
-    if (index < 0 or index > currItemCount) {
-        throw std::out_of_range("e");
+    if(currItemCount<=0){
+        throw std::out_of_range("In removeValueAtFront, List must have items");
     }
-    if (currItemCount < 0) {
-        throw std::out_of_range("e");
+    Playlist temp = array[index];
+    for (int i =index; i<currItemCount-1;i++){
+        array[i] = array[i+1];
     }
-    Playlist copy = array[index];
-    for (int i = 0; i < index; i++) {
-        array[i] = array[i];
-    }
-    for (int i = index + 1; i < currItemCount; i++) {
-        array[i - 1] = array[i];
-    }
-
     currItemCount--;
-    return copy;
+    return temp;
 }
 
 int PlaylistArrayList::find(std::string name){
