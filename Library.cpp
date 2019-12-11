@@ -96,7 +96,7 @@ void Library::removeFromPlaylist(std::string nameIn, std::string artist, std::st
 }
 void Library::removeFromPlaylists(std::string artist, std::string titleIn) {
 
-    for (int i = 0; i < 1; i++){
+    for (int i = 0; i < playlists->itemCount(); i++){
         playlists->getValueAt(i).removeSong(artist,titleIn);
     }
 
