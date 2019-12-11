@@ -154,6 +154,7 @@ void Library::playNext(std::string nameIn) {
         Song temp = Song(msg);
         int index = songs->findArtistandTitle(songs->itemCount(),temp.getArtist(),temp.getTitle());
         songs->getValueAt(index).incrementPlayCount();
+        if ()
     }
 
 }

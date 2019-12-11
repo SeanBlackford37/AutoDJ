@@ -144,7 +144,11 @@ int maine(){
             djBoard.playNext(name);
         }
         else if(words == "newrandom"){
-            //TODO
+            std::string name;
+            std::string duration;
+            getline(splitter, name, ',');
+            getline(splitter, duration, '>');
+            djBoard.newRandomPlaylist(name, duration);
         }
         else{
             std::cout << "That is not a valid command, enter help for a list of commands" << std::endl;
