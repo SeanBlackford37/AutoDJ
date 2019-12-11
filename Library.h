@@ -43,7 +43,7 @@ public:
      * and print those that were not removed (weren't within the library)
      * @param filename
      */
-    void discontinue(std::string filename);
+    void discontinue(std::string songIn);
 
     /**
      * Writes the current library to a file to save the data when the command quit is typed
@@ -116,6 +116,10 @@ public:
 
     void addSongToLibrary(std::string songIn);
 
+
+
+
+    void removeFromPlaylist(std::string artist, std::string titleIn);
 
 
 

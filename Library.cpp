@@ -6,6 +6,7 @@
 #include "ArrayLib.h"
 #include <iostream>
 #include <fstream>
+#include <sstream>
 
 Library::Library(){
     songs = new ArrayList(30);
@@ -49,11 +50,25 @@ void Library::displaySongs() {
         std::cout << "\t" + songs->getValueAt(i).toString() + "\n";
     }
 }
-
-void Library::discontinue(std::string file_name) {
-
-    //TODO
+void Library::discontinue(std::string songIn) {
+    Song temp = Song(songIn);
+    for (int i = 0; i < playlists->itemCount(); i++) {
+        playlists->getValueAt(i).removeSong(temp.getArtist(), temp.getTitle());
+    }
+    int index = songs->findArtistandTitle(songs->itemCount(), temp.getArtist(), temp.getTitle()) == -1;
+    if (songs->findArtistandTitle(songs->itemCount(), temp.getArtist(), temp.getTitle()) == -1) {
+        songs->removeValueAt(index);
+    } else {
+        std::cout << songIn << "does not exist" << std::endl;
+    }
 }
+
+
+
+
+
+
+
 
 void Library::saveLibrary() {
     //TODO
@@ -74,6 +89,9 @@ void Library::removeFromPlaylist(std::string nameIn, std::string artist, std::st
     int indexOfPlaylist = playlists->find(nameIn);
     playlists->getValueAt(indexOfPlaylist).removeSong(artist,titleIn);
 }
+
+
+
 
 void Library::addToPlaylist(std::string nameIn, std::string artist, std::string titleIn) {
     int indexOfPlaylist = playlists->find(nameIn);
@@ -155,10 +173,14 @@ void Library::addSongToLibrary(std::string songIn) {
         if (songs->findArtistandTitle(songs->itemCount(), temp.getArtist(), temp.getTitle()) == -1) {
             songs->insertAtAlphabetized(Song(songIn));
         } else {
-            std::cout << "Song already in" << std::endl;
+            std::cout << songIn << " is already in the library" << std::endl;
         }
     }
 
 }
+
+
+
+
 
 
