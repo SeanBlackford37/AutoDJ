@@ -40,6 +40,8 @@ public:
 
     Playlist(const Playlist& PlaylistToCopy);
 
+    int find(std::string artistIn, std::string titleIn);
+
      /**
       *
       * @return string representing all songs in the playlist

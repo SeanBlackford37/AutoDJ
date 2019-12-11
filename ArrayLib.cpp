@@ -11,15 +11,13 @@
 
 
 int genRandInt(int min, int max) {
-    int num = max;
-
-    if (min > max) {
+    if (min > max){
+        int temp = max;
         max = min;
-        min = num;
+        min = temp;
     }
+    int num = (rand() % (max - min + 1)) + min;
+    return num;
 
-    int randNum = rand() % (max - min + 1) + min;
-    return randNum;
 }
-
 
