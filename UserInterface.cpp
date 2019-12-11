@@ -38,7 +38,7 @@ int maine(){
             std::cout << "add<name,artist,title>\n\tAdd the given song to the end of the given playlist" << std::endl;
             std::cout << "remove<name, artist, title>\n\tremove the given song from the playlist" << std::endl;
             std::cout << "playnext<name>\n\tPrint all information about the next song to be played from the given playlist to the screen." <<std::endl;
-            std::cout << "newrandom<name,duration>\n\tMake a new playlist with the given name, and populate it with a random group of songs that do not repeat" << std::endl;
+            std::cout << "newrandom<name,duration>\n\tMake a new playlist with the given name, and populate it with a random group of songs that do not repeat. \n\tInput duration like 0:12:2 if the desired length of the playlist was 0 hours, 12 minutes, and 2 seconds" << std::endl;
             std::cout << "quit\n\tSave the library and all playlists and terminate execution." << std::endl;
         }
         else if (command == "library"){
@@ -58,6 +58,7 @@ int maine(){
         }
         else if(words == "import"){
             std::string filename;
+
             std::cout << "reading..." << std::endl;
             filename = "Songs.txt";
             std::ifstream infile(filename);
@@ -76,10 +77,15 @@ int maine(){
 
 
 
+            getline(splitter, filename, '>');
+            //djBoard.AddSongsFromFile(filename);
+            //TODO in prog
+>>>>>>> 391f30d579a4c729784009f728ce4d2658e29521
         }
         else if(words == "discontinue"){
             //TODO Remove all songs from the given file from the library?
             std::string filename;
+<<<<<<< HEAD
             std::cout << "reading..." << std::endl;
             filename = "Songs.txt";
             std::ifstream infile(filename);
@@ -96,6 +102,11 @@ int maine(){
             std::cout << "read....closing" << std::endl;
             infile.close();
 
+=======
+            getline(splitter, filename, '>');
+            //djBoard.discontinue(filename);
+            //TODO in prog
+>>>>>>> 391f30d579a4c729784009f728ce4d2658e29521
         }
         else if(command == "playlists"){
             djBoard.displayPlaylists();
@@ -142,6 +153,9 @@ int maine(){
         std::cout << "Enter your command: " <<std::endl;
         std::getline(std::cin, command);
     }
+
+    //djBoard.saveLibrary();
+
     return 0;
 }
 
