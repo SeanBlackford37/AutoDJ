@@ -143,8 +143,7 @@ void ArrayList::insertAtFront(Song itemToAdd) {
 
 int ArrayList::findArtistandTitle(const int size, std::string artistIn, std::string titleIn) {
 
-
-    for(int i = 0; i < size; i++){
+    for(int i = 0; i < size-1; i++){
         if(artistIn == array[i].getArtist()){
             if(titleIn == array[i].getTitle()){
                 return i;

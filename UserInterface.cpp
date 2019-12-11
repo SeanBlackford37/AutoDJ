@@ -64,8 +64,11 @@ int maine(){
         else if(words == "discontinue"){
             std::string filename;
             djBoard.discontinue(filename);
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 574b89e6651d040001f2f06ea0e727dc45dc42ca
         }
         else if(command == "playlists"){
             djBoard.displayPlaylists();
