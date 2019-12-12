@@ -114,7 +114,7 @@ public:
 
     void addSongToLibrary(std::string songIn);
 
-
+    void help();
 
     void removeFromPlaylists(std::string artist, std::string titleIn);
 

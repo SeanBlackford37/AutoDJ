@@ -95,49 +95,86 @@ void playlistTests() {
 
 void libraryTests() {
     std::cout << "----Library Tests----" << std::endl;
-    Library *testLib = new Library();
+    Library testLib =  Library();
 
-    testLib->addSongToLibrary("Never Gonna Give You Up,Rick Astley,3:33");
-    testLib->addSongToLibrary("Wake Me Up,Avicii,4:32,3");
-    testLib->addSongToLibrary("Hey Brother,Avicii,4:23");
-    testLib->addSongToLibrary("Hey Brother,Avicii,4:23,3");
-    //testLib->displaySongs();
+    std::cout << "command: help" <<std::endl;
+    testLib.help();
 
-    testLib->newPlaylist("Vibes");
-    testLib->addToPlaylist("Vibes", "Avicii", "Hey Brother");
+    std::cout << "\ncommand: library" <<std::endl;
+    testLib.displaySongs();
 
+    std::cout << "\ncommand: import<somesongs.txt>" <<std::endl;
+    testLib.AddSongsFromFile("somesongs.txt");
 
-    testLib->addToPlaylist("Vibes", "Rick Astley", "Never Gonna Give You Up");
-    //testLib->displayPlaylist("Vibes");
+    std::cout << "\ncommand: library" <<std::endl;
+    testLib.displaySongs();
 
-    //testLib->displayPlaylist("Vibes");
+    std::cout << "\ncommand: artist<Fall Out Boy>" <<std::endl;
+    testLib.displayArtist("Fall Out Boy");
 
-    //testLib->displayPlaylist("Vibes");
+    std::cout << "\ncommand: song<Avicii,Wake Me Up>" <<std::endl;
+    testLib.displaySong("Avicii","Wake Me Up");
 
-
-
-    testLib->playNext("Vibes");
-    testLib->displayPlaylist("Vibes");
-    testLib->removeFromPlaylist("Vibes","Rick Astley", "Never Gonna Give You Up");
-    //testLib->displayPlaylist("Vibes");
+    std::cout << "\ncommand: discontinue<songstodelete.txt>" <<std::endl;
+    testLib.discontinue("songstodelete.txt");
 
 
+    std::cout << "\ncommand: playlists" <<std::endl;
+    testLib.displayPlaylists();
 
-    testLib->addSongToLibrary("Darude Sandstorm,Darude,3:52");
-    testLib->addSongToLibrary("w.a.m.s,Fall Out Boy,4:38");
-    testLib->addSongToLibrary("Nobody's Perfect,Hannah Montana,3:21");
-    testLib->displaySongs();
-    testLib->addToPlaylist("Vibes", "Avicii", "Hey Brother");
-    testLib->newRandomPlaylist("Work It", "0:12:30");
-    //testLib->displayPlaylist("Work It");
+    std::cout << "\ncommand: new<Test1>" <<std::endl;
+    testLib.newPlaylist("Test1");
 
+    std::cout << "\ncommand: playlists" <<std::endl;
+    testLib.displayPlaylists();
 
-    testLib->displayPlaylist("Work It");
-    testLib->displayPlaylist("Vibes");
+    std::cout << "\ncommand: add<Test1,Avicii,Wake Me Up>" <<std::endl;
+    testLib.addToPlaylist("Test1","Avicii","Wake Me Up");
 
+    std::cout << "\ncommand: playlist<Test1>" <<std::endl;
+    testLib.displayPlaylist("Test1");
 
+    std::cout << "\ncommand: add<Test1,Drake,In My Feelings>" <<std::endl;
+    testLib.addToPlaylist("Test1","Drake","In My Feelings");
 
-    testLib->quit();
+    std::cout << "\ncommand: playlist<Test1>" <<std::endl;
+    testLib.displayPlaylist("Test1");
+
+    std::cout << "\ncommand: remove<Test1,Avicii,Wake Me Up>" <<std::endl;
+    testLib.removeFromPlaylist("Test1","Avicii","Wake Me Up");
+
+    std::cout << "\ncommand: playnext<Test1>" <<std::endl;
+    testLib.playNext("Test1");
+
+    std::cout << "\ncommand: playlist<Test1>" <<std::endl;
+    testLib.displayPlaylist("Test1");
+
+    std::cout << "\ncommand: song<Drake,In My Feelings>" <<std::endl;
+    testLib.displaySong("Drake","In My Feelings");
+
+    std::cout << "\ncommand: newrandom<Random,0:20:30>" <<std::endl;
+    testLib.newRandomPlaylist("Random","0:20:30");
+
+    std::cout << "\ncommand: playlists" <<std::endl;
+    testLib.displayPlaylists();
+
+    std::cout << "\ncommand: playlist<Random>" <<std::endl;
+    testLib.displayPlaylist("Random");
+
+    std::cout << "\ncommand: newrandom<Random2,0:20:30>" <<std::endl;
+    testLib.newRandomPlaylist("Random2","0:20:30");
+
+    std::cout << "\ncommand: playlists" <<std::endl;
+    testLib.displayPlaylists();
+
+    std::cout << "\ncommand: playlist<Random2>" <<std::endl;
+    testLib.displayPlaylist("Random2");
+
+    testLib.quit();
+
+    Library reopen = Library();
+    reopen.displaySongs();
+    reopen.displayPlaylists();
 
 }
 
