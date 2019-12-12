@@ -3,5 +3,5 @@ project(CS220FinalProject)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(CS220FinalProject Library.cpp Library.h Song.cpp Song.h Tests.cpp Playlist.cpp Playlist.h ArrayList.cpp ArrayList.h ArrayLib.cpp ArrayLib.h PlaylistArrayList.cpp PlaylistArrayList.h TestLib.cpp TestLib.h UserInterface.cpp)
+add_executable(CS220FinalProject Library.cpp Library.h Song.cpp Song.h Tests.cpp Playlist.cpp Playlist.h ArrayList.cpp ArrayList.h ArrayLib.cpp ArrayLib.h PlaylistArrayList.cpp PlaylistArrayList.h TestLib.cpp TestLib.h UserInterface.cpp List.h LinkedNode.h LinkedNode.cpp LinkedList.h LinkedList.cpp)
 
