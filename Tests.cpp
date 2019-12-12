@@ -144,7 +144,7 @@ void libraryTests() {
 
 
 
-int maine){
+int main(){
 
     //songTests();
     //SongArrayListTests();
