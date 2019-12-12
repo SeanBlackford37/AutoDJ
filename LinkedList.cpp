@@ -25,6 +25,32 @@ LinkedList::~LinkedList(){
     currItemCount = 0;
 }
 
+LinkedList::LinkedList(const LinkedList& arrayListToCopy){
+    this->front = new LinkedNode(arrayListToCopy.front->getItem());
+    LinkedNode* copy = arrayListToCopy.front;
+    LinkedNode* real = this->front;
+    while (copy!= nullptr) {
+        copy = copy->getNext();
+        real = real->getNext();
+        real->setNext(new LinkedNode(copy->getItem()));
+    }
+}
+
+LinkedList& LinkedList::operator=(const LinkedList& arrayListToCopy) {
+    if (this != &arrayListToCopy) {
+        this->clearList();
+        this->front = new LinkedNode(arrayListToCopy.front->getItem());
+        LinkedNode *copy = arrayListToCopy.front;
+        LinkedNode *real = this->front;
+        while (copy != nullptr) {
+            copy = copy->getNext();
+            real = real->getNext();
+            real->setNext(new LinkedNode(copy->getItem()));
+        }
+        return *this;
+    }
+}
+
 /**
  * appends the new item to the end of the list
  * @post the list has an additional value in it, at the end

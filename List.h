@@ -12,10 +12,12 @@
 class List {
 private:
     //Private to disable copying and assigning from outside class, don't implement these methods
+
+
+public:
     List(const List& listToCopy);
     List& operator=(const List& listToCopy);
 
-public:
     //constructor
     List() {}
 

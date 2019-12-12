@@ -9,7 +9,8 @@
 #include <string>
 #include "Song.h"
 
-class ArrayList {
+
+class ArrayList{
 private:
     //pointer to the start of the array
     Song* array;

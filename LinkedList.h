@@ -15,14 +15,14 @@ private:
     LinkedNode* front;
 
     //Private to disable copying and assigning from outside class, don't implement these methods
-    LinkedList(const LinkedList& arrayListToCopy);
-    LinkedList& operator=(const LinkedList& arrayListToCopy);
+
 public:
     /**
      * Constructor
      */
     LinkedList();
-
+    LinkedList(const LinkedList& arrayListToCopy);
+    LinkedList& operator=(const LinkedList& arrayListToCopy);
     //Destructor
     ~LinkedList();
 
