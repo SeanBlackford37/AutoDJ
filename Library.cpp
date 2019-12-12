@@ -76,7 +76,9 @@ void Library::loadLibrary(){
 void Library::quit(){
     std::ofstream myfile;
     std::cout << "writing..." << std::endl;
+    std::ofstream file("library.txt", std::ios::trunc);
     myfile.open("library.txt");
+
     for(int i = 0; i <songs->itemCount();i++){
         myfile << songs->getValueAt(i).toStringtoFile();
         myfile << "\n";
