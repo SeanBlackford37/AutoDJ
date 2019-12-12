@@ -165,6 +165,7 @@ void Library::displayPlaylists() {
 void Library::newPlaylist(std::string nameIn) {
     int index = playlists->find(nameIn);
     if (index == -1){
+        std::cout << "Playlist was created,  Name : " + nameIn << std::endl;
         playlists->insertAtEnd(Playlist(nameIn));
     }
     else{
@@ -180,6 +181,7 @@ void Library::removeFromPlaylist(std::string nameIn, std::string artist, std::st
         temp.removeSong(artist,titleIn,1);
         playlists->removeValueAt(indexOfPlaylist);
         playlists->insertAt(temp,indexOfPlaylist);
+        std::cout << titleIn + " by " + artist + " was removed from the playlist: " + nameIn << std::endl;
     }
 
 }
@@ -213,6 +215,7 @@ void Library::addToPlaylist(std::string nameIn, std::string artist, std::string 
         tempPlay.addSong(temp.toStringtoFile());
         playlists->removeValueAt(indexOfPlaylist);
         playlists->insertAt(tempPlay,indexOfPlaylist);
+        std::cout << titleIn + "by " + artist + " was added to the playlist: " + nameIn << std::endl;
 
     }
 }
@@ -331,6 +334,7 @@ void Library::newRandomPlaylist(std::string nameIn, std::string duration) {
             }
         }
         playlists->insertAtEnd(randPlaylist);
+        std::cout << "a random playlist was created. Playlist: " + nameIn << std::endl;
     }
     else{
         std::cout << "Playlist with this name already exists" << std::endl;
