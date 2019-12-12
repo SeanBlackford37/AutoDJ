@@ -101,9 +101,17 @@ int maine(){
         else if(words == "newrandom"){
             std::string name;
             std::string duration;
+            std::string test;
             getline(splitter, name, ',');
             getline(splitter, duration, '>');
-            djBoard.newRandomPlaylist(name, duration);
+            getline(splitter, test, ':');
+            if (duration == test){
+                std::cout << "Not a valid use of the command, don't forget to put the duration" << std::endl;
+            }
+            else{
+                djBoard.newRandomPlaylist(name, duration);
+            }
+
         }
         else{
             std::cout << "That is not a valid command, enter help for a list of commands" << std::endl;

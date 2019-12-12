@@ -184,7 +184,10 @@ void Library::removeFromPlaylist(std::string nameIn, std::string artist, std::st
 void Library::removeFromPlaylists(std::string artist, std::string titleIn) {
 
     for (int i = 0; i < playlists->itemCount(); i++){
-        playlists->getValueAt(i).removeSong(artist,titleIn,0);
+        Playlist temp = playlists->getValueAt(i);
+        temp.removeSong(artist,titleIn,0);
+        playlists->removeValueAt(i);
+        playlists->insertAt(temp,i);
     }
 
 }
@@ -308,7 +311,7 @@ void Library::newRandomPlaylist(std::string nameIn, std::string duration) {
         }
         int failCount = 0;
         int runningDuration = 0;
-        while (failCount != 10){
+        while (failCount != songs->itemCount()*2){
             int randIndex = genRandInt(0, songs->itemCount()-1);
             Song randSong = songs->getValueAt(randIndex);
             if (randPlaylist.find(randSong.getArtist(),randSong.getTitle()) != -1){
