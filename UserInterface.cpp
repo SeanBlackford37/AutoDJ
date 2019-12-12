@@ -116,7 +116,7 @@ int maine(){
         else{
             std::cout << "That is not a valid command, enter help for a list of commands" << std::endl;
         }
-        std::cout << "Enter your command: " <<std::endl;
+        std::cout << "\nEnter your command: " <<std::endl;
         std::getline(std::cin, command);
     }
 

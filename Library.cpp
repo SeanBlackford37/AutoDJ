@@ -66,16 +66,15 @@ void Library::loadLibrary(){
             }
         }
     }else {
-        std::cout << "file can not be read file!"  << std::endl;
+        std::cout << "save file can not be read file!"  << std::endl;
 
     }
-    std::cout << "closing" << std::endl;
     infile.close();
 }
 
 void Library::quit(){
     std::ofstream myfile;
-    std::cout << "writing..." << std::endl;
+    std::cout << "saving..." << std::endl;
     std::ofstream file("library.txt", std::ios::trunc);
     myfile.open("library.txt");
 
@@ -91,29 +90,30 @@ void Library::quit(){
             myfile<<"\n";
         }
     }
-    std::cout << "file has been written" << std::endl;
+    std::cout << "library has been saved" << std::endl;
     myfile.close();
 
 }
 
 void Library::AddSongsFromFile(std::string file_name){
-    std::cout << "reading..." << std::endl;
     std::string filename = file_name;
     std::ifstream infile(filename);
     if (infile){
+        std::cout << "reading file..." << std::endl;
         while (infile){
             std::string line;
             getline(infile, line);
-            std::cout << line << std::endl;
+            //std::cout << line << std::endl;
             if(line != ""){
                 addSongToLibrary(line);
             }
         }
+        std::cout << "read" << std::endl;
     }else {
         std::cout << "file can not be read file!"  << std::endl;
 
     }
-    std::cout << "closing" << std::endl;
+
     infile.close();
 
 }
@@ -127,10 +127,10 @@ void Library::displaySongs() {
     }
 }
 void Library::discontinue(std::string file_name) {
-    std::cout << "reading..." << std::endl;
     std::string filename = file_name;
     std::ifstream infile(filename);
     if (infile){
+        std::cout << "reading file..." << std::endl;
         while (infile){
             std::string line;
             getline(infile, line);
@@ -140,11 +140,11 @@ void Library::discontinue(std::string file_name) {
                 removeSongFromLibrary(line);
             }
         }
+        std::cout << "read" << std::endl;
     }else {
         std::cout << "file can not be read file!"  << std::endl;
 
     }
-    std::cout << "closing" << std::endl;
     infile.close();
 }
 
