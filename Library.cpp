@@ -163,7 +163,14 @@ void Library::displayPlaylists() {
 }
 
 void Library::newPlaylist(std::string nameIn) {
-    playlists->insertAtEnd(Playlist(nameIn));
+    int index = playlists->find(nameIn);
+    if (index == -1){
+        playlists->insertAtEnd(Playlist(nameIn));
+    }
+    else{
+        std::cout << "Playlist with that name already exists" << std::endl;
+    }
+
 }
 
 void Library::removeFromPlaylist(std::string nameIn, std::string artist, std::string titleIn) {
@@ -276,50 +283,56 @@ void Library::playNext(std::string nameIn) {
 }
 
 void Library::newRandomPlaylist(std::string nameIn, std::string duration) {
-    Playlist randPlaylist = Playlist(nameIn);
-    std::stringstream splitter (duration);
-    std::string words;
-    int count = 0;
-    int maxDuration = 0;
-    if (splitter){
-        getline(splitter, words, ':');
-        while (splitter){
-            int temp = stoi(words);
-            // it to the integer x
-            if(count == 0) {
-                count++;
-                maxDuration += temp * 60 * 60;
-            }
-            else if(count == 1) {
-                count++;
-                maxDuration += temp * 60;
-            }
-            else{
-                maxDuration += temp;
-            }
+    if (playlists->find(nameIn) == -1){
+        Playlist randPlaylist = Playlist(nameIn);
+        std::stringstream splitter (duration);
+        std::string words;
+        int count = 0;
+        int maxDuration = 0;
+        if (splitter){
             getline(splitter, words, ':');
+            while (splitter){
+                int temp = stoi(words);
+                // it to the integer x
+                if(count == 0) {
+                    count++;
+                    maxDuration += temp * 60 * 60;
+                }
+                else if(count == 1) {
+                    count++;
+                    maxDuration += temp * 60;
+                }
+                else{
+                    maxDuration += temp;
+                }
+                getline(splitter, words, ':');
+            }
         }
-    }
-    int failCount = 0;
-    int runningDuration = 0;
-    while (failCount != 10){
-        int randIndex = genRandInt(0, songs->itemCount()-1);
-        Song randSong = songs->getValueAt(randIndex);
-        if (randPlaylist.find(randSong.getArtist(),randSong.getTitle()) != -1){
-            failCount++;
-        }
-        else{
-            if (runningDuration + randSong.getDuration() > maxDuration){
-                failCount ++;
+        int failCount = 0;
+        int runningDuration = 0;
+        while (failCount != 10){
+            int randIndex = genRandInt(0, songs->itemCount()-1);
+            Song randSong = songs->getValueAt(randIndex);
+            if (randPlaylist.find(randSong.getArtist(),randSong.getTitle()) != -1){
+                failCount++;
             }
             else{
-                failCount = 0;
-                runningDuration += randSong.getDuration();
-                randPlaylist.addSong(randSong.toStringtoFile());
+                if (runningDuration + randSong.getDuration() > maxDuration){
+                    failCount ++;
+                }
+                else{
+                    failCount = 0;
+                    runningDuration += randSong.getDuration();
+                    randPlaylist.addSong(randSong.toStringtoFile());
+                }
             }
         }
+        playlists->insertAtEnd(randPlaylist);
     }
-    playlists->insertAtEnd(randPlaylist);
+    else{
+        std::cout << "Playlist with this name already exists" << std::endl;
+    }
+
 
 
 }
