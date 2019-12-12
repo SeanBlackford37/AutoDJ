@@ -111,14 +111,16 @@ void Playlist::addSong(std::string SongIn) {
     }
 }
 
-void Playlist::removeSong(std::string artist, std::string title) {
+void Playlist::removeSong(std::string artist, std::string title, int print) {
     int index = songs->findArtistandTitle(songs->itemCount(),artist,title);
     if (index != -1){
         songs->removeValueAt(index);
 
     }
     else{
-        std::cout << title << " " << artist << "  : couldn't be removed" << std::endl;
+        if(print == 1){
+            std::cout << title << " " << artist << "  : was not in the Playlist "+name << std::endl;
+        }
     }
 }
 

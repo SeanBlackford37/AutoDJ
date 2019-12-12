@@ -81,8 +81,7 @@ void ArrayList::insertAtEnd(Song itemToAdd) {
 void ArrayList::insertAtAlphabetized(Song itemToAdd) {
     int index = 0;
     Song temp = array[0];
-    int test = temp.getArtist().compare(itemToAdd.getArtist());
-    while (temp.getArtist().compare(itemToAdd.getArtist()) < 0) {
+    while (temp.getArtist().compare(itemToAdd.getArtist()) < -1 && index < currItemCount) {
         index += 1;
         temp = array[index];
     }
@@ -143,7 +142,7 @@ void ArrayList::insertAtFront(Song itemToAdd) {
 
 int ArrayList::findArtistandTitle(const int size, std::string artistIn, std::string titleIn) {
 
-    for(int i = 0; i < size-1; i++){
+    for(int i = 0; i < size; i++){
         if(artistIn == array[i].getArtist()){
             if(titleIn == array[i].getTitle()){
                 return i;

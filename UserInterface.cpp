@@ -9,15 +9,9 @@
 
 
 
-//First we'd load in a file but need that to work first
 int maine(){
     std::string command = "";
     Library djBoard = Library();
-    //WE'd get rid of this
-    djBoard.addSongToLibrary("Darude Sandstorm,Darude,3:52");
-    djBoard.addSongToLibrary("Wake Me Up,Avicii,4:32");
-    djBoard.addSongToLibrary("Hey Brother,Avicii,4:21");
-    //to here, this was for testing
     std::cout << "Enter help for a list of commands" << std::endl;
     std::cout << "Enter your command: " <<std::endl;
     std::getline(std::cin, command);
@@ -36,7 +30,7 @@ int maine(){
             std::cout << "playlist<name>\n\tDisplay all songs left in the given playlist, and the duration (time it will take to play the remaining songs)" << std::endl;
             std::cout << "new<name>\n\tMake a new empty playlist with the given name." <<std::endl;
             std::cout << "add<name,artist,title>\n\tAdd the given song to the end of the given playlist" << std::endl;
-            std::cout << "remove<name, artist, title>\n\tremove the given song from the playlist" << std::endl;
+            std::cout << "remove<name,artist,title>\n\tremove the given song from the playlist" << std::endl;
             std::cout << "playnext<name>\n\tPrint all information about the next song to be played from the given playlist to the screen." <<std::endl;
             std::cout << "newrandom<name,duration>\n\tMake a new playlist with the given name, and populate it with a random group of songs that do not repeat. \n\tInput duration like 0:12:2 if the desired length of the playlist was 0 hours, 12 minutes, and 2 seconds" << std::endl;
             std::cout << "quit\n\tSave the library and all playlists and terminate execution." << std::endl;
@@ -58,11 +52,13 @@ int maine(){
         }
         else if(words == "import"){
             std::string filename;
+            getline(splitter, filename, '>');
             djBoard.AddSongsFromFile(filename);
 
         }
         else if(words == "discontinue"){
             std::string filename;
+            getline(splitter, filename, '>');
             djBoard.discontinue(filename);
 
         }
@@ -116,7 +112,7 @@ int maine(){
         std::getline(std::cin, command);
     }
 
-    //djBoard.saveLibrary();
+    djBoard.quit();
 
     return 0;
 }

@@ -70,9 +70,9 @@ void playlistTests() {
     printAssertEquals(test->toString(),"Title: Shooting Stars Artist: Bag Raiders Duration: 3:56 Play Count: 0\nTitle: Never Gonna Give You Up Artist: Rick Astley Duration: 3:33 Play Count: 0\n");
     test->addSong("w.a.m.s,Fall Out Boy,4:38");
     printAssertEquals("0:12:7",test->calcDuration());
-    test->removeSong("Bag Raiders", "Shooting Stars");
-    test->removeSong("Fall Out Boy", "w.a.m.s");
-    test->removeSong("Rick Astley", "Never Gonna Give You Up");
+    test->removeSong("Bag Raiders", "Shooting Stars",1);
+    test->removeSong("Fall Out Boy", "w.a.m.s",1);
+    test->removeSong("Rick Astley", "Never Gonna Give You Up",1);
     printAssertEquals(test->toString(), "");
     std::cout << "Copy constructor test" << std::endl;
 

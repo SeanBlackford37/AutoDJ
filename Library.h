@@ -45,10 +45,8 @@ public:
      */
     void discontinue(std::string file_name);
 
-    /**
-     * Writes the current library to a file to save the data when the command quit is typed
-     */
-    void saveLibrary();
+
+
 
     /**
      * display all names of all playlists and their durations
@@ -118,12 +116,14 @@ public:
 
 
 
-
     void removeFromPlaylists(std::string artist, std::string titleIn);
 
 
     void removeSongFromLibrary(std::string songIn);
 
+    /**
+  * Writes the current library to a file to save the data when the command quit is typed
+  */
     void quit();
 };
 

@@ -25,13 +25,44 @@ void Library::loadLibrary(){
 
     std::string filename = "library.txt";
     std::ifstream infile(filename);
+
     if (infile){
         while (infile){
+
             std::string line;
             getline(infile, line);
-            std::cout << line << std::endl;
-            if(line != ""){
-                addSongToLibrary(line);
+
+            std::stringstream splitter (line);
+            std::string words;
+
+            //std::cout << line << std::endl;
+
+            getline(splitter, words, ':');
+            if(line != "" && words == "Title"){
+                while(infile) {
+                    getline(splitter, words, '\n');
+                    std::string name = words;
+                    newPlaylist(name);
+                    while (infile) {
+                        getline(infile, line);
+                        std::stringstream splitter(line);
+                        getline(splitter, words, ':');
+                        if (words == "Title") {
+                            getline(splitter, words, '\n');
+                            break;
+                        }
+                        if (line != "") {
+                            Song temp = Song(line);
+                            addToPlaylist(name, temp.getArtist(), temp.getTitle());
+                        }
+
+                    }
+                }
+            }
+            else{
+                if(line != ""){
+                    addSongToLibrary(line);
+                }
             }
         }
     }else {
@@ -51,7 +82,7 @@ void Library::quit(){
         myfile << "\n";
     }
     for(int i = 0; i<playlists->itemCount();i++){
-        myfile <<"Title: " + playlists->getValueAt(i).getName();
+        myfile <<"Title:" + playlists->getValueAt(i).getName();
         myfile<<"\n";
         for(int j = 0; j < playlists->getValueAt(i).playListLength(); j++) {
             myfile << playlists->getValueAt(i).getSong(j);
@@ -101,9 +132,9 @@ void Library::discontinue(std::string file_name) {
         while (infile){
             std::string line;
             getline(infile, line);
-            if(line != line) {
-                Song songin(line);
-                removeFromPlaylists(songin.getArtist(), songin.getTitle());
+            if(line != "") {
+                Song songIn = Song(line);
+                removeFromPlaylists(songIn.getArtist(), songIn.getTitle());
                 removeSongFromLibrary(line);
             }
         }
@@ -115,9 +146,7 @@ void Library::discontinue(std::string file_name) {
     infile.close();
 }
 
-void Library::saveLibrary() {
-    //TODO
-}
+
 
 void Library::displayPlaylists() {
     std::cout << "Playlists: " << std::endl;
@@ -139,7 +168,7 @@ void Library::removeFromPlaylist(std::string nameIn, std::string artist, std::st
     int indexOfPlaylist = playlists->find(nameIn);
     if (indexOfPlaylist != -1){
         Playlist temp = playlists->getValueAt(indexOfPlaylist);
-        temp.removeSong(artist,titleIn);
+        temp.removeSong(artist,titleIn,1);
         playlists->removeValueAt(indexOfPlaylist);
         playlists->insertAt(temp,indexOfPlaylist);
     }
@@ -148,7 +177,7 @@ void Library::removeFromPlaylist(std::string nameIn, std::string artist, std::st
 void Library::removeFromPlaylists(std::string artist, std::string titleIn) {
 
     for (int i = 0; i < playlists->itemCount(); i++){
-        playlists->getValueAt(i).removeSong(artist,titleIn);
+        playlists->getValueAt(i).removeSong(artist,titleIn,0);
     }
 
 }
