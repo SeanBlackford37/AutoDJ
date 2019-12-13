@@ -108,9 +108,7 @@ int Song::getDuration() {
     return duration;
 }
 
-int Song::getPlayCount() {
-    return playCount;
-}
+
 
 std::string Song::getDurationString() {
     return durationString;

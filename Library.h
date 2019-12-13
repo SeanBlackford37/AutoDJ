@@ -24,6 +24,7 @@ private:
 
 public:
     Library();
+    //destructor
     ~Library();
     /**
      * add things in alphabetical order and only songs not in the list
@@ -111,14 +112,29 @@ public:
      * @param nameIn
      */
     void newRandomPlaylist(std::string nameIn, std::string duration);
-
+    /**
+     * check if songs is empty if it is then the song is added
+     * if not and the song is not in the library already(a check) then the song is added
+     * @param songIn
+     *
+     */
     void addSongToLibrary(std::string songIn);
 
+    /**
+     * displays the given UserInterface commands
+     */
     void help();
-
+    /**
+     *removes the given song from all playlists this is for discontinue
+     * @param artist
+     * @param titleIn
+     */
     void removeFromPlaylists(std::string artist, std::string titleIn);
 
-
+    /**
+     * removes the song from the current library
+     * @param songIn
+     */
     void removeSongFromLibrary(std::string songIn);
 
     /**

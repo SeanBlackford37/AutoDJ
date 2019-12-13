@@ -67,8 +67,15 @@ public:
       */
       void removeSong(std::string artist, std::string title, int print);
 
+      /**
+       *
+       * @return the name of the playlist
+       */
       std::string getName();
-
+      /**
+       *
+       * @returns true if Songs is empty otherwise false
+       */
       bool isEmpty();
 
     int playListLength();

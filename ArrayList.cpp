@@ -208,6 +208,4 @@ Song ArrayList::removeValueAt(int index) {
     return copy;
 }
 
-int ArrayList::getCurrCapacity(){
-    return currCapacity;
-}
+

@@ -132,10 +132,14 @@ public:
      * @throws out_of_range exception if index is invalid
      */
     Song removeValueAt(int index);
-
+    /**
+     * looks through the arraylist by artist first then in the same index the songname
+     * @param currentSize,artistIn,titleIn
+     *  @return the index of the where the song is
+     */
     int findArtistandTitle(const int size, std::string artistIn, std::string titleIn);
 
-    int getCurrCapacity();
+
 };
 
 

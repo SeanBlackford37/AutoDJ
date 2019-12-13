@@ -43,19 +43,35 @@ public:
      * Turns the given song to a string format and is returned
      */
     std::string toString();
-
+    /**
+     * used to write to a file in a specfic format
+     * @return the tostring of a song with its artist and or playcount
+     */
     std::string toStringtoFile();
-
+    /**
+     * increments the current song play count
+     */
     void incrementPlayCount();
-
+    /**
+     *
+     * @return the current song's arist
+     */
     std::string getArtist();
-
+    /**
+     *
+     * @return the current song's title
+     */
     std::string getTitle();
-
+    /**
+     *
+     * @return the duration of the current song in int format
+     */
     int getDuration();
 
-    int getPlayCount();
-
+    /**
+     *
+     * @return the duration of the current song in string format
+     */
     std::string getDurationString();
 };
 
