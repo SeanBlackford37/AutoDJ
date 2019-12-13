@@ -1,0 +1,29 @@
+I Love College,Asher Roth,4:02
+Wake Me Up,Avicii,4:32
+Let it Be,Beatles,3:09
+Darude Sandstorm,Darude,3:52
+It's Not Over,Daughtry,3:35
+Highway Star,Deep Purple,6:08
+In My Feelings,Drake,3:38,1
+Dance Dance,Fall Out Boy,3:00
+w.a.m.s,Fall Out Boy,4:38
+Low,Flo Rida,3:50
+American Idiot,Green Day,2:54
+Nobody's Perfect,Hannah Montana,3:21
+La Bamba,Los Lobos,2:53
+Never Gonna Give You Up,Rick Astley,3:33
+Bangarang,Skrillex,3:35
+Mr. Brightside,The Killers,3:43
+Buddy Holly,Weezer,2:39
+Title:Random
+Nobody's Perfect,Hannah Montana,3:21
+Let it Be,Beatles,3:09
+Highway Star,Deep Purple,6:08
+It's Not Over,Daughtry,3:35
+American Idiot,Green Day,2:54
+Title:Random2
+Highway Star,Deep Purple,6:08
+Bangarang,Skrillex,3:35
+It's Not Over,Daughtry,3:35
+Let it Be,Beatles,3:09
+In My Feelings,Drake,3:38,1
