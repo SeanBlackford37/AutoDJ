@@ -63,14 +63,6 @@ public:
      */
     virtual void clearList()=0;
 
-    /**
-     * Searches an int array for a certain value
-     * @return the index of the first occurrence of numToFind if it is present, otherwise returns -1
-     */
-    virtual int find(Song numToFind)=0;
-
-
-
 
     virtual void insertAtFront(Song itemToAdd)=0;
 
@@ -107,6 +99,9 @@ public:
      * @throws out_of_range exception if index is invalid
      */
     virtual Song removeValueAt(int index)=0;
+
+
+    virtual int findArtistandTitle(const int size, std::string artistIn, std::string titleIn)=0;
 
 };
 

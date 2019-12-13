@@ -25,17 +25,6 @@ LinkedList::~LinkedList(){
     currItemCount = 0;
 }
 
-LinkedList::LinkedList(const LinkedList& arrayListToCopy){
-    this->front = new LinkedNode(arrayListToCopy.front->getItem());
-    LinkedNode* copy = arrayListToCopy.front;
-    LinkedNode* real = this->front;
-    while (copy!= nullptr) {
-        copy = copy->getNext();
-        real = real->getNext();
-        real->setNext(new LinkedNode(copy->getItem()));
-    }
-}
-
 LinkedList& LinkedList::operator=(const LinkedList& arrayListToCopy) {
     if (this != &arrayListToCopy) {
         this->clearList();
@@ -47,9 +36,23 @@ LinkedList& LinkedList::operator=(const LinkedList& arrayListToCopy) {
             real = real->getNext();
             real->setNext(new LinkedNode(copy->getItem()));
         }
-        return *this;
+
+    }
+    return *this;
+}
+
+LinkedList::LinkedList(const LinkedList& arrayListToCopy){
+    this->front = new LinkedNode(arrayListToCopy.front->getItem());
+    LinkedNode* copy = arrayListToCopy.front;
+    LinkedNode* real = this->front;
+    while (copy!= nullptr) {
+        copy = copy->getNext();
+        real = real->getNext();
+        real->setNext(new LinkedNode(copy->getItem()));
     }
 }
+
+
 
 /**
  * appends the new item to the end of the list
@@ -317,3 +320,24 @@ Song LinkedList::removeValueAt(int index){
     }
     return val;
 }
+
+
+int LinkedList::findArtistandTitle(const int size, std::string artistIn, std::string titleIn){
+    LinkedNode* temp = front;
+    int index = 0;
+    int found = -1;
+    while (temp != nullptr){
+        if(temp->getItem().getTitle() == titleIn && temp->getItem().getArtist() == artistIn){
+            return index;
+        }
+        else{
+            temp = temp->getNext();
+            index += 1;
+        }
+    }
+    if(found == -1){
+        return -1;
+    }
+}
+
+

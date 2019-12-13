@@ -7,6 +7,7 @@
 #include "ArrayLib.h"
 
 
+
 ArrayList::ArrayList(int initialCapacity) {
     if(initialCapacity < 1){
         throw std::invalid_argument("Size can't be less than 1");

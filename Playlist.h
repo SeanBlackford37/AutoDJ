@@ -3,6 +3,7 @@
 //
 #include <iostream>
 #include "ArrayList.h"
+#include "List.h"
 
 #ifndef CS220FINALPROJECT_PLAYLIST_H
 #define CS220FINALPROJECT_PLAYLIST_H

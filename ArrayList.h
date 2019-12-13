@@ -8,9 +8,10 @@
 #include <stdexcept>
 #include <string>
 #include "Song.h"
+#include "List.h"
 
 
-class ArrayList{
+class ArrayList: public List{
 private:
     //pointer to the start of the array
     Song* array;
@@ -28,6 +29,7 @@ private:
     void doubleCapacity();
 
 public:
+
     /**
      * Constructor
      * @throws an std::invalid_argument exception if size < 1

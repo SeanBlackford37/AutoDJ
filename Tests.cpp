@@ -7,7 +7,7 @@
 #include "ArrayList.h"
 #include "Playlist.h"
 #include "Library.h"
-
+#include "LinkedList.h"
 
 
 void songTests(){
@@ -42,7 +42,7 @@ void songTests(){
 
 void SongArrayListTests(){
     std::cout << "-----Song Array List Tests-----" << std::endl;
-    ArrayList* test = new ArrayList(5);
+    List* test = new LinkedList();
     test->insertAtFront( Song("Darude Sandstorm,Darude,3:52"));
     printAssertEquals(test->getValueAt(0).toString(),"Title: Darude Sandstorm Artist: Darude Duration: 3:52 Play Count: 0");
     test->insertAtFront( Song("Wake Me Up,Avicii,4:32"));
@@ -180,12 +180,11 @@ void libraryTests() {
 
 
 
-
 int main(){
 
     //songTests();
     //SongArrayListTests();
-    //playlistTests();
+    playlistTests();
     libraryTests();
 
 
