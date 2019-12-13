@@ -184,7 +184,7 @@ int main(){
 
     //songTests();
     //SongArrayListTests();
-    playlistTests();
+    //playlistTests();
     libraryTests();
 
 

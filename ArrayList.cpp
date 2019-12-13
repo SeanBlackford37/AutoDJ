@@ -82,12 +82,12 @@ void ArrayList::insertAtEnd(Song itemToAdd) {
 void ArrayList::insertAtAlphabetized(Song itemToAdd) {
     int index = 0;
     Song temp = array[0];
-    while (temp.getArtist().compare(itemToAdd.getArtist()) < -1 && index < currItemCount) {
+    while (temp.getArtist().compare(itemToAdd.getArtist()) <= -1 && index < currItemCount) {
         index += 1;
         temp = array[index];
     }
     if (temp.getArtist().compare(itemToAdd.getArtist()) == 0){
-        while ((temp.getTitle().compare(itemToAdd.getTitle()) < -1) and (temp.getArtist().compare(itemToAdd.getArtist()) == 0)){
+        while ((temp.getTitle().compare(itemToAdd.getTitle()) <= -1) and (temp.getArtist().compare(itemToAdd.getArtist()) == 0)){
             index+=1;
             temp = array[index];
         }
